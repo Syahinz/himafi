@@ -1,0 +1,31 @@
+---
+const { Pagetitle = `HIMAFI` } = Astro.props;
+import "../styles/global.css";
+import { Image } from "astro:assets";
+import { ClientRouter } from 'astro:transitions';
+import Navbar from "../components/Navbar.astro";
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/png" href="/himafi.png" />
+    <meta name="generator" content={Astro.generator} />
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font end -->
+    <title>{Pagetitle} | HIMAFI</title>
+  </head>
+  <body>
+    <Navbar/>
+    <slot />
+    <ClientRouter/>
+  </body>
+</html>

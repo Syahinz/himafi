@@ -1,0 +1,10 @@
+---
+const { text, mode = "left" } = Astro.props;
+const textMode = mode === "center" ? "md:text-center" : "md:text-left";
+---
+
+<p
+  class=`text-center leading-relaxed px-3 mt-4 font-isi  text-sm  md:px-10 lg:text-xl ${textMode}`
+>
+  {text}
+</p>

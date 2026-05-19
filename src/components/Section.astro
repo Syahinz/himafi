@@ -1,0 +1,13 @@
+---
+const { mode = "light" } = Astro.props;
+
+const baseClass = `min-h-screen w-full `;
+const modeClass =
+  mode === "dark"
+    ? "bg-primary-darken text-secondary-bright"
+    : "bg-secondary-bright text-primary";
+---
+
+<section class=`${baseClass} ${modeClass}`>
+  <slot />
+</section>

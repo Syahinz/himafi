@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+@import "tailwindcss";
+@source "../src";
+@theme {
+  /* COLOR */
+  --color-primary: #560b18;
+  --color-primary-darken: #3b010b;
+  --color-secondary: #fef19b;
+  --color-secondary-bright: #fdf8cf;
+  --color-neutralblack: #181717;
+  --color-neutralwhite: #f9f9f9;
+
+  /* font */
+  --font-heading: "Montserrat", sans-serif;
+  --font-subhead: "Playfair", serif;
+  --font-isi: "Plus Jakarta Sans", sans-serif;
+
+  --breakpoint-2xl: 1320px;
+
+  --animate-loop-scroll: loop-scroll 50s linear infinite;
+}
+
+.navbar {
+  @apply fixed top-6 w-full flex justify-center z-50;
+}
+.nav-container {
+  @apply bg-neutralwhite rounded-full box-border flex items-center justify-between shadow-lg px-6 py-3 w-9/10 lg:w-4/5 lg:h-20 md:justify-normal md:gap-10;
+}
+.navbar-icon {
+  @apply w-12 h-12 lg:w-16 lg:h-16;
+}
+
+.a-menu {
+  @apply font-bold text-lg hover:bg-primary-darken hover:text-neutralwhite p-3 rounded-full box-border transition delay-150 duration-300 ease-in-out;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: 0.5;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+.appear-anim {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0 cover 40%;
+}
+
+@keyframes loop-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}

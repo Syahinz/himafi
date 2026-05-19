@@ -1,0 +1,142 @@
+<nav
+  class="navbar flex justify-center z-50 fixed top-0 left-0 w-full transition-transform duration-300 ease-in-out"
+>
+  <!-- Container Pill Utama -->
+  <div class="nav-container relative z-20 w-full max-w-7xl">
+    <img src="../assets/logo/himafi.png" class="navbar-icon" alt="Logo" />
+
+    <!-- Menu Desktop -->
+    <div class="hidden md:flex">
+      <ul class="flex gap-8">
+        <li><a href="/" class="a-menu">Beranda</a></li>
+        <li><a href="/about" class="a-menu">Tentang</a></li>
+        <li><a href="/News" class="a-menu">Berita</a></li>
+        <li><a href="#" class="a-menu">Kontak</a></li>
+        <li><a href="#" class="a-menu">Utilitas</a></li>
+      </ul>
+    </div>
+
+    <!-- Tombol Hamburger Mobile -->
+    <div class="inset-y-0 left-0 flex items-center md:hidden">
+      <button
+        type="button"
+        id="hamburger"
+        aria-expanded="false"
+        class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-800 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-darken"
+      >
+        <span class="sr-only">Open main menu</span>
+        <!-- Ikon Garis Tiga (Menu) -->
+        <svg
+          id="icon-menu"
+          class="block h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          aria-hidden="true"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+        </svg>
+        <!-- Ikon Silang (X) -->
+        <svg
+          id="icon-close"
+          class="hidden h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          aria-hidden="true"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- BLOK MOBILE MENU (Dropdown)                -->
+  <!-- ========================================== -->
+  <div
+    id="mobile-menu"
+    class="hidden absolute top-full left-0 w-full px-4 mt-2 z-10 md:hidden"
+  >
+    <div
+      class="bg-white rounded-2xl shadow-xl ring-1 ring-black/5 px-4 pt-2 pb-4 space-y-2"
+    >
+      <a
+        href="/"
+        class="block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:bg-gray-100 hover:text-primary"
+        >Beranda</a
+      >
+      <a
+        href="/about"
+        class="block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:bg-gray-100 hover:text-primary"
+        >Tentang</a
+      >
+      <a
+        href="news"
+        class="block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:bg-gray-100 hover:text-primary"
+        >Program</a
+      >
+      <a
+        href="#"
+        class="block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:bg-gray-100 hover:text-primary"
+        >Kontak</a
+      >
+      <a
+        href="#"
+        class="block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:bg-gray-100 hover:text-primary"
+        >Utilitas</a
+      >
+    </div>
+  </div>
+  <!-- Akhir Blok Mobile Menu -->
+</nav>
+
+<script type="text/javascript">
+  // === Hamburger Menu ===
+  const btnHamburger = document.getElementById("hamburger");
+  const mobileMenu = document.getElementById("mobile-menu");
+  const iconMenu = document.getElementById("icon-menu");
+  const iconClose = document.getElementById("icon-close");
+
+  if (btnHamburger && mobileMenu && iconMenu && iconClose) {
+    btnHamburger.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+      iconMenu.classList.toggle("hidden");
+      iconClose.classList.toggle("hidden");
+      iconClose.classList.toggle("block");
+
+      const isExpanded = btnHamburger.getAttribute("aria-expanded") === "true";
+      btnHamburger.setAttribute("aria-expanded", String(!isExpanded));
+    });
+  }
+
+  // === Hide on Scroll Down, Show on Scroll Up ===
+  const navbar = document.querySelector("nav");
+  let lastScrollY = window.scrollY;
+
+  window.addEventListener("scroll", () => {
+    const currentScrollY = window.scrollY;
+
+    if (currentScrollY > lastScrollY && currentScrollY > 80) {
+      // Scroll ke bawah → sembunyikan navbar
+      navbar.style.transform = "translateY(-150%)";
+      // Tutup mobile menu juga kalau terbuka
+      mobileMenu?.classList.add("hidden");
+      iconMenu?.classList.remove("hidden");
+      iconClose?.classList.add("hidden");
+    } else {
+      // Scroll ke atas → tampilkan navbar
+      navbar.style.transform = "translateY(0)";
+    }
+
+    lastScrollY = currentScrollY;
+  });
+</script>

@@ -1,0 +1,154 @@
+---
+import Section from "./Section.astro";
+import H1 from "./H1.astro";
+import H2 from "./H2.astro";
+import Paragraph from "./Paragraph.astro";
+import { Image } from "astro:assets";
+import SamanvayaLogo from "../assets/logo/samanvaya.png";
+import raker from "../assets/images/raker.png";
+import praRaker from "../assets/images/pra-raker.jpg";
+import NewsCard from "../components/NewsCard.astro";
+import CTA from "./CTA.astro";
+import fotoNeiya from "../assets/images/Neiya.png";
+import fotoHarry from "../assets/images/Harry.png";
+import fotoPbak from "../assets/images/PBAK.jpg";
+import fotoRbtc from "../assets/images/Robotik.jpg";
+import fotoEkspe from "../assets/images/Ekspedisi.jpg";
+import fotoSpartival from "../assets/images/Spartival.jpg";
+import fotoTo from "../assets/images/Training-organization.jpg";
+import fotoPhyTon from "../assets/images/PHY-TON.jpg";
+import ProgramsCard from "../components/ProgramsCard.astro";
+
+const title = "HIMA";
+const subhead = `UIN syarif hidayatullah jakarta`;
+const spanTitle = "FI";
+---
+
+<Section mode="light">
+  <div
+    class="w-full pt-42 px-4 sm:px-8 md:px-16 lg:px-72 flex flex-col items-center md:flex-row"
+  >
+    <div class="md:w-1/2">
+      <H1 text={title} spanText={spanTitle} />
+      <H2 text={subhead} />
+      <Paragraph
+        text=`Kabinet Samanvaya hadir sebagai poros stabilitas dan sinergitas HIMAFI UIN Syarif Hidayatullah Jakarta. Kami berkomitmen penuhmewujudkan tata kelola organisasi yang integratif, akuntabel, dan profesional untuk menjalin kolaborasi strategis dengan berbagai kemitraan.`
+      />
+      <div class="w-fit mx-auto md:ml-9">
+        <CTA text="Get Started" mode="bright" Href="#" />
+      </div>
+    </div>
+    <div class="md:w-1/2">
+      <Image
+        src={SamanvayaLogo}
+        alt="Samanvaya"
+        class="max-w-xs md:max-w-lg object-contain mx-auto"
+      />
+    </div>
+  </div>
+</Section>
+
+<Section mode="dark">
+  <div class="w-full pt-10 flex flex-col items-center pb-20">
+    <div class="flex flex-col items-center">
+      <H1 text="Berita" mode="center" />
+    </div>
+    <div
+      class="mt-10 flex px-10 md:px-36 flex-wrap justify-center md:grid md:grid-cols-3 md:gap-7 sm:grid-cols-2 sm:gap-10"
+    >
+      <NewsCard
+        title="Raker"
+        date="17 Mei 2026"
+        img={raker}
+        content="Badan Pengurus Harian, Himpunan Mahasiswa Fisika (HIMAFI) UIN Syarif Hidayatullah Jakarta telah mengadakan kegiatan Evaluasi Kinerja Pengurus HIMAFI (EVAKUASI) 2025. "
+      />
+      <NewsCard
+        title="Pra-Raker"
+        date="10 Mei 2026"
+        img={praRaker}
+        content="Badan Pengurus Harian, Himpunan Mahasiswa Fisika (HIMAFI) UIN Syarif Hidayatullah Jakarta telah mengadakan kegiatan Evaluasi Kinerja Pengurus HIMAFI (EVAKUASI) 2025. "
+      />
+      <NewsCard
+        title="Gelora"
+        date="26 Mei 2026"
+        img={raker}
+        content="Badan Pengurus Harian, Himpunan Mahasiswa Fisika (HIMAFI) UIN Syarif Hidayatullah Jakarta telah mengadakan kegiatan Evaluasi Kinerja Pengurus HIMAFI (EVAKUASI) 2025. "
+      />
+    </div>
+    <CTA text="Lihat lebih banyak" Href="../pages/news.astro" mode="dark" />
+  </div>
+</Section>
+
+<Section mode="bright">
+  <div
+    class="flex flex-col py-10 items-center md:h-screen md:flex-row-reverse md:justify-between"
+  >
+    <div class="p-6 md:w-1/2 md:flex md:flex-col">
+      <H1 text="Struktur" />
+      <Paragraph
+        text="Dibalik setiap program kerja yang sukses, terdapat sinergi kuat dari
+        para pengurus HIMAFI. inilah jajaran struktur organisasi yang
+        berkomitmen untuk membawa perubahan positif dan menjadi wadah aspirasi
+        bagi seluruh mahasiswa"
+      />
+      <div class="w-fit mx-auto md:ml-9">
+        <CTA text="Learn more" mode="bright" Href="#" />
+      </div>
+    </div>
+    <div class="flex flex-col md:flex-row md:pl-10 md:gap-10">
+      <div>
+        <div
+          class="px-6 pt-6 backdrop-blur-md bg-white/30 border border-white/20 rounded-2xl shadow-lg appear-anim"
+        >
+          <Image
+            src={fotoNeiya}
+            alt="Neiya"
+            class="w-40 md:w-72 md:h-112 object-cover"
+          />
+        </div>
+        <h2 class="mt-2 text-center text-lg font-bold font-subhead">
+          Ketua Himpunan
+        </h2>
+        <p class="text-center font-isi">Na’ilah Zahra Putri Utomo</p>
+      </div>
+      <div>
+        <div
+          class="px-6 pt-6 backdrop-blur-md bg-white/30 border border-white/20 rounded-2xl shadow-lg appear-anim"
+        >
+          <Image
+            src={fotoHarry}
+            alt="Neiya"
+            class="w-40 md:w-72 md:h-112 object-cover"
+          />
+        </div>
+        <h2 class="mt-2 text-center text-lg font-bold font-subhead">
+          Wakil Ketua Himpunan
+        </h2>
+        <p class="text-center font-isi">Hary Caesar Setiawan</p>
+      </div>
+    </div>
+  </div>
+</Section>
+
+<Section mode="dark">
+  <div class="py-10">
+    <div class="">
+      <div class="hidden md:block pl-26"><H1 text="Program Kerja"  /></div>
+      <div class="md:hidden"><H1 text="Proker" /></div>
+      <div class="md:pl-26"><Paragraph text="Lkcnsaovovbdivbisvadovbavbdovadvbaovbadoi vsokv"></Paragraph></div>
+    </div>
+    <div
+      class="mt-10 flex px-10 md:px-36 flex-wrap justify-center md:grid md:grid-cols-3 md:gap-7 sm:grid-cols-2 sm:gap-10"
+    >
+      <ProgramsCard title="PBAK" img={fotoPbak} />
+      <ProgramsCard title="Robotik" img={fotoRbtc} />
+      <ProgramsCard title="Ekspedisi" img={fotoEkspe} />
+      <ProgramsCard title="Spartival" img={fotoSpartival} />
+      <ProgramsCard title="Training Organization" img={fotoTo} />
+      <ProgramsCard title="Phy-ton" img={fotoPhyTon} />
+    </div>
+    <div class="w-fit mx-auto ">
+      <CTA text="Learn more" mode="dark" Href="#" />
+    </div>
+  </div>
+</Section>
