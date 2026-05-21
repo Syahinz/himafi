@@ -104,44 +104,61 @@ import { Image } from "astro:assets";
   <!-- Akhir Blok Mobile Menu -->
 </nav>
 
-<script type="text/javascript" is:inline>
-  // === Hamburger Menu ===
-  const btnHamburger = document.getElementById("hamburger");
-  const mobileMenu = document.getElementById("mobile-menu");
-  const iconMenu = document.getElementById("icon-menu");
-  const iconClose = document.getElementById("icon-close");
+<script>
+  function init() {
+    // === Hamburger Menu ===
+    const btnHamburger = document.getElementById(
+      "hamburger",
+    ) as HTMLButtonElement;
+    const mobileMenu = document.getElementById("mobile-menu") as HTMLElement;
+    const iconMenu = document.getElementById("icon-menu") as HTMLElement;
+    const iconClose = document.getElementById("icon-close") as HTMLElement;
+    const navbar = document.querySelector("nav") as HTMLElement;
 
-  if (btnHamburger && mobileMenu && iconMenu && iconClose) {
-    btnHamburger.addEventListener("click", () => {
+    if (!btnHamburger || !mobileMenu || !iconMenu || !iconClose || !navbar)
+      return;
+
+    // Clone button untuk cegah double event listener
+    const newBtn = btnHamburger.cloneNode(true) as HTMLButtonElement;
+    btnHamburger.parentNode!.replaceChild(newBtn, btnHamburger);
+
+    newBtn.addEventListener("click", () => {
       mobileMenu.classList.toggle("hidden");
       iconMenu.classList.toggle("hidden");
       iconClose.classList.toggle("hidden");
       iconClose.classList.toggle("block");
 
-      const isExpanded = btnHamburger.getAttribute("aria-expanded") === "true";
-      btnHamburger.setAttribute("aria-expanded", String(!isExpanded));
+      const isExpanded = newBtn.getAttribute("aria-expanded") === "true";
+      newBtn.setAttribute("aria-expanded", String(!isExpanded));
     });
+
+    // === Hide on Scroll Down, Show on Scroll Up ===
+    let lastScrollY = window.scrollY;
+
+    // Clone window scroll juga biar tidak numpuk tiap navigasi
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY && currentScrollY > 80) {
+        navbar.style.transform = "translateY(-150%)";
+        mobileMenu.classList.add("hidden");
+        iconMenu.classList.remove("hidden");
+        iconClose.classList.add("hidden");
+      } else {
+        navbar.style.transform = "translateY(0)";
+      }
+
+      lastScrollY = currentScrollY;
+    };
+
+    // Hapus scroll listener lama sebelum pasang baru
+    window.removeEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll);
   }
 
-  // === Hide on Scroll Down, Show on Scroll Up ===
-  const navbar = document.querySelector("nav");
-  let lastScrollY = window.scrollY;
+  // First load
+  init();
 
-  window.addEventListener("scroll", () => {
-    const currentScrollY = window.scrollY;
-
-    if (currentScrollY > lastScrollY && currentScrollY > 80) {
-      // Scroll ke bawah → sembunyikan navbar
-      navbar.style.transform = "translateY(-150%)";
-      // Tutup mobile menu juga kalau terbuka
-      mobileMenu?.classList.add("hidden");
-      iconMenu?.classList.remove("hidden");
-      iconClose?.classList.add("hidden");
-    } else {
-      // Scroll ke atas → tampilkan navbar
-      navbar.style.transform = "translateY(0)";
-    }
-
-    lastScrollY = currentScrollY;
-  });
+  // Setelah navigasi antar halaman (View Transitions)
+  document.addEventListener("astro:after-swap", init);
 </script>
