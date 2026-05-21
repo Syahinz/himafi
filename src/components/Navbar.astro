@@ -1,16 +1,21 @@
+---
+import himafiLogo from "../assets/logo/himafi.png";
+import { Image } from "astro:assets";
+---
+
 <nav
   class="navbar flex justify-center z-50 fixed top-0 left-0 w-full transition-transform duration-300 ease-in-out"
 >
   <!-- Container Pill Utama -->
   <div class="nav-container relative z-20 w-full max-w-7xl">
-    <img src="/src/assets/logo/himafi.png" class="navbar-icon" alt="Logo" />
+    <Image src={himafiLogo} class="navbar-icon" alt="Logo" />
 
     <!-- Menu Desktop -->
     <div class="hidden md:flex">
       <ul class="flex gap-8">
         <li><a href="/" class="a-menu">Beranda</a></li>
         <li><a href="/about" class="a-menu">Tentang</a></li>
-        <li><a href="/News" class="a-menu">Berita</a></li>
+        <li><a href="/news" class="a-menu">Berita</a></li>
         <li><a href="#" class="a-menu">Kontak</a></li>
         <li><a href="#" class="a-menu">Utilitas</a></li>
       </ul>
@@ -80,7 +85,7 @@
         >Tentang</a
       >
       <a
-        href="news"
+        href="/news"
         class="block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:bg-gray-100 hover:text-primary"
         >Program</a
       >
@@ -99,7 +104,7 @@
   <!-- Akhir Blok Mobile Menu -->
 </nav>
 
-<script type="text/javascript">
+<script type="text/javascript" is:inline>
   // === Hamburger Menu ===
   const btnHamburger = document.getElementById("hamburger");
   const mobileMenu = document.getElementById("mobile-menu");

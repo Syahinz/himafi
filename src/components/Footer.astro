@@ -1,5 +1,6 @@
 ---
-import logoHimafi from '../assets/Himafi.png';
+import himafiLogo from "../assets/logo/himafi.png";
+import { Image } from "astro:assets";
 ---
 
 <footer class="bg-green-900">
@@ -30,7 +31,7 @@ import logoHimafi from '../assets/Himafi.png';
     <div class="lg:flex lg:items-end lg:justify-between">
       <div>
         <div class="flex justify-center lg:justify-start items-center gap-3">
-          <img src="/src/assets/logo/himafi.png" class="w-20" alt="logo" />
+          <Image src={himafiLogo} class="w-20" alt="logo" />
           <p class="text-secondary-bright font-bold text-2xl">HIMAFI</p>
         </div>
 

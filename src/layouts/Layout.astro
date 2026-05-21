@@ -1,8 +1,9 @@
 ---
 const { Pagetitle = `HIMAFI` } = Astro.props;
 import "../styles/global.css";
+import Footer from "../components/Footer.astro";
 import { Image } from "astro:assets";
-import { ClientRouter } from 'astro:transitions';
+import { ClientRouter } from "astro:transitions";
 import Navbar from "../components/Navbar.astro";
 ---
 
@@ -24,8 +25,9 @@ import Navbar from "../components/Navbar.astro";
     <title>{Pagetitle} | HIMAFI</title>
   </head>
   <body>
-    <Navbar/>
+    <Navbar />
     <slot />
-    <ClientRouter/>
+    <Footer />
+    <ClientRouter />
   </body>
 </html>
