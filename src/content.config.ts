@@ -1,11 +1,10 @@
-import { file } from "astro/loaders";
+import { glob } from "astro/loaders";
 import { defineCollection } from "astro:content";
 import { z } from "astro/zod";
 
 const news = defineCollection({
-  loader: file("src/content/news.json"),
+  loader: glob({ base: "src/content/news", pattern: "*.mdx" }),
   schema: z.object({
-    id: z.string(),
     title: z.string(),
     date: z.string(),
     author: z.string(),
