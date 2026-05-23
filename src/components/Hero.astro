@@ -18,10 +18,11 @@ import fotoSpartival from "../assets/images/Spartival.jpg";
 import fotoTo from "../assets/images/Training-organization.jpg";
 import fotoPhyTon from "../assets/images/PHY-TON.jpg";
 import ProgramsCard from "../components/ProgramsCard.astro";
-
+import { getCollection } from "astro:content";
 const title = "HIMA";
 const subhead = `UIN syarif hidayatullah jakarta`;
 const spanTitle = "FI";
+const news = await getCollection("news");
 ---
 
 <Section mode="light">
@@ -49,31 +50,15 @@ const spanTitle = "FI";
 </Section>
 
 <Section mode="dark">
-  <div class="w-full pt-10 flex flex-col items-center pb-20">
+  <div class="w-full pt-36 flex flex-col items-center pb-20 md:pb-0  ">
     <div class="flex flex-col items-center">
       <H1 text="Berita" mode="center" />
     </div>
     <div
       class="mt-10 flex px-10 md:px-36 flex-wrap justify-center md:grid md:grid-cols-3 md:gap-7 sm:grid-cols-2 sm:gap-10"
     >
-      <NewsCard
-        title="Raker"
-        date="17 Mei 2026"
-        img={raker}
-        content="Badan Pengurus Harian, Himpunan Mahasiswa Fisika (HIMAFI) UIN Syarif Hidayatullah Jakarta telah mengadakan kegiatan Evaluasi Kinerja Pengurus HIMAFI (EVAKUASI) 2025. "
-      />
-      <NewsCard
-        title="Pra-Raker"
-        date="10 Mei 2026"
-        img={praRaker}
-        content="Badan Pengurus Harian, Himpunan Mahasiswa Fisika (HIMAFI) UIN Syarif Hidayatullah Jakarta telah mengadakan kegiatan Evaluasi Kinerja Pengurus HIMAFI (EVAKUASI) 2025. "
-      />
-      <NewsCard
-        title="Gelora"
-        date="26 Mei 2026"
-        img={raker}
-        content="Badan Pengurus Harian, Himpunan Mahasiswa Fisika (HIMAFI) UIN Syarif Hidayatullah Jakarta telah mengadakan kegiatan Evaluasi Kinerja Pengurus HIMAFI (EVAKUASI) 2025. "
-      />
+      {news.map((report) => <NewsCard report={report} />)}
+      {news.length < 1 && <Paragraph text="Ga ada berita kawan " />}
     </div>
     <CTA text="Lihat lebih banyak" Href="../pages/news.astro" mode="dark" />
   </div>
@@ -133,9 +118,11 @@ const spanTitle = "FI";
 <Section mode="dark">
   <div class="py-10">
     <div class="">
-      <div class="hidden md:block pl-26"><H1 text="Program Kerja"  /></div>
+      <div class="hidden md:block pl-26"><H1 text="Program Kerja" /></div>
       <div class="md:hidden"><H1 text="Proker" /></div>
-      <div class="md:pl-26"><Paragraph text="Lkcnsaovovbdivbisvadovbavbdovadvbaovbadoi vsokv"></Paragraph></div>
+      <div class="md:pl-26">
+        <Paragraph text="Lkcnsaovovbdivbisvadovbavbdovadvbaovbadoi vsokv" />
+      </div>
     </div>
     <div
       class="mt-10 flex px-10 md:px-36 flex-wrap justify-center md:grid md:grid-cols-3 md:gap-7 sm:grid-cols-2 sm:gap-10"
@@ -147,7 +134,7 @@ const spanTitle = "FI";
       <ProgramsCard title="Training Organization" img={fotoTo} />
       <ProgramsCard title="Phy-ton" img={fotoPhyTon} />
     </div>
-    <div class="w-fit mx-auto ">
+    <div class="w-fit mx-auto">
       <CTA text="Learn more" mode="dark" Href="#" />
     </div>
   </div>
