@@ -8,7 +8,15 @@ import { Image } from "astro:assets";
 >
   <!-- Container Pill Utama -->
   <div class="nav-container relative z-20 w-full max-w-7xl">
-    <Image src={himafiLogo} class="navbar-icon" alt="Logo" />
+    <a href="/"
+      ><Image
+        src={himafiLogo}
+        class="navbar-icon"
+        alt="Logo"
+        loading="eager"
+        fetchpriority="high"
+      /></a
+    >
 
     <!-- Menu Desktop -->
     <div class="hidden md:flex">

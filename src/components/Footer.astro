@@ -1,93 +1,119 @@
 ---
 import himafiLogo from "../assets/logo/himafi.png";
 import { Image } from "astro:assets";
+import Paragraph from "./Paragraph.astro";
 ---
 
-<footer class="bg-green-900">
-  <div class="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:pt-24">
-    <div
-      class="absolute inset-e-4 top-4 sm:inset-e-6 sm:top-6 lg:inset-e-8 lg:top-8"
-    >
-      <a
-        class="inline-block rounded-full bg-primary p-2 text-secondary shadow-sm transition hover:bg-neutralblack sm:p-3 lg:p-4 dark:bg-secondary-bright dark:text-primary-darken dark:hover:bg-neutralwhite"
-        href="#"
-      >
-        <span class="sr-only">Back to top</span>
-
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="size-5"
-          viewBox="0 0 20 20"
-          fill="currentColor"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z"
-            clip-rule="evenodd"></path>
-        </svg>
-      </a>
-    </div>
-
-    <div class="lg:flex lg:items-end lg:justify-between">
-      <div>
-        <div class="flex justify-center lg:justify-start items-center gap-3">
-          <Image src={himafiLogo} class="w-20" alt="logo" />
-          <p class="text-secondary-bright font-bold text-2xl">HIMAFI</p>
-        </div>
-
-        <p
-          class="mx-auto mt-6 max-w-md text-center leading-relaxed text-secondary-bright lg:text-left"
-        >
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt
-          consequuntur amet culpa cum itaque neque.
+<footer class="bg-green-900 text-neutralwhite">
+  <div class="mx-auto w-full max-w-7xl p-4 py-6 lg:py-8">
+    <div class="md:flex md:justify-between">
+      <div class="mb-6 md:mb-0">
+        <a href="/" class="flex items-center">
+          <Image src={himafiLogo} class="w-20 me-3" alt="HIMAFI" />
+          <span
+            class="text-heading self-center font-heading text-2xl font-semibold whitespace-nowrap"
+            >HIMAFI</span
+          >
+        </a>
+        <p class="mt-4 container max-w-md">
+          LT 7 Gedung FST UIN Jakarta, UIN Jakarta, Jl. Lkr. Kampus 1, Cempaka
+          Putih, Ciputat Timur, Kota Tangerang Selatan, Banten 15412
         </p>
       </div>
-
-      <ul
-        class="mt-12 flex flex-wrap justify-center gap-6 md:gap-8 lg:mt-0 lg:justify-end lg:gap-12"
-      >
-        <li>
-          <a
-            class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75"
-            href="about"
-          >
-            Tentang
-          </a>
-        </li>
-
-        <li>
-          <a
-            class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75"
-            href="/news"
-          >
-            Berita
-          </a>
-        </li>
-
-        <li>
-          <a
-            class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75"
-            href="#"
-          >
-            Kontak
-          </a>
-        </li>
-
-        <li>
-          <a
-            class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75"
-            href="#"
-          >
-            Utilitas
-          </a>
-        </li>
-      </ul>
+      <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+        <div>
+          <h2 class="mb-6 text-sm font-semibold text-heading uppercase">
+            Halaman
+          </h2>
+          <ul class="text-body font-medium">
+            <li class="mb-4">
+              <a href="/" class="hover:underline">Beranda</a>
+            </li>
+            <li>
+              <a href="/about" class="hover:underline">Tentang</a>
+            </li>
+            <li>
+              <a href="/news" class="hover:underline">Berita</a>
+            </li>
+            <li>
+              <a href="/" class="hover:underline">Kontak</a>
+            </li>
+            <li>
+              <a href="/" class="hover:underline">Utilitas</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="mb-6 text-sm font-semibold text-heading uppercase">
+            Lihat juga
+          </h2>
+          <ul class="text-body font-medium">
+            <li class="mb-4">
+              <a
+                href="https://fst.uinjkt.ac.id/id/kegiatan-dema-fst"
+                class="hover:underline">Fakultas Sains dan Teknologi</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.instagram.com/demafst_uinjkt/"
+                class="hover:underline">Dema FST UIN Jakarta</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
-
-    <p
-      class="mt-12 text-center text-sm text-gray-500 lg:text-right dark:text-gray-400"
-    >
-      Copyright © 2026. All rights reserved.
-    </p>
+    <hr class="my-6 border-default sm:mx-auto lg:my-8" />
+    <div class="sm:flex sm:items-center sm:justify-between">
+      <span class="text-sm text-body sm:text-center"
+        >© 2026 <a href="/" class="hover:underline">HIMAFI™</a>. All Rights
+        Reserved.
+      </span>
+      <div class="flex mt-4 sm:justify-center sm:mt-0">
+        <a
+          href="https://www.instagram.com/himafi.uinjkt/"
+          class="text-body hover:text-heading ms-5"
+          target="_blank"
+        >
+          <img
+            src="/src/assets/logo/instagram.svg"
+            width="24"
+            height="24"
+            class="w-5 h-5"
+            alt="instagram"
+          />
+          <span class="sr-only">Instagram</span>
+        </a>
+        <a
+          href="https://www.youtube.com/@himafiuinjakarta"
+          class="text-body hover:text-heading ms-5"
+          target="_blank"
+        >
+          <img
+            src="/src/assets/logo/youtube.svg"
+            width="24"
+            height="24"
+            class="w-5 h-5"
+            alt="youtube"
+          />
+          <span class="sr-only">Youtube</span>
+        </a>
+        <a
+          href="https://www.tiktok.com/@himafi.uinjkt"
+          class="text-body hover:text-heading ms-5"
+          target="_blank"
+        >
+          <img
+            src="/src/assets/logo/tiktok.svg"
+            width="24"
+            height="24"
+            class="w-5 h-5"
+            alt="tiktok"
+          />
+          <span class="sr-only">tiktok</span>
+        </a>
+      </div>
+    </div>
   </div>
 </footer>

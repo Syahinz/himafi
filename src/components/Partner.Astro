@@ -1,0 +1,177 @@
+---
+import { Image } from "astro:assets";
+import kalacitraLogo from "../assets/logo/kalacitra.webp";
+import forsaLogo from "../assets/logo/Forsa.jpg";
+import himafiUnsriLogo from "../assets/logo/HIMAFI-Unsri.jpeg";
+import himatansiUnjam from "../assets//logo/himatansi-unja.jpg";
+import himkaUinjktLogo from "../assets/logo/HIMKA-Uinjkt.png";
+import himsiUinjktLogo from "../assets/logo/HIMSI-UINJKT.jpg";
+import himtiUinjktLogo from "../assets/logo/HIMTI-UINJKT.webp";
+import hmjAgriUinjktLogo from "../assets/logo/HMJ-Agri-UINKT.jpg";
+import pufaLogo from "../assets/logo/pufa.png";
+---
+
+<section
+  class="bg-secondary-bright flex flex-col py-10 text-primary-darken items-center md:justify-between overflow-x-hidden"
+>
+  <div>
+    <h1 class="headline-text-center text-4xl md:block font-bold">
+      Our Partner
+    </h1>
+  </div>
+
+  <!-- Wrapper animasi, space-x gw kecilin dikit di HP (8) dan gedein di Desktop (16) -->
+  <div class="flex space-x-8 md:space-x-16 overflow-hidden w-full mt-8">
+    <!-- UL Pertama (tambahin shrink-0) -->
+    <ul
+      class="flex space-x-8 md:space-x-16 animate-loop-scroll shrink-0 items-center"
+    >
+      <li class="shrink-0">
+        <Image
+          src={kalacitraLogo}
+          class="w-28 h-14 md:w-40 md:h-20 max-w-none object-contain"
+          alt="kalacitra"
+        />
+      </li>
+
+      <li class="shrink-0">
+        <Image
+          src={forsaLogo}
+          class="w-28 h-14 md:w-40 md:h-20 max-w-none object-contain"
+          alt="Forsa Uinjkt"
+        />
+      </li>
+
+      <li class="shrink-0">
+        <Image
+          src={himafiUnsriLogo}
+          class="w-28 h-14 md:w-40 md:h-20 max-w-none object-contain"
+          alt="HIMAFI UNSRI"
+        />
+      </li>
+
+      <li class="shrink-0">
+        <Image
+          src={himkaUinjktLogo}
+          class="w-28 h-14 md:w-40 md:h-20 max-w-none object-contain"
+          alt="himkaUinjktLogo"
+        />
+      </li>
+
+      <li class="shrink-0">
+        <Image
+          src={himatansiUnjam}
+          class="w-28 h-14 md:w-40 md:h-20 max-w-none object-contain"
+          alt="UIN Jakarta"
+        />
+      </li>
+
+      <li class="shrink-0">
+        <Image
+          src={himsiUinjktLogo}
+          class="w-28 h-14 md:w-40 md:h-20 max-w-none object-contain"
+          alt="himsiUinjktLogo"
+        />
+      </li>
+
+      <li class="shrink-0">
+        <Image
+          src={himtiUinjktLogo}
+          class="w-28 h-14 md:w-40 md:h-20 max-w-none object-contain"
+          alt="himtiUinjktLogo"
+        />
+      </li>
+      <li class="shrink-0">
+        <Image
+          src={hmjAgriUinjktLogo}
+          class="w-28 h-14 md:w-40 md:h-20 max-w-none object-contain"
+          alt="hmjAgriUinjktLogo"
+        />
+      </li>
+      <li class="shrink-0">
+        <Image
+          src={pufaLogo}
+          class="w-28 h-14 md:w-40 md:h-20 max-w-none object-contain"
+          alt="pufa"
+        />
+      </li>
+    </ul>
+
+    <!-- UL Kedua (Duplikat buat looping, tambahin shrink-0 juga) -->
+    <ul
+      class="flex space-x-8 md:space-x-16 animate-loop-scroll shrink-0 items-center"
+      aria-hidden="true"
+    >
+      <li class="shrink-0">
+        <Image
+          src={kalacitraLogo}
+          class="w-28 h-14 md:w-40 md:h-20 max-w-none object-contain"
+          alt="kalacitra"
+        />
+      </li>
+
+      <li class="shrink-0">
+        <Image
+          src={forsaLogo}
+          class="w-28 h-14 md:w-40 md:h-20 max-w-none object-contain"
+          alt="Forsa Uinjkt"
+        />
+      </li>
+
+      <li class="shrink-0">
+        <Image
+          src={himafiUnsriLogo}
+          class="w-28 h-14 md:w-40 md:h-20 max-w-none object-contain"
+          alt="HIMAFI UNSRI"
+        />
+      </li>
+
+      <li class="shrink-0">
+        <Image
+          src={himkaUinjktLogo}
+          class="w-28 h-14 md:w-40 md:h-20 max-w-none object-contain"
+          alt="himkaUinjktLogo"
+        />
+      </li>
+
+      <li class="shrink-0">
+        <Image
+          src={himatansiUnjam}
+          class="w-28 h-14 md:w-40 md:h-20 max-w-none object-contain"
+          alt="UIN Jakarta"
+        />
+      </li>
+
+      <li class="shrink-0">
+        <Image
+          src={himsiUinjktLogo}
+          class="w-28 h-14 md:w-40 md:h-20 max-w-none object-contain"
+          alt="himsiUinjktLogo"
+        />
+      </li>
+
+      <li class="shrink-0">
+        <Image
+          src={himtiUinjktLogo}
+          class="w-28 h-14 md:w-40 md:h-20 max-w-none object-contain"
+          alt="himtiUinjktLogo"
+        />
+      </li>
+      <li class="shrink-0">
+        <Image
+          src={hmjAgriUinjktLogo}
+          class="w-28 h-14 md:w-40 md:h-20 max-w-none object-contain"
+          alt="hmjAgriUinjktLogo"
+        />
+      </li>
+      <li class="shrink-0">
+        <Image
+          src={pufaLogo}
+          class="w-28 h-14 md:w-40 md:h-20 max-w-none object-contain"
+          alt="pufa"
+        />
+      </li>
+    </ul>
+  </div>
+</section>
+<!-- parters -->

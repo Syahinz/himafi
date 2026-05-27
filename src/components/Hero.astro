@@ -2,11 +2,14 @@
 import Section from "./Section.astro";
 import H1 from "./H1.astro";
 import H2 from "./H2.astro";
+
 import Paragraph from "./Paragraph.astro";
 import { Image } from "astro:assets";
 import SamanvayaLogo from "../assets/logo/samanvaya.png";
 import NewsCard from "../components/NewsCard.astro";
+
 import NewsSection from "./newsSection.astro";
+import Partner from "./Partner.astro";
 import CTA from "./CTA.astro";
 import fotoNeiya from "../assets/images/Neiya.png";
 import fotoHarry from "../assets/images/Harry.png";
@@ -17,6 +20,7 @@ import fotoSpartival from "../assets/images/Spartival.jpg";
 import fotoTo from "../assets/images/Training-organization.jpg";
 import fotoPhyTon from "../assets/images/PHY-TON.jpg";
 import ProgramsCard from "../components/ProgramsCard.astro";
+
 import { getCollection } from "astro:content";
 const title = "HIMA";
 const subhead = `UIN syarif hidayatullah jakarta`;
@@ -35,7 +39,7 @@ const news = await getCollection("news");
         text=`Kabinet Samanvaya hadir sebagai poros stabilitas dan sinergitas HIMAFI UIN Syarif Hidayatullah Jakarta. Kami berkomitmen penuhmewujudkan tata kelola organisasi yang integratif, akuntabel, dan profesional untuk menjalin kolaborasi strategis dengan berbagai kemitraan.`
       />
       <div class="w-fit mx-auto md:ml-9">
-        <CTA text="Get Started" mode="bright" Href="#" />
+        <CTA mode="bright" Href="#" />
       </div>
     </div>
     <div class="md:w-1/2">
@@ -43,13 +47,17 @@ const news = await getCollection("news");
         src={SamanvayaLogo}
         alt="Samanvaya"
         class="max-w-xs md:max-w-lg object-contain mx-auto"
+        loading="eager"
+        fetchpriority="high"
       />
     </div>
   </div>
 </Section>
 
 <Section mode="dark">
-  <div class="w-full pt-36 flex flex-col items-center pb-20 md:pb-0">
+  <div
+    class="w-full pt-36 px-4 sm:px-8 md:px-16 lg:px-24 flex flex-col items-center pb-20 md:pb-0"
+  >
     <div class="flex flex-col items-center">
       <H1 text="Berita" mode="center" />
     </div>
@@ -65,7 +73,7 @@ const news = await getCollection("news");
 
 <Section mode="bright">
   <div
-    class="flex flex-col py-10 items-center md:h-screen md:flex-row-reverse md:justify-between"
+    class="px-4 sm:px-8 md:px-16 lg:px-42 flex flex-col py-10 items-center md:h-screen md:flex-row-reverse md:justify-between"
   >
     <div class="p-6 md:w-1/2 md:flex md:flex-col">
       <H1 text="Struktur" />
@@ -76,7 +84,7 @@ const news = await getCollection("news");
         bagi seluruh mahasiswa"
       />
       <div class="w-fit mx-auto md:ml-9">
-        <CTA text="Learn more" mode="bright" Href="#" />
+        <CTA mode="bright" Href="#" />
       </div>
     </div>
     <div class="flex flex-col md:flex-row md:pl-10 md:gap-10">
@@ -115,26 +123,53 @@ const news = await getCollection("news");
 </Section>
 
 <Section mode="dark">
-  <div class="py-10">
+  <div class="py-10 px-4 sm:px-8 md:px-16 lg:px-20">
     <div class="">
       <div class="hidden md:block pl-26"><H1 text="Program Kerja" /></div>
       <div class="md:hidden"><H1 text="Proker" /></div>
       <div class="md:pl-26">
-        <Paragraph text="Lkcnsaovovbdivbisvadovbavbdovadvbaovbadoi vsokv" />
+        <Paragraph
+          text="Program Kerja HIMAFI disusun dan dikaji secara matang oleh masing-masing departemen HIMAFI"
+        />
       </div>
     </div>
     <div
       class="mt-10 flex px-10 md:px-36 flex-wrap justify-center md:grid md:grid-cols-3 md:gap-7 sm:grid-cols-2 sm:gap-10"
     >
-      <ProgramsCard title="PBAK" img={fotoPbak} />
-      <ProgramsCard title="Robotik" img={fotoRbtc} />
-      <ProgramsCard title="Ekspedisi" img={fotoEkspe} />
-      <ProgramsCard title="Spartival" img={fotoSpartival} />
-      <ProgramsCard title="Training Organization" img={fotoTo} />
-      <ProgramsCard title="Phy-ton" img={fotoPhyTon} />
+      <ProgramsCard
+        title="PBAK"
+        content="Pengenalan Budaya Akademik"
+        img={fotoPbak}
+      />
+      <ProgramsCard
+        title="Robotik"
+        content="Klub Robotik HIMAFI"
+        img={fotoRbtc}
+      />
+      <ProgramsCard
+        title="Ekspedisi"
+        content="Eksplorasi Pengenalan Edukasi Fisika"
+        img={fotoEkspe}
+      />
+      <ProgramsCard
+        title="Spartival"
+        content="Sport and Art Festival"
+        img={fotoSpartival}
+      />
+      <ProgramsCard
+        title="Training Organization"
+        content="Pelatihan Organisasi dan Kepemimpinan"
+        img={fotoTo}
+      />
+      <ProgramsCard
+        title="Phy-ton"
+        content="Penggalangan dana bagi anak-anak panti asuhan"
+        img={fotoPhyTon}
+      />
     </div>
     <div class="w-fit mx-auto">
       <CTA text="Learn more" mode="dark" Href="#" />
     </div>
   </div>
 </Section>
+<Partner />
