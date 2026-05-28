@@ -60,7 +60,7 @@ const authorImg = findImage(memberImages, report.data.authorPic);
 
 <Layout Pagetitle={report.data.title}>
   <div
-    class="relative w-full h-64 sm:h-80 lg:h-96 overflow-hidden bg-[#1A1A2E]"
+    class="relative w-full h-64 sm:h-80 lg:h-96 overflow-hidden bg-primary-darken"
   >
     <!-- Gambar artikel (ganti path sesuai struktur aset kamu) -->
     {docImg ? <Image src={docImg} alt={report.data.title} class="w-full h-full object-cover opacity-50" onerror="his.style.display='none'"/>
@@ -76,12 +76,12 @@ const authorImg = findImage(memberImages, report.data.authorPic);
     <!-- Label kategori + judul di atas gambar -->
     <div class="absolute bottom-0 left-0 right-0 p-6 sm:p-10 max-w-4xl">
       <span
-        class="inline-block bg-[#E8C547] text-[#1A1A2E] text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-sm mb-3"
+        class="inline-block font-subhead bg-teritary text-[#1A1A2E] text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-sm mb-3"
       >
         {report.data.produced}
       </span>
       <h1
-        class="font-['Playfair_Display'] text-white text-2xl sm:text-3xl lg:text-4xl font-black leading-tight"
+        class="font-heading text-white text-2xl sm:text-3xl lg:text-4xl font-black leading-tight"
       >
         {report.data.title}
       </h1>
@@ -89,7 +89,7 @@ const authorImg = findImage(memberImages, report.data.authorPic);
   </div>
 
   <!-- ░░ KONTEN UTAMA ░░ -->
-  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+  <main class="max-w-7xl  mx-auto px-4 sm:px-6 lg:px-8 py-10">
     <div class="flex flex-col lg:flex-row gap-10">
       <!-- ══ KOLOM KIRI: ARTIKEL ══ -->
       <article class="flex-1 min-w-0">
@@ -119,7 +119,7 @@ const authorImg = findImage(memberImages, report.data.authorPic);
 
         <!-- Lead / deskripsi singkat -->
         <p
-          class="font-['Plus_Jakarta_Sans'] text-base sm:text-lg text-[#1A1A2E]/70 leading-relaxed mb-8 italic border-l-4 border-[#E8C547] pl-4"
+          class="font-subhead text-base sm:text-lg text-[#1A1A2E]/70 leading-relaxed mb-8 italic border-l-4 border-teritary pl-4"
         >
           {report.data.Description}
         </p>
@@ -141,7 +141,7 @@ const authorImg = findImage(memberImages, report.data.authorPic);
     prose-p:font-['Plus_Jakarta_Sans'] prose-p:text-[#3A3A4E] prose-p:text-base
     prose-strong:text-[#1A1A2E] prose-strong:font-semibold
     prose-blockquote:border-l-[#E8C547] prose-blockquote:text-[#1A1A2E]/60
-    prose-img:rounded-lg prose-img:shadow-md"
+    prose-img:rounded-lg prose-img:shadow-md "
         >
           <Content />
         </div>
@@ -170,7 +170,7 @@ const authorImg = findImage(memberImages, report.data.authorPic);
           </div>
           <a
             href=`/news`
-            class="text-sm font-semibold text-[#1A1A2E] hover:text-[#E8C547] transition-colors flex items-center gap-1"
+            class="text-sm font-semibold text-[#1A1A2E] hover:text-teritary transition-colors flex items-center gap-1"
           >
             ← Lihat semua artikel
           </a>

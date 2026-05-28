@@ -2,18 +2,63 @@
 import Layout from "../layouts/Layout.astro";
 import Section from "../components/Section.astro";
 import H1 from "../components/H1.astro";
+import H3 from "../components/H3.astro";
+import CTA from "../components/CTA.astro";
 import Paragraph from "../components/Paragraph.astro";
+import BentoGrid from "../components/BentoGrid.astro";
+import Sample1 from "../assets/images/Training-organization.jpg";
+import { Image } from "astro:assets";
+import H2 from "../components/H2.astro";
 const title = `Tentang`;
 ---
 
 <Layout Pagetitle={title}>
-  <Section>
+  <Section direct="about">
     <div class="pt-36 px-4 sm:px-8 md:px-16 lg:px-72">
       <H1 text="TENTANG" mode="center" />
       <Paragraph
-        text="HIMAFI bukan sekadar organisasi, tetapi ruang bagi mahasiswa fisika untuk belajar, berkolaborasi, dan berkembang bersama. dengan semangat sinergi dan kebersamaan, HIMAFI hadir untuk mengembangkan potensi anggota serta memberi dampak positif bagi lingkungan akademik dan masyarakat."
+        text="Beragam dalam Peran, Bersatu dalam Tujuan"
         mode="center"
       />
     </div>
+    <BentoGrid />
   </Section>
+  <Section mode="dark" direct="history">
+    <div
+      class="pt-20 pb-20 md:pb-0 md:pt-36 px-10 md:px-16 lg:px-72 flex flex-col md:flex-row gap-6 md:gap-16 justify-between items-center "
+    >
+      <div class="md:w-1/2 flex flex-col justify-center items-center bg-secondary-bright md:p-16 p-6 rounded-2xl text-primary appear-anim">
+        <H3 text="VISI" />
+        <p
+          class="leading-relaxed mt-4 text-md font-isi md:px-10 lg:text-xl text-justify"
+        >
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam
+          expedita reiciendis perspiciatis nobis alias, mollitia natus
+          quibusdam,
+        </p>
+        <br class="mt-10" />
+        <H3 text="MISI" />
+        <ol
+          class="leading-relaxed mt-4 ml-4 text-md font-isi md:px-10 lg:text-xl text-justify list-decimal"
+        >
+          <li>Lorem ipsum dolor sit amet consectetur a</li>
+          <li>Lorem ipsum dolor sit amet consectetur a</li>
+          <li>Lorem ipsum dolor sit amet consectetur a</li>
+          <li>Lorem ipsum dolor sit amet consectetur a</li>
+        </ol>
+      </div>
+      <div class="md:w-1/2 flex flex-col items-center bg-secondary-bright text-primary rounded-2xl md:p-16 p-6 appear-anim" >
+        <H3 text="Tujuan" mode="center" />
+        <ol
+          class="leading-relaxed mt-4 ml-4 text-md font-isi md:px-10 lg:text-xl text-justify list-decimal"
+        >
+          <li>Lorem ipsum dolor sit amet consectetur a</li>
+          <li>Lorem ipsum dolor sit amet consectetur a</li>
+          <li>Lorem ipsum dolor sit amet consectetur a</li>
+          <li>Lorem ipsum dolor sit amet consectetur a</li>
+        </ol>
+      </div>
+    </div>
+  </Section>
+  <Section mode="bright" direct="structure" />
 </Layout>

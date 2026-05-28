@@ -1,5 +1,7 @@
 ---
 import himafiLogo from "../assets/logo/himafi.png";
+import uinLogo from "../assets/logo/uin-jakarta.png";
+import fstLogo from "../assets/logo/fstLogo.png";
 import { Image } from "astro:assets";
 import Paragraph from "./Paragraph.astro";
 ---
@@ -9,9 +11,11 @@ import Paragraph from "./Paragraph.astro";
     <div class="md:flex md:justify-between">
       <div class="mb-6 md:mb-0">
         <a href="/" class="flex items-center">
+          <Image src={uinLogo} class="w-20 me-3" alt="HIMAFI" />
+          <Image src={fstLogo} class="w-20 me-3" alt="HIMAFI" />
           <Image src={himafiLogo} class="w-20 me-3" alt="HIMAFI" />
           <span
-            class="text-heading self-center font-heading text-2xl font-semibold whitespace-nowrap"
+            class="text-heading self-center font-heading text-2xl font-semibold whitespace-nowrap hidden md:block"
             >HIMAFI</span
           >
         </a>
@@ -26,7 +30,7 @@ import Paragraph from "./Paragraph.astro";
             Halaman
           </h2>
           <ul class="text-body font-medium">
-            <li class="mb-4">
+            <li class="">
               <a href="/" class="hover:underline">Beranda</a>
             </li>
             <li>
@@ -48,7 +52,12 @@ import Paragraph from "./Paragraph.astro";
             Lihat juga
           </h2>
           <ul class="text-body font-medium">
-            <li class="mb-4">
+            <li class="">
+              <a href="https://www.uinjkt.ac.id/id" class="hover:underline"
+                >UIN Syarif Hidayyatullah Jakarta</a
+              >
+            </li>
+            <li class="">
               <a
                 href="https://fst.uinjkt.ac.id/id/kegiatan-dema-fst"
                 class="hover:underline">Fakultas Sains dan Teknologi</a
@@ -82,6 +91,7 @@ import Paragraph from "./Paragraph.astro";
             height="24"
             class="w-5 h-5"
             alt="instagram"
+            loading="lazy"
           />
           <span class="sr-only">Instagram</span>
         </a>
@@ -96,6 +106,7 @@ import Paragraph from "./Paragraph.astro";
             height="24"
             class="w-5 h-5"
             alt="youtube"
+            loading="lazy"
           />
           <span class="sr-only">Youtube</span>
         </a>
@@ -110,6 +121,7 @@ import Paragraph from "./Paragraph.astro";
             height="24"
             class="w-5 h-5"
             alt="tiktok"
+            loading="lazy"
           />
           <span class="sr-only">tiktok</span>
         </a>

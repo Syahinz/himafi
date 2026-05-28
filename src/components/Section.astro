@@ -1,5 +1,5 @@
 ---
-const { mode = "light" } = Astro.props;
+const { mode = "light", direct = "" } = Astro.props;
 
 const baseClass = `min-h-screen w-full `;
 const modeClass =
@@ -8,6 +8,6 @@ const modeClass =
     : "bg-secondary-bright text-primary";
 ---
 
-<section class=`${baseClass} ${modeClass}`>
+<section class=`${baseClass} ${modeClass}` id=`${direct}`>
   <slot />
 </section>
