@@ -4,8 +4,8 @@ const { text, mode = "left" } = Astro.props;
 const textMode = mode === "center" ? "md:text-center" : "md:text-justify";
 ---
 
-<h1
+<h3
   class=`font-bold px-3 font-heading text-center ${textMode} md:text-5xl lg:text-6xl md:px-9 text-4xl `
 >
   {text}
-</h1>
+</h3>

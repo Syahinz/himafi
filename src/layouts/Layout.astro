@@ -1,17 +1,26 @@
 ---
-const { Pagetitle = `HIMAFI` } = Astro.props;
 import "../styles/global.css";
 import Footer from "../components/Footer.astro";
 import { Image } from "astro:assets";
 import { ClientRouter } from "astro:transitions";
 import Navbar from "../components/Navbar.astro";
+const {
+  Pagetitle = "HIMAFI",
+  description = "HIMAFI UIN Syarif Hidayatullah Jakarta...",
+} = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en" class="scroll-smooth">
+<html lang="id" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <meta property="og:title" content={`${Pagetitle} | HIMAFI`} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content="/himafi.png" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
     <link rel="icon" type="image/png" href="/himafi.png" />
     <meta name="generator" content={Astro.generator} />
     <!-- font -->

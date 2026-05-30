@@ -1,7 +1,7 @@
 ---
-import { getCollection } from "astro:content";
+
 import type { CollectionEntry } from "astro:content";
-const news = await getCollection("news");
+
 const parseDate = (str: string) => {
   const [d, m, y] = str.split("-");
   return new Date(`${y}-${m}-${d}`);
@@ -25,7 +25,7 @@ const docImages = import.meta.glob<{ default: ImageMetadata }>(
 );
 
 const memberImages = import.meta.glob<{ default: ImageMetadata }>(
-  "../assets/member/*.{jpg,jpeg,png,webp}",
+  "../assets/author/*.{jpg,jpeg,png,webp}",
   { eager: true },
 );
 

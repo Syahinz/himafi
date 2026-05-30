@@ -14,6 +14,24 @@ import ldkSyahidFst from "../assets/logo/ldk-syahid.jpg";
 import pionirLogo from "../assets/logo/pionir-muda.jpg";
 import pusatKarirUinLogo from "../assets/logo/pusat-karier.jpg";
 import pufaLogo from "../assets/logo/pufa.png";
+
+const partners = [
+  { src: UinLogo, alt: "UIN Jakarta" },
+  { src: kalacitraLogo, alt: "Kala Citra" },
+  { src: forsaLogo, alt: "Forsa UIN Jakarta" },
+  { src: himafiUnsriLogo, alt: "HIMAFI Universitas Sriwijaya" },
+  { src: himatansiUnjam, alt: "Himatansi Universitas Jambi" },
+  { src: himkaUinjktLogo, alt: "HIMKA UIN Jakarta" },
+  { src: himsiUinjktLogo, alt: "HIMSI UIN Jakarta" },
+  { src: himtiUinjktLogo, alt: "HIMTI UIN Jakarta" },
+  { src: hmjAgriUinjktLogo, alt: "HMJ AGRI UIN Jakarta" },
+  { src: kmfbUb, alt: "KMFBUB" },
+  { src: ldkSyahidFst, alt: "LDK SYAHID FST UIN Jakarta" },
+  { src: pionirLogo, alt: "Pionir UIN Jakarta" },
+  { src: pusatKarirUinLogo, alt: "Pusat Karir UIN Jakarta" },
+  { src: pufaLogo, alt: "PUFA" },
+];
+const doubled = [...partners, ...partners];
 ---
 
 <section
@@ -31,110 +49,17 @@ import pufaLogo from "../assets/logo/pufa.png";
     <ul
       class="flex space-x-8 md:space-x-16 animate-loop-scroll shrink-0 items-center"
     >
-      <li class="shrink-0">
-        <Image
-          src={UinLogo}
-          class="w-28 h-14 md:w-40 md:h-20 max-w-none object-contain"
-          alt="kalacitra"
-        />
-      </li>
-      <li class="shrink-0">
-        <Image
-          src={kalacitraLogo}
-          class="w-28 h-14 md:w-40 md:h-20 max-w-none object-contain"
-          alt="kalacitra"
-        />
-      </li>
-
-      <li class="shrink-0">
-        <Image
-          src={forsaLogo}
-          class="w-28 h-14 md:w-40 md:h-20 max-w-none object-contain"
-          alt="Forsa Uinjkt"
-        />
-      </li>
-
-      <li class="shrink-0">
-        <Image
-          src={himafiUnsriLogo}
-          class="w-28 h-14 md:w-40 md:h-20 max-w-none object-contain"
-          alt="HIMAFI UNSRI"
-        />
-      </li>
-
-      <li class="shrink-0">
-        <Image
-          src={himkaUinjktLogo}
-          class="w-28 h-14 md:w-40 md:h-20 max-w-none object-contain"
-          alt="himkaUinjktLogo"
-        />
-      </li>
-
-      <li class="shrink-0">
-        <Image
-          src={himatansiUnjam}
-          class="w-28 h-14 md:w-40 md:h-20 max-w-none object-contain"
-          alt="UIN Jakarta"
-        />
-      </li>
-
-      <li class="shrink-0">
-        <Image
-          src={himsiUinjktLogo}
-          class="w-28 h-14 md:w-40 md:h-20 max-w-none object-contain"
-          alt="himsiUinjktLogo"
-        />
-      </li>
-
-      <li class="shrink-0">
-        <Image
-          src={himtiUinjktLogo}
-          class="w-28 h-14 md:w-40 md:h-20 max-w-none object-contain"
-          alt="himtiUinjktLogo"
-        />
-      </li>
-      <li class="shrink-0">
-        <Image
-          src={hmjAgriUinjktLogo}
-          class="w-28 h-14 md:w-40 md:h-20 max-w-none object-contain"
-          alt="hmjAgriUinjktLogo"
-        />
-      </li>
-      <li class="shrink-0">
-        <Image
-          src={pufaLogo}
-          class="w-28 h-14 md:w-40 md:h-20 max-w-none object-contain"
-          alt="pufa"
-        />
-      </li>
-      <li class="shrink-0">
-        <Image
-          src={kmfbUb}
-          class="w-28 h-14 md:w-40 md:h-20 max-w-none object-contain"
-          alt="kmfbUb"
-        />
-      </li>
-      <li class="shrink-0">
-        <Image
-          src={ldkSyahidFst}
-          class="w-28 h-14 md:w-40 md:h-20 max-w-none object-contain"
-          alt="ldk fst"
-        />
-      </li>
-      <li class="shrink-0">
-        <Image
-          src={pionirLogo}
-          class="w-28 h-14 md:w-40 md:h-20 max-w-none object-contain"
-          alt="pionir"
-        />
-      </li>
-      <li class="shrink-0">
-        <Image
-          src={pusatKarirUinLogo}
-          class="w-28 h-14 md:w-40 md:h-20 max-w-none object-contain"
-          alt="pusatKarirUinLogo"
-        />
-      </li>
+      {
+        doubled.map(({ src, alt }) => (
+          <li class="shrink-0">
+            <Image
+              src={src}
+              class="w-28 h-14 md:w-40 md:h-20 object-contain"
+              alt={alt}
+            />
+          </li>
+        ))
+      }
     </ul>
 
     <!-- UL Kedua (Duplikat buat looping, tambahin shrink-0 juga) -->
@@ -142,110 +67,17 @@ import pufaLogo from "../assets/logo/pufa.png";
       class="flex space-x-8 md:space-x-16 animate-loop-scroll shrink-0 items-center"
       aria-hidden="true"
     >
-      <li class="shrink-0">
-        <Image
-          src={UinLogo}
-          class="w-28 h-14 md:w-40 md:h-20 max-w-none object-contain"
-          alt="kalacitra"
-        />
-      </li>
-      <li class="shrink-0">
-        <Image
-          src={kalacitraLogo}
-          class="w-28 h-14 md:w-40 md:h-20 max-w-none object-contain"
-          alt="kalacitra"
-        />
-      </li>
-
-      <li class="shrink-0">
-        <Image
-          src={forsaLogo}
-          class="w-28 h-14 md:w-40 md:h-20 max-w-none object-contain"
-          alt="Forsa Uinjkt"
-        />
-      </li>
-
-      <li class="shrink-0">
-        <Image
-          src={himafiUnsriLogo}
-          class="w-28 h-14 md:w-40 md:h-20 max-w-none object-contain"
-          alt="HIMAFI UNSRI"
-        />
-      </li>
-
-      <li class="shrink-0">
-        <Image
-          src={himkaUinjktLogo}
-          class="w-28 h-14 md:w-40 md:h-20 max-w-none object-contain"
-          alt="himkaUinjktLogo"
-        />
-      </li>
-
-      <li class="shrink-0">
-        <Image
-          src={himatansiUnjam}
-          class="w-28 h-14 md:w-40 md:h-20 max-w-none object-contain"
-          alt="UIN Jakarta"
-        />
-      </li>
-
-      <li class="shrink-0">
-        <Image
-          src={himsiUinjktLogo}
-          class="w-28 h-14 md:w-40 md:h-20 max-w-none object-contain"
-          alt="himsiUinjktLogo"
-        />
-      </li>
-
-      <li class="shrink-0">
-        <Image
-          src={himtiUinjktLogo}
-          class="w-28 h-14 md:w-40 md:h-20 max-w-none object-contain"
-          alt="himtiUinjktLogo"
-        />
-      </li>
-      <li class="shrink-0">
-        <Image
-          src={hmjAgriUinjktLogo}
-          class="w-28 h-14 md:w-40 md:h-20 max-w-none object-contain"
-          alt="hmjAgriUinjktLogo"
-        />
-      </li>
-      <li class="shrink-0">
-        <Image
-          src={pufaLogo}
-          class="w-28 h-14 md:w-40 md:h-20 max-w-none object-contain"
-          alt="pufa"
-        />
-      </li>
-      <li class="shrink-0">
-        <Image
-          src={kmfbUb}
-          class="w-28 h-14 md:w-40 md:h-20 max-w-none object-contain"
-          alt="kmfbUb"
-        />
-      </li>
-      <li class="shrink-0">
-        <Image
-          src={ldkSyahidFst}
-          class="w-28 h-14 md:w-40 md:h-20 max-w-none object-contain"
-          alt="ldk fst"
-        />
-      </li>
-      <li class="shrink-0">
-        <Image
-          src={pionirLogo}
-          class="w-28 h-14 md:w-40 md:h-20 max-w-none object-contain"
-          alt="pionir"
-        />
-      </li>
-      <li class="shrink-0">
-        <Image
-          src={pusatKarirUinLogo}
-          class="w-28 h-14 md:w-40 md:h-20 max-w-none object-contain"
-          alt="pusatKarirUinLogo"
-        />
-      </li>
+      {
+        doubled.map(({ src, alt }) => (
+          <li class="shrink-0">
+            <Image
+              src={src}
+              class="w-28 h-14 md:w-40 md:h-20 object-contain"
+              alt={alt}
+            />
+          </li>
+        ))
+      }
     </ul>
   </div>
 </section>

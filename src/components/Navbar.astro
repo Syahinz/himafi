@@ -1,6 +1,7 @@
 ---
 import himafiLogo from "../assets/logo/himafi.png";
 import { Image } from "astro:assets";
+const currentPath = Astro.url.pathname;
 ---
 
 <nav
@@ -21,11 +22,45 @@ import { Image } from "astro:assets";
     <!-- Menu Desktop -->
     <div class="hidden md:flex">
       <ul class="flex gap-8">
-        <li><a href="/" class="a-menu">Beranda</a></li>
-        <li><a href="/about" class="a-menu">Tentang</a></li>
-        <li><a href="/news" class="a-menu">Berita</a></li>
-        <li><a href="/contact" class="a-menu">Kontak</a></li>
-        <li><a href="/utility" class="a-menu">Utilitas</a></li>
+        <li>
+          <a
+            href="/"
+            class={`a-menu ${currentPath === "/" ? "bg-primary text-neutralwhite" : ""}`}
+            aria-current={currentPath === "/" ? "page" : undefined}>Beranda</a
+          >
+        </li>
+        <li>
+          <a
+            href="/about"
+            class={`a-menu ${currentPath === "/about" ? "bg-primary text-neutralwhite" : ""}`}
+            aria-current={currentPath === "/about" ? "page" : undefined}
+            >Tentang</a
+          >
+        </li>
+        <li>
+          <a
+            href="/news"
+            class={`a-menu ${currentPath === "/news" ? "bg-primary text-neutralwhite" : ""}`}
+            aria-current={currentPath === "/news" ? "page" : undefined}
+            >Berita</a
+          >
+        </li>
+        <li>
+          <a
+            href="/contact"
+            class={`a-menu ${currentPath === "/contact" ? "bg-primary text-neutralwhite" : ""}`}
+            aria-current={currentPath === "/contact" ? "page" : undefined}
+            >Kontak</a
+          >
+        </li>
+        <li>
+          <a
+            href="/utility"
+            class={`a-menu ${currentPath === "/utility" ? "bg-primary text-neutralwhite" : ""}`}
+            aria-current={currentPath === "/utility" ? "page" : undefined}
+            >Utilitas</a
+          >
+        </li>
       </ul>
     </div>
 
