@@ -21,6 +21,7 @@
   --animate-loop-scroll: loop-scroll 50s linear infinite;
 }
 
+
 .navbar {
   @apply fixed top-6 w-full flex justify-center z-50;
 }
@@ -33,6 +34,10 @@
 
 .a-menu {
   @apply font-bold text-lg hover:bg-primary-darken hover:text-neutralwhite p-3 rounded-full box-border transition delay-150 duration-300 ease-in-out;
+}
+
+.span-text-structure{
+  @apply absolute bottom-0 z-10 flex font-heading  items-center justify-center w-full h-12 text-white font-bold text-lg md:text-xl tracking-wider transition-transform duration-300  before:content-[''] before:absolute before:inset-0 before:bg-primary before:-z-10  shadow-md
 }
 
 @keyframes appear {

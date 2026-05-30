@@ -9,28 +9,10 @@ interface Props {
 
 const { report } = Astro.props;
 
-const docImages = import.meta.glob<{ default: ImageMetadata }>(
-  "../assets/images/*.{jpg,jpeg,png,webp}",
-  { eager: true },
-);
-
-const memberImages = import.meta.glob<{ default: ImageMetadata }>(
-  "../assets/author/*.{jpg,jpeg,png,webp}",
-  { eager: true },
-);
-
-function findImage(
-  glob: Record<string, { default: ImageMetadata }>,
-  name: string
-) {
-  const entry = Object.entries(glob).find(([path]) =>
-    path.split("/").pop()?.split(".")[0] === name
-  );
-  return entry?.[1].default;
-}
+import { docImages, authorImages, findImage } from "../utils/image";
 
 const docImg = findImage(docImages, report.data.img);
-const authorImg = findImage(memberImages, report.data.authorPic);
+const authorImg = findImage(authorImages, report.data.authorPic);
 ---
 
 <article

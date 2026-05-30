@@ -7,14 +7,10 @@ import Paragraph from "../../components/Paragraph.astro";
 import { render } from "astro:content";
 
 
-const parseDate = (str: string) => {
-  const [d, m, y] = str.split("-");
-  return new Date(`${y}-${m}-${d}`);
-};
 const news = await getCollection("news");
 export async function getStaticPaths() {
-const news = await getCollection("news");
-
+  const news = await getCollection("news");
+  
   return news.map((report) => {
     return {
       params: { id: report.id },
@@ -24,38 +20,15 @@ const news = await getCollection("news");
 }
 const { report } = Astro.props;
 const {Content} = await render(report);
-const docImages = import.meta.glob<{ default: ImageMetadata }>(
-  "../../assets/images/*.{jpg,jpeg,png,webp}",
-  { eager: true },
-);
-
-const memberImages = import.meta.glob<{ default: ImageMetadata }>(
-  "../../assets/author/*.{jpg,jpeg,png,webp}",
-  { eager: true },
-);
-
-function findImage(
-  glob: Record<string, { default: ImageMetadata }>,
-  name: string,
-) {
-  const entry = Object.entries(glob).find(
-    ([path]) => path.split("/").pop()?.split(".")[0] === name,
-  );
-  return entry?.[1].default;
-}
-
-const formatDate = (str: string) => {
-  const date = parseDate(str);
-  return date.toLocaleDateString("id-ID", {
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-  });
-};
-
-
+import { docImages, authorImages, findImage } from "../../utils/image";
+import { formatDate } from "../../utils/date";
 const docImg = findImage(docImages, report.data.img);
-const authorImg = findImage(memberImages, report.data.authorPic);
+const authorImg = findImage(authorImages, report.data.authorPic);
+
+
+
+
+
 ---
 
 <Layout Pagetitle={report.data.title}>

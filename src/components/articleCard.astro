@@ -2,46 +2,17 @@
 
 import type { CollectionEntry } from "astro:content";
 
-const parseDate = (str: string) => {
-  const [d, m, y] = str.split("-");
-  return new Date(`${y}-${m}-${d}`);
-};
-import Paragraph from "../components/Paragraph.astro";
-const formatDate = (str: string) =>
-  parseDate(str).toLocaleDateString("id-ID", {
-    day: "numeric",
-    month: "short",
-    year: "numeric",
-  });
+import { formatDate } from "../utils/date";
 interface Props {
   report: CollectionEntry<"news">;
 }
 import { Image } from "astro:assets";
 const { report } = Astro.props;
 
-const docImages = import.meta.glob<{ default: ImageMetadata }>(
-  "../assets/images/*.{jpg,jpeg,png,webp}",
-  { eager: true },
-);
-
-const memberImages = import.meta.glob<{ default: ImageMetadata }>(
-  "../assets/author/*.{jpg,jpeg,png,webp}",
-  { eager: true },
-);
-
-function findImage(
-  glob: Record<string, { default: ImageMetadata }>,
-  name: string
-) {
-  const entry = Object.entries(glob).find(([path]) =>
-    path.split("/").pop()?.split(".")[0] === name
-  );
-  return entry?.[1].default;
-}
-
+import { docImages, authorImages, findImage } from "../utils/image";
 
 const docImg = findImage(docImages, report.data.img);
-const authorImg = findImage(memberImages, report.data.authorPic);
+const authorImg = findImage(authorImages, report.data.authorPic);
 ---
 
 <a

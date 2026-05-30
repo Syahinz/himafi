@@ -1,0 +1,119 @@
+---
+import { Image } from "astro:assets";
+import BPH from "../assets/structure/BPH.jpg";
+import Kaderisasi from "../assets/structure/Kaderisasi.jpg";
+import Adkesma from "../assets/structure/Adkesma.jpg";
+import Litbang from "../assets/structure/Litbang.jpg";
+import Minbak from "../assets/structure/minbak.jpg";
+import MSDO from "../assets/structure/MSDO.jpg";
+import SOSRO from "../assets/structure/sosro.jpg";
+import Kominfo from "../assets/structure/Kominfo.jpg";
+---
+
+<section class="w-full min-h-screen flex items-center justify-center">
+  
+  <div
+    class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-13 w-full max-w-360 mx-auto p-10 auto-rows-auto"
+  >
+    <a
+      href="/"
+      class="md:col-start-2 md:row-start-1 md:row-span-2 relative overflow-hidden min-h-100 md:min-h-0 rounded-2xl flex items-center justify-center shadow-lg group transition-transform duration-300 hover:scale-[1.02] appear-anim"
+    >
+      <Image
+        src={BPH}
+        alt="BPH"
+        class="absolute inset-0 w-full h-full object-contain bg-primary transition-all duration-500 brightness-[0.9] group-hover:brightness-100 group-hover:scale-110"
+      />
+
+      <span
+        class="absolute md:bottom-10 bottom-2 z-10 text-white font-bold text-2xl md:text-3xl tracking-widest"
+        >BPH</span
+      >
+    </a>
+
+    <a
+      href="/"
+      class="md:col-start-1 md:row-start-1 relative overflow-hidden rounded-2xl flex items-center justify-center min-h-60 md:min-h-90 shadow-md group transition-transform duration-300 hover:scale-[1.02] appear-anim"
+    >
+      <Image
+        src={MSDO}
+        alt="MSDO"
+        class="absolute inset-0 w-full h-full object-cover transition-all duration-500 brightness-[0.9] group-hover:brightness-100 group-hover:scale-110"
+      />
+
+      <span class="span-text-structure">MSDO</span>
+    </a>
+
+    <a href="/"
+      class="md:col-start-3 md:row-start-1 relative overflow-hidden rounded-2xl flex items-center justify-center min-h-60 md:min-h-90 shadow-md group transition-transform duration-300 hover:scale-[1.02] appear-anim"
+    >
+      <Image
+        src={Minbak}
+        alt="MINBAK"
+        class="absolute inset-0 w-full h-full object-cover transition-all duration-500 brightness-[0.9] group-hover:brightness-100 group-hover:scale-110"
+      />
+
+      <span class="span-text-structure">MINBAK</span>
+    </a>
+
+    <a href="/"
+      class="md:col-start-1 md:row-start-2 relative overflow-hidden rounded-2xl flex items-center justify-center min-h-60 md:min-h-90 shadow-md group transition-transform duration-300 hover:scale-[1.02] appear-anim"
+    >
+      <Image
+        src={Kaderisasi}
+        alt="Kaderisasi"
+        class="absolute inset-0 w-full h-full object-cover transition-all duration-500 brightness-[0.9] group-hover:brightness-100 group-hover:scale-110"
+      />
+
+      <span class="span-text-structure">Kaderisasi</span>
+    </a>
+
+    <a href="/"
+      class="md:col-start-3 md:row-start-2 relative overflow-hidden rounded-2xl flex items-center justify-center min-h-60 md:min-h-90 shadow-md group transition-transform duration-300 hover:scale-[1.02] appear-anim"
+    >
+      <Image
+        src={SOSRO}
+        alt="SOSRO"
+        class="absolute inset-0 w-full h-full object-cover transition-all duration-500 brightness-[0.9] group-hover:brightness-100 group-hover:scale-110"
+      />
+
+      <span class="span-text-structure">SOSRO</span>
+    </a>
+
+    <a href="/"
+      class="md:col-start-1 md:row-start-3 relative overflow-hidden rounded-2xl flex items-center justify-center min-h-60 md:min-h-90 shadow-md group transition-transform duration-300 hover:scale-[1.02] appear-anim"
+    >
+      <Image
+        src={Kominfo}
+        alt="Kominfo"
+        class="absolute inset-0 w-full h-full object-cover transition-all duration-500 brightness-[0.9] group-hover:brightness-100 group-hover:scale-110"
+      />
+
+      <span class="span-text-structure">Kominfo</span>
+    </a>
+
+    <a href="/"
+      class="md:col-start-2 md:row-start-3 relative overflow-hidden rounded-2xl flex items-center justify-center min-h-60 md:min-h-90 shadow-md group transition-transform duration-300 hover:scale-[1.02] appear-anim"
+    >
+      <Image
+        src={Adkesma}
+        alt="Adkhesma"
+        class="absolute inset-0 w-full h-full object-cover transition-all duration-500 brightness-[0.9] group-hover:brightness-100 group-hover:scale-110"
+      />
+
+      <span class="span-text-structure">Adkhesma</span>
+    </a>
+
+    <a href="/"
+      class="md:col-start-3 md:row-start-3 relative overflow-hidden rounded-2xl flex items-center justify-center min-h-60 md:min-h-90 shadow-md group transition-transform duration-300 hover:scale-[1.02] appear-anim"
+    >
+      <Image
+        src={Litbang}
+        alt="LITBANG"
+        class="absolute inset-0 w-full h-full object-cover transition-all duration-500 brightness-[0.9] group-hover:brightness-100 group-hover:scale-110"
+      />
+
+      <span class="span-text-structure">LITBANG</span>
+    </a>
+  </div>
+</section>
