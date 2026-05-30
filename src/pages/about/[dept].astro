@@ -1,0 +1,188 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import { memberImages, structureImages, findImage } from "../../utils/image";
+
+export async function getStaticPaths() {
+  const departments = await getCollection("departments");
+  console.log("departments ditemukan:", departments.length); // kalau 0 = masalahnya di sini
+  console.log(
+    "ids:",
+    departments.map((d) => d.id),
+  );
+  return departments.map((dept) => ({
+    params: { dept: dept.id },
+    props: { dept },
+  }));
+}
+
+const { dept } = Astro.props;
+
+// Resolve foto header departemen
+const deptPhoto = findImage(structureImages, dept.data.photo);
+
+// Resolve semua foto member
+
+const resolvedMembers = dept.data.members.map((member) => ({
+  ...member,
+  resolvedPhoto: findImage(memberImages, member.profilePic),
+}));
+---
+
+<Layout Pagetitle={dept.data.name}>
+  <!-- Hero foto departemen -->
+  {
+    deptPhoto && (
+      <div class="relative h-80 w-full overflow-hidden">
+        <Image
+          src={deptPhoto}
+          alt={dept.data.name}
+          class="w-full h-full object-cover brightness-75"
+        />
+        <div class="absolute inset-0 flex flex-col items-center justify-center">
+          <h1 class="font-heading font-bold text-5xl text-white">
+            {dept.data.name}
+          </h1>
+          <p class="font-isi text-white/80 mt-2">{dept.data.fullName}</p>
+        </div>
+      </div>
+    )
+  }
+
+  <section class="px-4 md:px-16 lg:px-40 py-16">
+    <p class="font-isi max-w-2xl">{dept.data.description}</p>
+
+    <!-- Grid member -->
+    <h2 class="font-heading font-bold text-2xl mt-14 mb-6">Anggota</h2>
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+      {
+        resolvedMembers.map((member) => (
+          <button
+            class="text-left group cursor-pointer"
+            data-member={JSON.stringify({
+              name: member.name,
+              role: member.role,
+              angkatan: member.angkatan,
+              bio: member.bio,
+            })}
+          >
+            <div class="overflow-hidden rounded-xl aspect-square bg-primary-darken/10">
+              {member.resolvedPhoto ? (
+                <Image
+                  src={member.resolvedPhoto}
+                  alt={member.name}
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              ) : (
+                <div class="w-full h-full flex items-center justify-center">
+                  <span class="font-heading text-2xl font-bold text-primary">
+                    {member.name.charAt(0)}
+                  </span>
+                </div>
+              )}
+            </div>
+            <p class="mt-2 font-heading font-bold text-sm">{member.name}</p>
+            <p class="font-isi text-xs text-primary/60">{member.role}</p>
+          </button>
+        ))
+      }
+    </div>
+
+    <!-- Section program kerja (kalau ada) -->
+    {
+      dept.data.programs.length > 0 && (
+        <div class="mt-16">
+          <h2 class="font-heading font-bold text-2xl mb-6">Program Kerja</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            {dept.data.programs.map((program) => (
+              <div class="rounded-xl border border-primary/10 p-5">
+                <p class="font-heading font-bold text-base">{program.name}</p>
+                {program.date && (
+                  <p class="font-isi text-xs text-primary/50 mt-1">
+                    {program.date}
+                  </p>
+                )}
+                {program.programDesc && (
+                  <p class="font-isi text-sm mt-3 leading-relaxed">
+                    {program.programDesc}
+                  </p>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      )
+    }
+  </section>
+
+  <!-- Modal — wajib ada class "hidden" di sini -->
+  <div
+    id="member-modal"
+    class="hidden fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4"
+  >
+    <div class="bg-neutralwhite rounded-2xl p-8 max-w-sm w-full relative">
+      <button
+        id="close-modal"
+        class="absolute top-4 right-4 text-primary hover:opacity-60">✕</button
+      >
+      <p
+        id="modal-name"
+        class="font-heading font-bold text-2xl text-primary-darken"
+      >
+      </p>
+      <p id="modal-role" class="font-isi text-sm text-primary/60 mt-1"></p>
+      <p id="modal-angkatan" class="font-isi text-xs text-primary/40 mt-1"></p>
+      <hr class="my-4 border-primary/10" />
+      <p
+        id="modal-bio"
+        class="font-isi text-sm leading-relaxed text-primary-darken"
+      >
+      </p>
+    </div>
+  </div>
+</Layout>
+
+<!-- Script TIDAK di-comment — ini yang bikin modal bisa jalan -->
+<script>
+  const modal = document.getElementById("member-modal")!;
+  const closeBtn = document.getElementById("close-modal")!;
+
+  function openModal(data: {
+    name: string;
+    role: string;
+    angkatan?: string;
+    bio: string;
+  }) {
+    document.getElementById("modal-name")!.textContent = data.name;
+    document.getElementById("modal-role")!.textContent = data.role;
+    document.getElementById("modal-angkatan")!.textContent = data.angkatan
+      ? `Angkatan ${data.angkatan}`
+      : "";
+    document.getElementById("modal-bio")!.textContent = data.bio;
+    modal.classList.remove("hidden");
+  }
+
+  function attachListeners() {
+    document.querySelectorAll("[data-member]").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const data = JSON.parse((btn as HTMLElement).dataset.member!);
+        openModal(data);
+      });
+    });
+  }
+
+  closeBtn.addEventListener("click", () => modal.classList.add("hidden"));
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) modal.classList.add("hidden");
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") modal.classList.add("hidden");
+  });
+
+  // Jalan pertama kali
+  attachListeners();
+
+  // Re-attach setelah View Transitions navigasi
+  document.addEventListener("astro:after-swap", attachListeners);
+</script>

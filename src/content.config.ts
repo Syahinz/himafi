@@ -16,4 +16,32 @@ const news = defineCollection({
   }),
 });
 
-export const collections = { news };
+// schema baru untuk departments
+const memberSchema = z.object({
+  name: z.string(),
+  role: z.string(),
+  profilePic: z.string(),
+  angkatan: z.string().optional(),
+  bio: z.string(),
+});
+
+const programSchema = z.object({
+  name: z.string(),
+  programDesc: z.string(),
+  date: z.string(),
+  programPic: z.string(),
+});
+
+const departments = defineCollection({
+  loader: glob({ base: "src/content/departments", pattern: "*.json" }),
+  schema: z.object({
+    name: z.string(),
+    fullName: z.string(),
+    photo: z.string(),
+    description: z.string(),
+    members: z.array(memberSchema),
+    programs: z.array(programSchema),
+  }),
+});
+
+export const collections = { news, departments };

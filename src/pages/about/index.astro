@@ -7,9 +7,11 @@ import CTA from "../../components/CTA.astro";
 import Paragraph from "../../components/Paragraph.astro";
 import BentoGrid from "../../components/BentoGrid.astro";
 import Structure from "../../components/Structure.astro";
-import fotoNeiya from "../../assets/member/Neiya.jpg";
-import fotoHarry from "../../assets/member/Harry.jpg";
+import fotoNeiya from "../../assets/member/bph-neiya.jpg";
+import fotoHarry from "../../assets/member/bph-harry.jpg";
 import { Image } from "astro:assets";
+import { getCollection } from "astro:content";
+const departments = await getCollection("departments");
 const title = `Tentang`;
 ---
 

@@ -7,6 +7,20 @@ export const authorImages = import.meta.glob<{ default: ImageMetadata }>(
   "../assets/author/*.{jpg,jpeg,png,webp}",
   { eager: true },
 );
+
+export const memberImages = import.meta.glob<{ default: ImageMetadata }>(
+  "../assets/member/*.{jpg,jpeg,png,webp}",
+  { eager: true },
+);
+export const programsImages = import.meta.glob<{ default: ImageMetadata }>(
+  "../assets/programs/*.{jpg,jpeg,png,webp}",
+  { eager: true },
+);
+export const structureImages = import.meta.glob<{ default: ImageMetadata }>(
+  "../assets/structure/*.{jpg,jpeg,png,webp}",
+  { eager: true },
+);
+
 export function findImage(
   glob: Record<string, { default: ImageMetadata }>,
   name: string,

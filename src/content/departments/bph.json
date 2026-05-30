@@ -1,0 +1,64 @@
+{
+  "name": "BPH",
+  "fullName": "Badan Pengurus Harian",
+  "photo": "BPH",
+  "description": "loremsnasondsdnasdnsadksdnskldnak",
+  "members": [
+    {
+      "name": "Na'ilah Zahra Putri Utomo",
+      "role": "Ketua Himpunan",
+      "profilePic": "bph-neiya",
+      "angkatan": "2024",
+      "bio": "Mahasiswi Fisika 2024 yang berfokus pada pengelolaan organisasi yang integratif."
+    },
+    {
+      "name": "Harry Caesar Setiawan",
+      "role": "Wakil Ketua Himpunan",
+      "profilePic": "bph-harry",
+      "angkatan": "2024",
+      "bio": "Mahasiswa Fisika 2024 yang berfokus pada pengelolaan organisasi yang integratif."
+    },
+    {
+      "name": "Balqis Amalia",
+      "role": "Sekertaris 1",
+      "profilePic": "bph-balqis",
+      "angkatan": "2024",
+      "bio": "Mahasiswi Fisika 2024 yang berfokus pada pengelolaan organisasi yang integratif."
+    },
+    {
+      "name": "Kanza Amalia",
+      "role": "Sekertaris 2",
+      "profilePic": "bph-kanza",
+      "angkatan": "2024",
+      "bio": "Mahasiswi Fisika 2024 yang berfokus pada pengelolaan organisasi yang integratif."
+    },
+    {
+      "name": "Ghefira Nurul Faizah",
+      "role": "Bendahara 1",
+      "profilePic": "bph-ghefira",
+      "angkatan": "2024",
+      "bio": "Mahasiswi Fisika 2024 yang berfokus pada pengelolaan organisasi yang integratif."
+    },
+    {
+      "name": "Rina Agustiani",
+      "role": "Bendahara 2",
+      "profilePic": "bph-rina",
+      "angkatan": "2024",
+      "bio": "Mahasiswi Fisika 2024 yang berfokus pada pengelolaan organisasi yang integratif."
+    }
+  ],
+  "programs": [
+    {
+      "name": "Pra-Raker",
+      "programDesc": "",
+      "date": "",
+      "programPic": ""
+    },
+    {
+      "name": "Raker",
+      "programDesc": "",
+      "date": "",
+      "programPic": "bph-raker"
+    }
+  ]
+}
