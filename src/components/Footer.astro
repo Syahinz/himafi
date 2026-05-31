@@ -3,6 +3,9 @@ import himafiLogo from "../assets/logo/himafi.png";
 import uinLogo from "../assets/logo/uin-jakarta.png";
 import fstLogo from "../assets/logo/fstLogo.png";
 import { Image } from "astro:assets";
+import instagramIcon from "../assets/logo/instagram.svg?raw";
+import youtubeIcon from "../assets/logo/youtube.svg?raw";
+import tiktokIcon from "../assets/logo/tiktok.svg?raw";
 import { version } from "../../package.json";
 import Paragraph from "./Paragraph.astro";
 ---
@@ -89,14 +92,9 @@ import Paragraph from "./Paragraph.astro";
           class="text-body hover:text-heading ms-5"
           target="_blank"
         >
-          <img
-            src="/src/assets/logo/instagram.svg"
-            width="24"
-            height="24"
-            class="w-5 h-5"
-            alt="instagram"
-            loading="lazy"
-          />
+          <div class="[&>svg]:w-5 [&>svg]:h-5">
+            <Fragment set:html={instagramIcon} alt="instagram" loading="lazy" />
+          </div>
           <span class="sr-only">Instagram</span>
         </a>
         <a
@@ -104,14 +102,9 @@ import Paragraph from "./Paragraph.astro";
           class="text-body hover:text-heading ms-5"
           target="_blank"
         >
-          <img
-            src="/src/assets/logo/youtube.svg"
-            width="24"
-            height="24"
-            class="w-5 h-5"
-            alt="youtube"
-            loading="lazy"
-          />
+          <div class="[&>svg]:w-5 [&>svg]:h-5">
+            <Fragment set:html={youtubeIcon} alt="instagram" loading="lazy" />
+          </div>
           <span class="sr-only">Youtube</span>
         </a>
         <a
@@ -119,14 +112,9 @@ import Paragraph from "./Paragraph.astro";
           class="text-body hover:text-heading ms-5"
           target="_blank"
         >
-          <img
-            src="/src/assets/logo/tiktok.svg"
-            width="24"
-            height="24"
-            class="w-5 h-5"
-            alt="tiktok"
-            loading="lazy"
-          />
+          <div class="[&>svg]:w-5 [&>svg]:h-5">
+            <Fragment set:html={tiktokIcon} alt="instagram" loading="lazy" />
+          </div>
           <span class="sr-only">tiktok</span>
         </a>
       </div>
