@@ -25,14 +25,19 @@ const key = import.meta.env.PUBLIC_WEB3FORMS_KEY;
             <div class="[&>svg]:w-5 [&>svg]:h-5">
               <Fragment
                 set:html={whatsappIcon}
-                alt="instagram"
-                loading="lazy"
+                alt="whatsapp"
+                loading="eager"
               />
             </div>
-
-            <span class="font-medium font-isi"
-              >+62 896-5443-1972 (Wulan Maulida Sari)</span
+            <a
+              href="https://wa.me/6289654431972"
+              target="_blank"
+              rel="noopener noreferrer"
             >
+              <span class="font-medium font-isi"
+                >+62 896-5443-1972 (Wulan Maulida Sari)</span
+              >
+            </a>
           </dd>
         </div>
 
@@ -86,10 +91,12 @@ const key = import.meta.env.PUBLIC_WEB3FORMS_KEY;
               >Lt 7 Gedung FST UIN Jakarta, UIN Jakarta, Jl. Lkr. Kampus 1,
               Cempaka Putih, Ciputat Timur, Kota Tangerang Selatan, Banten 15412</span
             >
-            <div class="lg:w-125 lg:h-100 min-w-20 ml-4 md:ml-0 min-h-20 w-78 h-50 mt-5 rounded-2xl overflow-hidden border-2 border-secondary">
+            <div
+              class="lg:w-125 lg:h-100 min-w-20 ml-4 md:ml-0 min-h-20 w-78 h-50 mt-5 rounded-2xl overflow-hidden border-2 border-secondary"
+            >
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d305.9455464929487!2d106.752363!3d-6.3065021!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNsKwMTgnMjMuMyJTIDEwNsKwNDUnMDguNiJF!5e1!3m2!1sid!2sid!4v1780241511123!5m2!1sid!2sid"
-                class="w-full  h-full"
+                class="w-full h-full"
                 style="border:0;"
                 allowfullscreen=""
                 loading="lazy"
