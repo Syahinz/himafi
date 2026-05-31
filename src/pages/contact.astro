@@ -1,11 +1,26 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Handler from "../components/underwork.astro";
+import { Image } from "astro:assets";
+import kominfoImg from "../assets/structure/Kominfo2.png";
+import Section from "../components/Section.astro";
+import ContactSection from "../components/ContactSection.astro";
 const Pagetitle = `Kontak`;
 ---
 
 <Layout Pagetitle={Pagetitle}>
-  
-  <Handler />
-
+  <div class="relative h-80 w-full overflow-hidden">
+    <Image
+      src={kominfoImg}
+      alt="kominfo"
+      class="w-full h-full object-cover brightness-75"
+      loading="eager"
+      fetchpriority="high"
+    />
+  </div>
+  <Section mode="dark">
+    <div class="pt-10">
+      <ContactSection />
+    </div>
+  </Section>
 </Layout>
