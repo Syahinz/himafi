@@ -9,6 +9,8 @@ import BentoGrid from "../../components/BentoGrid.astro";
 import Structure from "../../components/Structure.astro";
 import fotoNeiya from "../../assets/member/bph-neiya.jpg";
 import fotoHarry from "../../assets/member/bph-harry.jpg";
+import MPKPO from "../../assets/structure/MPKPO.jpg";
+import H2 from "../../components/H2.astro";
 import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
 const departments = await getCollection("departments");
@@ -98,7 +100,7 @@ const title = `Tentang`;
     <div class="md:pt-24 pt-10">
       <div class="mx-auto px-6 md:px-0">
         <H3 text="Struktur" mode="center" />
-        <Paragraph text="lorem ipsum" mode="center"></Paragraph>
+        <Paragraph text="lorem ipsum" mode="center" />
       </div>
       <div
         class="px-4 sm:px-8 md:px-16 lg:px-42 flex flex-col items-center md:py-16 pb-5 md:flex-row-reverse md:justify-between"
@@ -110,11 +112,10 @@ const title = `Tentang`;
         berkomitmen untuk membawa perubahan positif dan menjadi wadah aspirasi
         bagi seluruh mahasiswa"`
           />
-          
         </div>
         <div class="flex flex-col md:flex-row md:pl-10 md:gap-10">
           <div>
-            <div class="rounded-2xl shadow-lg overflow-hidden appear-anim ">
+            <div class="rounded-2xl shadow-lg overflow-hidden appear-anim">
               <Image
                 src={fotoNeiya}
                 alt="Neiya"
@@ -143,10 +144,36 @@ const title = `Tentang`;
       </div>
 
       <div class="px-6 md:py-10">
-        <div class="mx-auto px-6 pb-10 md:px-0 flex justify-center ">
-          <span class="font-bold px-3 font-heading text-center md:text-5xl lg:text-6xl md:px-9 text-4xl">Kepengurusan</span>
+        <div class="mx-auto px-6 pb-10 md:px-0 flex justify-center">
+          <span
+            class="font-bold px-3 font-heading text-center md:text-5xl lg:text-6xl md:px-9 text-4xl"
+            >Kepengurusan</span
+          >
         </div>
         <Structure />
+      </div>
+    </div>
+  </Section>
+  <Section mode="dark">
+    <div
+      class="w-full pt-42 px-4 sm:px-8 md:px-16 lg:px-56 flex flex-col gap-10 items-center md:flex-row"
+    >
+      <div class="md:w-1/2">
+        <H1 text="MPK" spanText="PO" />
+        <H2 text="Majelis Pengawas dan Konsultasi Pengurus Organisasi" />
+        <Paragraph
+          text=`Kabinet Samanvaya hadir sebagai poros stabilitas dan sinergitas HIMAFI UIN Syarif Hidayatullah Jakarta. Kami berkomitmen penuhmewujudkan tata kelola organisasi yang integratif, akuntabel, dan profesional untuk menjalin kolaborasi strategis dengan berbagai kemitraan.`
+        />
+        <div class="w-fit mx-auto md:ml-9">
+          <CTA mode="dark" Href="/about/mpkpo" />
+        </div>
+      </div>
+      <div class="md:w-1/2 rounded-2xl shadow-lg overflow-hidden appear-anim">
+        <Image
+          src={MPKPO}
+          alt="MPKPO"
+          class="bg-secondary md:max-h-130 object-cover mx-auto transition-all duration-500 brightness-[0.9] hover:brightness-100 hover:scale-110"
+        />
       </div>
     </div>
   </Section>

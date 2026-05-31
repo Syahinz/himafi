@@ -1,0 +1,58 @@
+{
+  "name": "MINBAK",
+  "fullName": "Departemen Minat dan Bakat",
+  "photo": "minbak",
+  "secondPhoto": "minbak2",
+  "description": "Departemen Minat dan Bakat adalah blablabla balbalbalab labalbalb albloekf nsfkbfbvdjbvvb hvaliof dhvhsavohhds lvdhsv jhxcdbcsisdjcxn x sajv",
+  "members": [
+    {
+      "name": "Akhmad Jabal Atthoriq",
+      "role": "Ketua Departemen MINBAK",
+      "profilePic": "minbak-jabal",
+      "angkatan": "2024",
+      "bio": "Mahasiswa Fisika 2024 yang berfokus pada minat dan bakat."
+    },
+    {
+      "name": "Belinda Rosalina",
+      "role": "Staff MINBAK",
+      "profilePic": "minbak-belinda",
+      "angkatan": "2024",
+      "bio": "Mahasiswi Fisika 2024 yang berfokus pada pengelolaan organisasi yang integratif."
+    },
+    {
+      "name": "Rafi Nur Akmal",
+      "role": "Staff MINBAK",
+      "profilePic": "minbak-rafi",
+      "angkatan": "2025",
+      "bio": "Mahasiswa Fisika 2024 yang berfokus pada pengelolaan organisasi yang integratif."
+    },
+    {
+      "name": "Muhammad Hanif Raditya",
+      "role": "Staff MINBAK",
+      "profilePic": "minbak-hanif",
+      "angkatan": "2025",
+      "bio": "Mahasiswa Fisika 2025 yang berfokus pada pengelolaan organisasi yang integratif."
+    },
+    {
+      "name": "Nova Khairul Sofyan",
+      "role": "Staff MINBAK",
+      "profilePic": "minbak-nova",
+      "angkatan": "2025",
+      "bio": "Mahasiswa Fisika 2025 yang berfokus pada pengelolaan organisasi yang integratif."
+    }
+  ],
+  "programs": [
+    {
+      "name": "Spartival",
+      "programDesc": "pra rapat kerja HIMAFI 2026",
+      "date": "",
+      "programPic": "bph-pra-raker"
+    },
+    {
+      "name": "Fotografi",
+      "programDesc": "Rapat kerja himafi 2026",
+      "date": "",
+      "programPic": "bph-raker"
+    }
+  ]
+}

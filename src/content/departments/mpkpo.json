@@ -1,0 +1,66 @@
+{
+  "name": "MPKPO",
+  "fullName": "Majelis Pengawas dan Konsultasi Pengurus Organisasi",
+  "photo": "MPKPO",
+  "secondPhoto": "MPKPO",
+  "description": "MPKPO Hadir untuk mengawasi sekaligus mengevaluasi kinerja kepengurusan HIMAFI. Tak hanya itu, MPKPO juga berfungsi sebagai jembatan komunikasi yang menghubungkan pengurus organisasi dengan mahasiswa UIN Syarif Hidayatullah Jakarta",
+  "members": [
+    {
+      "name": "Muhammad Arief Rahman Hakim",
+      "role": "Ketua MPKPO dan MPKPO Kaderisasi",
+      "profilePic": "mpkpo-arief",
+      "angkatan": "2023",
+      "bio": "Mahasiswa Fisika 2023 yang berfokus pada minat dan bakat."
+    },
+    {
+      "name": "Jasmine Putri",
+      "role": "MPKPO MSDO",
+      "profilePic": "mpkpo-jasmine",
+      "angkatan": "2023",
+      "bio": "Mahasiswi Fisika 2023 yang berfokus pada pengelolaan organisasi yang integratif."
+    },
+    {
+      "name": "Naswa Natisha",
+      "role": "MPKPO KOMINFO",
+      "profilePic": "mpkpo-naswa",
+      "angkatan": "2023",
+      "bio": "Mahasiswi Fisika 2023 yang berfokus pada pengelolaan organisasi yang integratif."
+    },
+    {
+      "name": "Yahya Dimaritsco Fidzikri Rahman",
+      "role": "MPKPO LITBANG",
+      "profilePic": "mpkpo-yahya",
+      "angkatan": "2023",
+      "bio": "Mahasiswa Fisika 2023 yang berfokus pada pengelolaan organisasi yang integratif."
+    },
+    {
+      "name": "Tsabitah Rifasalma",
+      "role": "MPKPO Adkesma",
+      "profilePic": "mpkpo-tsabitah",
+      "angkatan": "2023",
+      "bio": "Mahasiswi Fisika 2023 yang berfokus pada pengelolaan organisasi yang integratif."
+    },
+    {
+      "name": "Gerry Giblatar Tjokra",
+      "role": "MPKPO SOSRO",
+      "profilePic": "mpkpo-gerry",
+      "angkatan": "2023",
+      "bio": "Mahasiswa Fisika 2023 yang berfokus pada pengelolaan organisasi yang integratif."
+    },
+    {
+      "name": "Damar Sinulingga",
+      "role": "MPKPO MINBAK",
+      "profilePic": "mpkpo-damar",
+      "angkatan": "2023",
+      "bio": "Mahasiswa Fisika 2023 yang berfokus pada pengelolaan organisasi yang integratif."
+    }
+  ],
+  "programs": [
+    {
+      "name": "Evaluasi Himafi",
+      "programDesc": "mengawasi dan mengevaluasi himafi",
+      "date": "",
+      "programPic": "bph-pra-raker"
+    }
+  ]
+}

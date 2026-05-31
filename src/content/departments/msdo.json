@@ -1,0 +1,65 @@
+{
+  "name": "MSDO",
+  "fullName": "Departemen Manajemen Sumber Daya Organisasi",
+  "photo": "MSDO",
+  "secondPhoto": "MSDO2",
+  "description": "Departemen Manajemen Sumber Daya Organisasi adalah blablabla balbalbalab labalbalb albloekf nsfkbfbvdjbvvb hvaliof dhvhsavohhds lvdhsv jhxcdbcsisdjcxn x sajv",
+  "members": [
+    {
+      "name": "Muhammad Alvi Al Farizi",
+      "role": "Ketua Departemen MSDO",
+      "profilePic": "msdo-alvi",
+      "angkatan": "2024",
+      "bio": "Mahasiswa Fisika 2024 yang berfokus pada minat dan bakat."
+    },
+    {
+      "name": "Zabra Zhafirah Anjani",
+      "role": "Staff MSDO",
+      "profilePic": "msdo-zabra",
+      "angkatan": "2024",
+      "bio": "Mahasiswi Fisika 2024 yang berfokus pada pengelolaan organisasi yang integratif."
+    },
+    {
+      "name": "Aulia Nurkamilah",
+      "role": "Staff MSDO",
+      "profilePic": "msdo-aulia",
+      "angkatan": "2025",
+      "bio": "Mahasiswi Fisika 2025 yang berfokus pada pengelolaan organisasi yang integratif."
+    },
+    {
+      "name": "Heptiana Rahmawati",
+      "role": "Staff MSDO",
+      "profilePic": "msdo-hepta",
+      "angkatan": "2025",
+      "bio": "Mahasiswi Fisika 2025 yang berfokus pada pengelolaan organisasi yang integratif."
+    },
+    {
+      "name": "Zahra Fitria",
+      "role": "Staff MSDO",
+      "profilePic": "msdo-zahra",
+      "angkatan": "2025",
+      "bio": "Mahasiswi Fisika 2025 yang berfokus pada pengelolaan organisasi yang integratif."
+    },
+    {
+      "name": "Robiatul Azhar Mumtaz",
+      "role": "Staff MSDO",
+      "profilePic": "msdo-robiatul",
+      "angkatan": "2025",
+      "bio": "Mahasiswi Fisika 2025 yang berfokus pada pengelolaan organisasi yang integratif."
+    }
+  ],
+  "programs": [
+    {
+      "name": "JAHIM",
+      "programDesc": "pra rapat kerja HIMAFI 2026",
+      "date": "",
+      "programPic": "bph-pra-raker"
+    },
+    {
+      "name": "PDH",
+      "programDesc": "Rapat kerja himafi 2026",
+      "date": "",
+      "programPic": "bph-raker"
+    }
+  ]
+}

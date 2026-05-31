@@ -1,0 +1,72 @@
+{
+  "name": "SOSRO",
+  "fullName": "Departemen Sosial dan Rohani",
+  "photo": "sosro",
+  "secondPhoto": "sosro2",
+  "description": "Departemen Sosial dan Rohani adalah blablabla balbalbalab labalbalb albloekf nsfkbfbvdjbvvb hvaliof dhvhsavohhds lvdhsv jhxcdbcsisdjcxn x sajv",
+  "members": [
+    {
+      "name": "Muhammad Zidan Muzakki",
+      "role": "Ketua Departemen Sosial dan Rohani",
+      "profilePic": "sosro-zidan",
+      "angkatan": "2024",
+      "bio": "Mahasiswa Fisika 2024 yang berfokus pada minat dan bakat."
+    },
+    {
+      "name": "Nabila Putri Widiarini",
+      "role": "Staff SOSRO",
+      "profilePic": "sosro-nabila",
+      "angkatan": "2024",
+      "bio": "Mahasiswi Fisika 2024 yang berfokus pada pengelolaan organisasi yang integratif."
+    },
+    {
+      "name": "Kayla Mutiara Syakirah",
+      "role": "Staff SOSRO",
+      "profilePic": "sosro-kayla",
+      "angkatan": "2025",
+      "bio": "Mahasiswi Fisika 2025 yang berfokus pada pengelolaan organisasi yang integratif."
+    },
+    {
+      "name": "Annisa Magfiroh",
+      "role": "Staff SOSRO",
+      "profilePic": "sosro-annisa",
+      "angkatan": "2025",
+      "bio": "Mahasiswi Fisika 2025 yang berfokus pada pengelolaan organisasi yang integratif."
+    },
+    {
+      "name": "Alifia Zaskia Faidah",
+      "role": "Staff SOSRO",
+      "profilePic": "sosro-alifia",
+      "angkatan": "2025",
+      "bio": "Mahasiswi Fisika 2025 yang berfokus pada pengelolaan organisasi yang integratif."
+    },
+    {
+      "name": "Muhammad Ian Hafidh",
+      "role": "Staff SOSRO",
+      "profilePic": "sosro-ian",
+      "angkatan": "2025",
+      "bio": "Mahasiswa Fisika 2025 yang berfokus pada pengelolaan organisasi yang integratif."
+    },
+    {
+      "name": "Dandy Moreno Syahputra",
+      "role": "Staff SOSRO",
+      "profilePic": "sosro-dandy",
+      "angkatan": "2025",
+      "bio": "Mahasiswa Fisika 2025 yang berfokus pada pengelolaan organisasi yang integratif."
+    }
+  ],
+  "programs": [
+    {
+      "name": "Phy-ton",
+      "programDesc": "pra rapat kerja HIMAFI 2026",
+      "date": "",
+      "programPic": "bph-pra-raker"
+    },
+    {
+      "name": "Galang Dana",
+      "programDesc": "pra rapat kerja HIMAFI 2026",
+      "date": "",
+      "programPic": "bph-pra-raker"
+    }
+  ]
+}

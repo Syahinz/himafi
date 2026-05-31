@@ -1,0 +1,83 @@
+{
+  "name": "Kaderisasi",
+  "fullName": "Departemen Kaderisasi",
+  "photo": "Kaderisasi",
+  "secondPhoto": "Kaderisasi2",
+  "description": "Departemen Kaderisasi adalah blablabla balbalbalab labalbalb albloekf nsfkbfbvdjbvvb hvaliof dhvhsavohhds lvdhsv jhxcdbcsisdjcxn x sajv",
+  "members": [
+    {
+      "name": "Adi Cahya Nurgiman",
+      "role": "Ketua Departemen Kaderisasi",
+      "profilePic": "kader-cahya",
+      "angkatan": "2024",
+      "bio": "Mahasiswa Fisika 2024 yang berfokus pada minat dan bakat."
+    },
+    {
+      "name": "Alfira Zalwa",
+      "role": "Staff Kaderisasi",
+      "profilePic": "kader-fira",
+      "angkatan": "2025",
+      "bio": "Mahasiswi Fisika 2025 yang berfokus pada pengelolaan organisasi yang integratif."
+    },
+    {
+      "name": "Thalita Meysa Zahra",
+      "role": "Staff Kaderisasi",
+      "profilePic": "kader-meysa",
+      "angkatan": "2025",
+      "bio": "Mahasiswi Fisika 2025 yang berfokus pada pengelolaan organisasi yang integratif."
+    },
+    {
+      "name": "Elbentores Wirasatria",
+      "role": "Staff Kaderisasi",
+      "profilePic": "kader-elben",
+      "angkatan": "2025",
+      "bio": "Mahasiswa Fisika 2025 yang berfokus pada pengelolaan organisasi yang integratif."
+    },
+    {
+      "name": "Diaz Aji Saputra",
+      "role": "Staff Kaderisasi",
+      "profilePic": "kader-diaz",
+      "angkatan": "2025",
+      "bio": "Mahasiswa Fisika 2025 yang berfokus pada pengelolaan organisasi yang integratif."
+    },
+    {
+      "name": "Ananda Muzakir",
+      "role": "Staff Kaderisasi",
+      "profilePic": "kader-muza",
+      "angkatan": "2025",
+      "bio": "Mahasiswa Fisika 2025 yang berfokus pada pengelolaan organisasi yang integratif."
+    }
+  ],
+  "programs": [
+    {
+      "name": "PBAK",
+      "programDesc": "pra rapat kerja HIMAFI 2026",
+      "date": "",
+      "programPic": "bph-pra-raker"
+    },
+    {
+      "name": "KABIM",
+      "programDesc": "pra rapat kerja HIMAFI 2026",
+      "date": "",
+      "programPic": "bph-pra-raker"
+    },
+    {
+      "name": "GELORA",
+      "programDesc": "pra rapat kerja HIMAFI 2026",
+      "date": "",
+      "programPic": "bph-pra-raker"
+    },
+    {
+      "name": "Training Organization",
+      "programDesc": "pra rapat kerja HIMAFI 2026",
+      "date": "",
+      "programPic": "bph-pra-raker"
+    },
+    {
+      "name": "EKSPEDISI",
+      "programDesc": "Eksplorasi pengenalan budaya fisika",
+      "date": "",
+      "programPic": "bph-raker"
+    }
+  ]
+}

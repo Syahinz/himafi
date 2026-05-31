@@ -1,0 +1,58 @@
+{
+  "name": "Adkesma",
+  "fullName": "Departemen Advokasi dan Kesejahteraan Mahasiswa",
+  "photo": "Adkesma",
+  "secondPhoto": "Adkesma2",
+  "description": "Departemen Advokasi dan Kesejahteraan Mahasiswa adalah blablabla balbalbalab labalbalb albloekf nsfkbfbvdjbvvb hvaliof dhvhsavohhds lvdhsv jhxcdbcsisdjcxn x sajv",
+  "members": [
+    {
+      "name": "Salwa Nabilah Putri",
+      "role": "Ketua Departemen Adkesma",
+      "profilePic": "adkesma-salwa",
+      "angkatan": "2024",
+      "bio": "Mahasiswi Fisika 2024 yang berfokus pada minat dan bakat."
+    },
+    {
+      "name": "Nazwa Aulia Rahmadhani",
+      "role": "Staff Adkesma",
+      "profilePic": "adkesma-nazwa",
+      "angkatan": "2024",
+      "bio": "Mahasiswi Fisika 2024 yang berfokus pada pengelolaan organisasi yang integratif."
+    },
+    {
+      "name": "Lolita Amelia",
+      "role": "Staff Adkesma",
+      "profilePic": "adkesma-lolita",
+      "angkatan": "2025",
+      "bio": "Mahasiswa Fisika 2025 yang berfokus pada pengelolaan organisasi yang integratif."
+    },
+    {
+      "name": "Nabila Alifia Rahmania",
+      "role": "Staff Adkesma",
+      "profilePic": "adkesma-nabila",
+      "angkatan": "2025",
+      "bio": "Mahasiswi Fisika 2025 yang berfokus pada pengelolaan organisasi yang integratif."
+    },
+    {
+      "name": "Fais Arrohman",
+      "role": "Staff Adkesma",
+      "profilePic": "adkesma-faiz",
+      "angkatan": "2025",
+      "bio": "Mahasiswa Fisika 2025 yang berfokus pada pengelolaan organisasi yang integratif."
+    }
+  ],
+  "programs": [
+    {
+      "name": "Phy-creto",
+      "programDesc": "pra rapat kerja HIMAFI 2026",
+      "date": "",
+      "programPic": "bph-pra-raker"
+    },
+    {
+      "name": "Penurunan UKT",
+      "programDesc": "Rapat kerja himafi 2026",
+      "date": "",
+      "programPic": "bph-raker"
+    }
+  ]
+}

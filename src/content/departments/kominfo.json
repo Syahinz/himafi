@@ -1,0 +1,77 @@
+{
+  "name": "KOMINFO",
+  "fullName": "Departemen Komunikasi dan Informasi",
+  "photo": "Kominfo",
+  "secondPhoto": "Kominfo2",
+  "description": "Departemen KOMINFO bertindak sebagai pusat media, komunikasi, dan penyebaran informasi bagi mahasiswa Fisika UIN Jakarta. Departemen ini mengelola saluran komunikasi himpunan secara terorganisir, kreatif, serta dinamis",
+  "members": [
+    {
+      "name": "Helen Syakineu Rahmahdini",
+      "role": "Ketua Departemen KOMINFO",
+      "profilePic": "kominfo-helen",
+      "angkatan": "2024",
+      "bio": "Mahasiswa Fisika 2024 yang berfokus pada minat dan bakat."
+    },
+    {
+      "name": "Nouva Ridho Azzahrah",
+      "role": "Staff KOMINFO",
+      "profilePic": "kominfo-nouva",
+      "angkatan": "2024",
+      "bio": "Mahasiswi Fisika 2024 yang berfokus pada pengelolaan organisasi yang integratif."
+    },
+    {
+      "name": "Sadewi Narandi",
+      "role": "Staff KOMINFO",
+      "profilePic": "kominfo-sadewi",
+      "angkatan": "2024",
+      "bio": "Mahasiswi Fisika 2024 yang berfokus pada pengelolaan organisasi yang integratif."
+    },
+    {
+      "name": "Naysilla Nursyifa",
+      "role": "Staff KOMINFO",
+      "profilePic": "kominfo-naysilla",
+      "angkatan": "2025",
+      "bio": "Mahasiswi Fisika 2025 yang berfokus pada pengelolaan organisasi yang integratif."
+    },
+    {
+      "name": "Wulan Maulida Sari",
+      "role": "Staff KOMINFO",
+      "profilePic": "kominfo-wulan",
+      "angkatan": "2025",
+      "bio": "Mahasiswi Fisika 2025 yang berfokus pada pengelolaan organisasi yang integratif."
+    },
+    {
+      "name": "Muhammad Syahin",
+      "role": "Staff KOMINFO",
+      "profilePic": "kominfo-syahin",
+      "angkatan": "2025",
+      "bio": "Dalam derasnya arus digitalisasi imajinasi dan ide adalah hal yang membuat kita unik, perkenalkan saya Syahin seorang generalist yang akan selalu belajar apapun yang saya suka"
+    }
+  ],
+  "programs": [
+    {
+      "name": "Phytagram",
+      "programDesc": "mengelola sosial media HIMAFI",
+      "date": "",
+      "programPic": "bph-pra-raker"
+    },
+    {
+      "name": "Eksternal",
+      "programDesc": "mengelola hubungan eksternal HIMAFI",
+      "date": "",
+      "programPic": "bph-pra-raker"
+    },
+    {
+      "name": "Database",
+      "programDesc": "mengelola database HIMAFI 2026",
+      "date": "",
+      "programPic": "bph-pra-raker"
+    },
+    {
+      "name": "Website",
+      "programDesc": "Mengelola Website HIMAFI",
+      "date": "",
+      "programPic": "bph-pra-raker"
+    }
+  ]
+}

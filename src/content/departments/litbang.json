@@ -1,0 +1,72 @@
+{
+  "name": "LITBANG",
+  "fullName": "Departemen Literasi dan Pengembangan",
+  "photo": "Litbang",
+  "secondPhoto": "Litbang2",
+  "description": "Departemen Literasi dan Pengembangan adalah blablabla balbalbalab labalbalb albloekf nsfkbfbvdjbvvb hvaliof dhvhsavohhds lvdhsv jhxcdbcsisdjcxn x sajv",
+  "members": [
+    {
+      "name": "Muhammad Arvin Hassya Riyanto",
+      "role": "Ketua Departemen LITBANG",
+      "profilePic": "litbang-arvin",
+      "angkatan": "2024",
+      "bio": "Mahasiswa Fisika 2024 yang berfokus pada minat dan bakat."
+    },
+    {
+      "name": "Khayla Azka Putri",
+      "role": "Staff LITBANG",
+      "profilePic": "litbang-khayla",
+      "angkatan": "2025",
+      "bio": "Mahasiswi Fisika 2025 yang berfokus pada pengelolaan organisasi yang integratif."
+    },
+    {
+      "name": "Naski Muhemina",
+      "role": "Staff LITBANG",
+      "profilePic": "litbang-naski",
+      "angkatan": "2025",
+      "bio": "Mahasiswi Fisika 2025 yang berfokus pada pengelolaan organisasi yang integratif."
+    },
+    {
+      "name": "Ananda Fasha",
+      "role": "Staff LITBANG",
+      "profilePic": "litbang-fasha",
+      "angkatan": "2025",
+      "bio": "Mahasiswa Fisika 2025 yang berfokus pada pengelolaan organisasi yang integratif."
+    },
+    {
+      "name": "Rasyid Achmad Dani",
+      "role": "Staff LITBANG",
+      "profilePic": "litbang-rasyid",
+      "angkatan": "2025",
+      "bio": "Mahasiswa Fisika 2025 yang berfokus pada pengelolaan organisasi yang integratif."
+    },
+    {
+      "name": "Muhammad Daffa Al Ghifari",
+      "role": "Staff LITBANG",
+      "profilePic": "litbang-daffa",
+      "angkatan": "2025",
+      "bio": "Mahasiswa Fisika 2025 yang berfokus pada pengelolaan organisasi yang integratif."
+    },
+    {
+      "name": "Ezra Gilang Pratama",
+      "role": "Staff LITBANG",
+      "profilePic": "litbang-ezra",
+      "angkatan": "2025",
+      "bio": "Mahasiswa Fisika 2025 yang berfokus pada pengelolaan organisasi yang integratif."
+    }
+  ],
+  "programs": [
+    {
+      "name": "Spartival",
+      "programDesc": "pra rapat kerja HIMAFI 2026",
+      "date": "",
+      "programPic": "bph-pra-raker"
+    },
+    {
+      "name": "Fotografi",
+      "programDesc": "Rapat kerja himafi 2026",
+      "date": "",
+      "programPic": "bph-raker"
+    }
+  ]
+}
