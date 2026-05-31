@@ -55,12 +55,5 @@
       "bio": "Mahasiswa Fisika 2023 yang berfokus pada pengelolaan organisasi yang integratif."
     }
   ],
-  "programs": [
-    {
-      "name": "Evaluasi Himafi",
-      "programDesc": "mengawasi dan mengevaluasi himafi",
-      "date": "",
-      "programPic": "bph-pra-raker"
-    }
-  ]
+  "programs": []
 }

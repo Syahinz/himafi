@@ -53,7 +53,7 @@
       "name": "PBAK",
       "programDesc": "pra rapat kerja HIMAFI 2026",
       "date": "",
-      "programPic": "bph-pra-raker"
+      "programPic": "kader-pbak"
     },
     {
       "name": "KABIM",
@@ -65,19 +65,19 @@
       "name": "GELORA",
       "programDesc": "pra rapat kerja HIMAFI 2026",
       "date": "",
-      "programPic": "bph-pra-raker"
+      "programPic": "kader-gelora"
     },
     {
       "name": "Training Organization",
       "programDesc": "pra rapat kerja HIMAFI 2026",
       "date": "",
-      "programPic": "bph-pra-raker"
+      "programPic": "kader-to"
     },
     {
       "name": "EKSPEDISI",
       "programDesc": "Eksplorasi pengenalan budaya fisika",
       "date": "",
-      "programPic": "bph-raker"
+      "programPic": "kader-ekspedisi"
     }
   ]
 }

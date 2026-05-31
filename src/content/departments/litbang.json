@@ -57,13 +57,31 @@
   ],
   "programs": [
     {
-      "name": "Spartival",
-      "programDesc": "pra rapat kerja HIMAFI 2026",
+      "name": "Robotik",
+      "programDesc": "klub robotik HIMAFI",
       "date": "",
-      "programPic": "bph-pra-raker"
+      "programPic": "litbang-robotik"
     },
     {
-      "name": "Fotografi",
+      "name": "Ensika",
+      "programDesc": "ensiklopedia fisika",
+      "date": "",
+      "programPic": "litbang-robotik"
+    },
+    {
+      "name": "Phy-Path-Course",
+      "programDesc": "program baru litbang",
+      "date": "",
+      "programPic": "litbang-robotik"
+    },
+    {
+      "name": "Manajemen Projek",
+      "programDesc": "program baru litbang",
+      "date": "",
+      "programPic": "litbang-robotik"
+    },
+    {
+      "name": "Seminar Peminatan",
       "programDesc": "Rapat kerja himafi 2026",
       "date": "",
       "programPic": "bph-raker"

@@ -3,6 +3,7 @@ const {
   title = "Lorem",
   content = "Lorem ipsum dolor sit amet",
   img,
+  Href = "/",
 } = Astro.props;
 import { Image } from "astro:assets";
 ---
@@ -14,7 +15,7 @@ import { Image } from "astro:assets";
     <Image alt="news1" src={img} class="h-56 w-full object-cover" />
 
     <div class="bg-secondary-bright p-4 sm:p-6">
-      <a href="/">
+      <a href={Href}>
         <h3 class="text-primary-darken text-center font-bold mt-1 text-xl">
           {title}
         </h3>

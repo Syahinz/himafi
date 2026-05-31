@@ -27,9 +27,9 @@ const memberSchema = z.object({
 
 const programSchema = z.object({
   name: z.string(),
-  programDesc: z.string(),
-  date: z.string(),
-  programPic: z.string(),
+  programDesc: z.string().optional().default(""),
+  date: z.string().optional().default(""),
+  programPic: z.string().optional().default(""),
 });
 
 const departments = defineCollection({
@@ -41,7 +41,7 @@ const departments = defineCollection({
     secondPhoto: z.string(),
     description: z.string(),
     members: z.array(memberSchema),
-    programs: z.array(programSchema),
+    programs:z.array(programSchema).optional().default([]),
   }),
 });
 

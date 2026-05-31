@@ -23,6 +23,7 @@ export async function getStaticPaths() {
 }
 
 const { dept } = Astro.props;
+const programId = `${dept.data.name}Program`;
 
 // Resolve foto header departemen
 const deptPhoto = findImage(structureImages, dept.data.photo);
@@ -127,58 +128,56 @@ const resolvedPrograms = dept.data.programs.map((program) => ({
       <!-- Section program kerja (kalau ada) -->
     </section>
 
-    <Section mode="dark">
-      <div class="flex justify-center">
-        {
-          resolvedPrograms.length > 0 && (
-            <div class="mt-16 px-6 md:px-16 pb-16">
-              <h2 class="font-heading font-bold text-center text-2xl md:text-6xl mb-6">
-                Program Kerja
-              </h2>
-              <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                {resolvedPrograms.map((program) => (
-                  <button
-                    class="rounded-xl border border-secondary-bright/20 overflow-hidden text-left cursor-pointer group hover:scale-[1.02] transition-transform duration-300"
-                    data-program={JSON.stringify({
-                      name: program.name,
-                      date: program.date,
-                      programDesc: program.programDesc,
-                      photo: program.resolvePicture?.src ?? "",
-                    })}
-                  >
-                    <div class="h-48 overflow-hidden bg-primary-darken/30 relative">
-                      {program.resolvePicture ? (
-                        <Image
-                          src={program.resolvePicture}
-                          alt={program.name}
-                          class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                        />
-                      ) : (
-                        <div class="w-full h-full flex items-center justify-center">
-                          <span class="font-heading text-4xl font-bold text-secondary-bright/30">
-                            {program.name.charAt(0)}
-                          </span>
-                        </div>
-                      )}
-                    </div>
-                    <div class="p-4">
-                      <p class="font-heading font-bold text-base text-secondary-bright">
-                        {program.name}
+    {
+      resolvedPrograms.length > 0 && (
+        <Section mode="dark" direct={programId}>
+          <div class="pt-16 px-6 md:px-16 lg:px-30 pb-16">
+            <h2 class="font-heading font-bold text-center text-2xl md:text-6xl mb-6">
+              Program Kerja
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+              {resolvedPrograms.map((program) => (
+                <button
+                  class="rounded-xl border border-secondary-bright/20 overflow-hidden text-left cursor-pointer group hover:scale-[1.02] transition-transform duration-300"
+                  data-program={JSON.stringify({
+                    name: program.name,
+                    date: program.date,
+                    programDesc: program.programDesc,
+                    photo: program.resolvePicture?.src ?? "",
+                  })}
+                >
+                  <div class="h-56 w-full object-cover overflow-hidden bg-primary-darken/30 relative">
+                    {program.resolvePicture ? (
+                      <Image
+                        src={program.resolvePicture}
+                        alt={program.name}
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                    ) : (
+                      <div class="w-full h-full flex items-center justify-center">
+                        <span class="font-heading text-4xl font-bold text-secondary-bright/30">
+                          {program.name.charAt(0)}
+                        </span>
+                      </div>
+                    )}
+                  </div>
+                  <div class="p-4">
+                    <p class="font-heading font-bold text-base text-secondary-bright">
+                      {program.name}
+                    </p>
+                    {program.date && (
+                      <p class="font-isi text-xs text-secondary-bright/50 mt-1">
+                        {program.date}
                       </p>
-                      {program.date && (
-                        <p class="font-isi text-xs text-secondary-bright/50 mt-1">
-                          {program.date}
-                        </p>
-                      )}
-                    </div>
-                  </button>
-                ))}
-              </div>
+                    )}
+                  </div>
+                </button>
+              ))}
             </div>
-          )
-        }
-      </div>
-    </Section>
+          </div>
+        </Section>
+      )
+    }
 
     <div
       id="program-modal"
@@ -311,144 +310,152 @@ const resolvedPrograms = dept.data.programs.map((program) => ({
   </Section>
 
   <script>
-    const memberModal = document.getElementById("member-modal")! as HTMLElement;
-    const closeBtn = document.getElementById("close-modal")!;
-    const programModal = document.getElementById(
-      "program-modal",
-    )! as HTMLElement;
-    const closeProgramBtn = document.getElementById("close-program-modal")!;
+    // ─── Helper: typed getElementById ────────────────────────
+    function el<T extends HTMLElement = HTMLElement>(id: string) {
+      return document.getElementById(id) as T | null;
+    }
 
-    // ── Member modal ──────────────────────────────
-    function openModal(data: {
+    // ─── Helper: isi foto atau fallback huruf pertama ─────────
+    function setPhoto(
+      photoId: string,
+      fallbackId: string,
+      initialId: string,
+      src: string,
+      name: string,
+    ) {
+      const photo = el<HTMLImageElement>(photoId);
+      const fallback = el(fallbackId);
+      const initial = el(initialId);
+      if (!photo || !fallback || !initial) return;
+
+      if (src) {
+        photo.src = src;
+        photo.alt = name;
+        photo.style.display = "block";
+        fallback.style.display = "none";
+      } else {
+        photo.style.display = "none";
+        fallback.style.display = "flex";
+        initial.textContent = name.charAt(0);
+      }
+    }
+
+    // ─── Helper: buka/tutup modal generik ────────────────────
+    function openModal(id: string) {
+      const modal = el(id);
+      if (!modal) return;
+      modal.style.display = "flex";
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeModal(id: string) {
+      const modal = el(id);
+      if (!modal) return;
+      modal.style.display = "none";
+      document.body.style.overflow = "";
+    }
+
+    // ─── Populate member modal ────────────────────────────────
+    function showMember(data: {
       name: string;
       role: string;
       angkatan?: string;
       bio: string;
       photo?: string;
     }) {
-      const photoEl = document.getElementById(
-        "modal-photo",
-      ) as HTMLImageElement;
-      const fallback = document.getElementById("modal-photo-fallback")!;
-      const initial = document.getElementById("modal-photo-initial")!;
+      el("modal-name")!.textContent = data.name;
+      el("modal-role")!.textContent = data.role;
+      el("modal-bio")!.textContent = data.bio;
 
-      document.getElementById("modal-name")!.textContent = data.name;
-      document.getElementById("modal-role")!.textContent = data.role;
-      document.getElementById("modal-bio")!.textContent = data.bio;
-
-      const angkatanEl = document.getElementById(
-        "modal-angkatan",
-      )! as HTMLElement;
-      angkatanEl.textContent = data.angkatan ? `Angkatan ${data.angkatan}` : "";
-      angkatanEl.style.display = data.angkatan ? "inline-block" : "none";
-
-      if (data.photo) {
-        photoEl.src = data.photo;
-        photoEl.alt = data.name;
-        photoEl.style.display = "block";
-        fallback.style.display = "none";
-      } else {
-        photoEl.style.display = "none";
-        fallback.style.display = "flex";
-        initial.textContent = data.name.charAt(0);
+      const badge = el("modal-angkatan");
+      if (badge) {
+        badge.textContent = data.angkatan ? `Angkatan ${data.angkatan}` : "";
+        badge.style.display = data.angkatan ? "inline-block" : "none";
       }
 
-      memberModal.style.display = "flex";
-      document.body.style.overflow = "hidden";
+      setPhoto(
+        "modal-photo",
+        "modal-photo-fallback",
+        "modal-photo-initial",
+        data.photo ?? "",
+        data.name,
+      );
+
+      openModal("member-modal");
     }
 
-    function closeModal() {
-      memberModal.style.display = "none";
-      document.body.style.overflow = "";
-    }
-
-    // ── Program modal ─────────────────────────────
-    function openProgramModal(data: {
+    // ─── Populate program modal ───────────────────────────────
+    function showProgram(data: {
       name: string;
       date?: string;
       programDesc?: string;
       photo?: string;
     }) {
-      const photoEl = document.getElementById(
+      el("prog-modal-name")!.textContent = data.name;
+
+      const dateEl = el("prog-modal-date");
+      if (dateEl) {
+        dateEl.textContent = data.date ?? "";
+        dateEl.style.display = data.date ? "inline-block" : "none";
+      }
+
+      const descEl = el("prog-modal-desc");
+      const emptyEl = el("prog-modal-empty");
+      if (descEl && emptyEl) {
+        const hasDesc = Boolean(data.programDesc);
+        descEl.textContent = data.programDesc ?? "";
+        descEl.style.display = hasDesc ? "block" : "none";
+        emptyEl.style.display = hasDesc ? "none" : "block";
+      }
+
+      setPhoto(
         "prog-modal-photo",
-      ) as HTMLImageElement;
-      const fallback = document.getElementById("prog-modal-fallback")!;
-      const initial = document.getElementById("prog-modal-initial")!;
-      const descEl = document.getElementById("prog-modal-desc")! as HTMLElement;
-      const emptyEl = document.getElementById(
-        "prog-modal-empty",
-      )! as HTMLElement;
-      const dateEl = document.getElementById("prog-modal-date")! as HTMLElement;
+        "prog-modal-fallback",
+        "prog-modal-initial",
+        data.photo ?? "",
+        data.name,
+      );
 
-      document.getElementById("prog-modal-name")!.textContent = data.name;
+      openModal("program-modal");
+    }
 
-      dateEl.textContent = data.date ?? "";
-      dateEl.style.display = data.date ? "inline-block" : "none";
+    // ─── Event delegation ─────────────────────────────────────
+    // Satu listener di document — tidak butuh re-attach setelah View Transitions
+    document.addEventListener("click", (e) => {
+      const t = e.target as Element;
 
-      if (data.programDesc) {
-        descEl.textContent = data.programDesc;
-        descEl.style.display = "block";
-        emptyEl.style.display = "none";
-      } else {
-        descEl.style.display = "none";
-        emptyEl.style.display = "block";
+      // Klik kartu member
+      const memberCard = t.closest<HTMLElement>("[data-member]");
+      if (memberCard?.dataset.member) {
+        showMember(JSON.parse(memberCard.dataset.member));
+        return;
       }
 
-      if (data.photo) {
-        photoEl.src = data.photo;
-        photoEl.alt = data.name;
-        photoEl.style.display = "block";
-        fallback.style.display = "none";
-      } else {
-        photoEl.style.display = "none";
-        fallback.style.display = "flex";
-        initial.textContent = data.name.charAt(0);
+      // Klik kartu program
+      const programCard = t.closest<HTMLElement>("[data-program]");
+      if (programCard?.dataset.program) {
+        showProgram(JSON.parse(programCard.dataset.program));
+        return;
       }
 
-      programModal.style.display = "flex";
-      document.body.style.overflow = "hidden";
-    }
+      // Tutup member modal: tombol X atau klik backdrop
+      if (t.closest("#close-modal") || t.id === "member-modal") {
+        closeModal("member-modal");
+        return;
+      }
 
-    function closeProgramModal() {
-      programModal.style.display = "none";
-      document.body.style.overflow = "";
-    }
-
-    // ── Listeners ─────────────────────────────────
-    function attachListeners() {
-      document.querySelectorAll("[data-member]").forEach((btn) => {
-        btn.addEventListener("click", () => {
-          const data = JSON.parse((btn as HTMLElement).dataset.member!);
-          openModal(data);
-        });
-      });
-
-      document.querySelectorAll("[data-program]").forEach((btn) => {
-        btn.addEventListener("click", () => {
-          const data = JSON.parse((btn as HTMLElement).dataset.program!);
-          openProgramModal(data);
-        });
-      });
-    }
-
-    closeBtn.addEventListener("click", closeModal);
-    memberModal.addEventListener("click", (e) => {
-      if (e.target === memberModal) closeModal();
+      // Tutup program modal: tombol X atau klik backdrop
+      if (t.closest("#close-program-modal") || t.id === "program-modal") {
+        closeModal("program-modal");
+        return;
+      }
     });
 
-    closeProgramBtn.addEventListener("click", closeProgramModal);
-    programModal.addEventListener("click", (e) => {
-      if (e.target === programModal) closeProgramModal();
-    });
-
+    // Escape menutup modal yang sedang terbuka
     document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape") {
-        closeModal();
-        closeProgramModal();
-      }
+      if (e.key !== "Escape") return;
+      closeModal("member-modal");
+      closeModal("program-modal");
     });
-
-    attachListeners();
-    document.addEventListener("astro:after-swap", attachListeners);
   </script>
 </Layout>
