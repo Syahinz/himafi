@@ -44,9 +44,28 @@ const resolvedPrograms = dept.data.programs.map((program) => ({
   <!-- Hero foto departemen -->
   {
     deptPhoto && (
-      <div class="relative  h-80 w-full overflow-hidden">
+      <div class="relative md:hidden h-80 w-full overflow-hidden">
         <Image
           src={deptPhoto}
+          alt={dept.data.name}
+          class="w-full h-full object-cover brightness-75"
+          loading="eager"
+          fetchpriority="high"
+        />
+        <div class="absolute inset-0 flex flex-col items-center justify-center">
+          <h1 class="font-heading font-bold text-5xl text-white">
+            {dept.data.name}
+          </h1>
+          <p class="font-isi text-white/80 mt-2">{dept.data.fullName}</p>
+        </div>
+      </div>
+    )
+  }
+  {
+    deptSecPhoto && (
+      <div class="relative hidden md:block h-120 w-full overflow-hidden">
+        <Image
+          src={deptSecPhoto}
           alt={dept.data.name}
           class="w-full h-full object-cover brightness-75"
           loading="eager"
