@@ -44,7 +44,7 @@ const resolvedPrograms = dept.data.programs.map((program) => ({
   <!-- Hero foto departemen -->
   {
     deptPhoto && (
-      <div class="relative md:hidden h-80 w-full overflow-hidden">
+      <div class="relative  h-80 w-full overflow-hidden">
         <Image
           src={deptPhoto}
           alt={dept.data.name}
@@ -63,85 +63,51 @@ const resolvedPrograms = dept.data.programs.map((program) => ({
   }
 
   <Section>
-    <div class="md:flex">
-      <section
-        class="hidden md:flex md:flex-col md:items-center px-4 md:pt-56 md:px-10 py-16 md:w-1/2"
-      >
-        <h1 class="font-heading font-bold text-5xl text-primary">
-          {dept.data.name}
-        </h1>
-        <p class="font-isi text-primary mt-2">{dept.data.fullName}</p>
-        {
-          deptPhoto && (
-            <Image
-              src={deptPhoto}
-              alt={dept.data.name}
-              class="w-md max-h-140 mt-10 object-cover  rounded-2xl hover:scale-105 transition-transform duration-300"
-              loading="eager"
-              fetchpriority="high"
-            />
-          )
-        }
-        {
-          deptSecPhoto && (
-            <Image
-              src={deptSecPhoto}
-              alt={dept.data.name}
-              class="hidden lg:block w-md max-h-140 mt-10 object-cover  rounded-2xl hover:scale-105 transition-transform duration-300"
-              loading="eager"
-              fetchpriority="high"
-            />
-          )
-        }
-        <p class="font-isi text-primary container lg:px-10 mt-6">
-          {dept.data.description}
-        </p>
-      </section>
-      <section class="px-4 md:pt-36 md:px-10 py-16 md:w-1/2">
-        <p class="font-isi max-w-2xl md:hidden">{dept.data.description}</p>
+    <section class="px-4 md:px-10 py-16">
+      <p class="font-isi max-w-2xl">{dept.data.description}</p>
 
-        <!-- Grid member -->
-        <h2 class="font-heading font-bold text-2xl mt-14 mb-6">Anggota</h2>
-        <div class="grid grid-cols-2 gap-6">
-          {
-            resolvedMembers.map((member) => (
-              <button
-                class="text-left group cursor-pointer"
-                data-member={JSON.stringify({
-                  name: member.name,
-                  role: member.role,
-                  angkatan: member.angkatan,
-                  bio: member.bio,
-                  photo: member.resolvedPhoto?.src ?? "",
-                })}
-              >
-                <div class="overflow-hidden rounded-xl aspect-square bg-primary-darken/10">
-                  {member.resolvedPhoto ? (
-                    <Image
-                      src={member.resolvedPhoto}
-                      alt={member.name}
-                      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                      loading="eager"
-                      fetchpriority="high"
-                    />
-                  ) : (
-                    <div class="w-full h-full flex items-center justify-center">
-                      <span class="font-heading text-2xl font-bold text-primary">
-                        {member.name.charAt(0)}
-                      </span>
-                    </div>
-                  )}
-                </div>
-                <p class="mt-2 font-heading font-bold text-sm">{member.name}</p>
-                <p class="font-isi text-xs text-primary/60">{member.role}</p>
-              </button>
-            ))
-          }
-        </div>
+      <!-- Grid member -->
+      <h2 class="font-heading font-bold text-2xl mt-14 mb-6">Anggota</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+        {
+          resolvedMembers.map((member) => (
+            <button
+              class="text-left group cursor-pointer"
+              data-member={JSON.stringify({
+                name: member.name,
+                role: member.role,
+                angkatan: member.angkatan,
+                bio: member.bio,
+                photo: member.resolvedPhoto?.src ?? "",
+              })}
+            >
+              <div class="overflow-hidden rounded-xl aspect-square bg-primary-darken/10">
+                {member.resolvedPhoto ? (
+                  <Image
+                    src={member.resolvedPhoto}
+                    alt={member.name}
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    loading="eager"
+                    fetchpriority="high"
+                  />
+                ) : (
+                  <div class="w-full h-full flex items-center justify-center">
+                    <span class="font-heading text-2xl font-bold text-primary">
+                      {member.name.charAt(0)}
+                    </span>
+                  </div>
+                )}
+              </div>
+              <p class="mt-2 font-heading font-bold text-sm">{member.name}</p>
+              <p class="font-isi text-xs text-primary/60">{member.role}</p>
+            </button>
+          ))
+        }
+      </div>
 
-        <!-- Section program kerja (kalau ada) -->
-      </section>
-    </div>
+      <!-- Section program kerja (kalau ada) -->
+    </section>
+
     <Section mode="dark">
       <div class="flex justify-center">
         {
