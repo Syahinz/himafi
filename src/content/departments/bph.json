@@ -2,7 +2,8 @@
   "name": "BPH",
   "fullName": "Badan Pengurus Harian",
   "photo": "BPH",
-  "description": "loremsnasondsdnasdnsadksdnskldnak",
+  "secondPhoto": "BPH2",
+  "description": "Badan pengurus harian adalah blablabla balbalbalab labalbalb albloekf nsfkbfbvdjbvvb hvaliof dhvhsavohhds lvdhsv jhxcdbcsisdjcxn x sajv",
   "members": [
     {
       "name": "Na'ilah Zahra Putri Utomo",
@@ -50,13 +51,13 @@
   "programs": [
     {
       "name": "Pra-Raker",
-      "programDesc": "",
+      "programDesc": "pra rapat kerja HIMAFI 2026",
       "date": "",
-      "programPic": ""
+      "programPic": "bph-pra-raker"
     },
     {
       "name": "Raker",
-      "programDesc": "",
+      "programDesc": "Rapat kerja himafi 2026",
       "date": "",
       "programPic": "bph-raker"
     }

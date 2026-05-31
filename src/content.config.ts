@@ -38,6 +38,7 @@ const departments = defineCollection({
     name: z.string(),
     fullName: z.string(),
     photo: z.string(),
+    secondPhoto: z.string(),
     description: z.string(),
     members: z.array(memberSchema),
     programs: z.array(programSchema),
