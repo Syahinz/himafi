@@ -3,7 +3,7 @@
   "fullName": "Departemen Literasi dan Pengembangan",
   "photo": "Litbang",
   "secondPhoto": "Litbang2",
-  "description": "Departemen Literasi dan Pengembangan adalah blablabla balbalbalab labalbalb albloekf nsfkbfbvdjbvvb hvaliof dhvhsavohhds lvdhsv jhxcdbcsisdjcxn x sajv",
+  "description": "Departemen Penelitian dan Pengembangan adalah bagian dari organisasi yang berfokus pada peningkatan kualitas akademik serta mendorong budaya riset dan inovasi di kalangan mahasiswa. Tupoksinya meliputi menyelenggarakan program kerja seperti Seminar Peminatan, serta mendukung komunitas akademik seperti Club Robotik, guna mengembangkan kemampuan riset, berpikir kritis, dan inovasi mahasiswa sesuai dengan bidang keilmuan dan minat mereka",
   "members": [
     {
       "name": "Muhammad Arvin Hassya Riyanto",
@@ -57,34 +57,28 @@
   ],
   "programs": [
     {
-      "name": "Robotik",
+      "name": "Robotic Club",
       "programDesc": "klub robotik HIMAFI",
       "date": "",
       "programPic": "litbang-robotik"
     },
     {
       "name": "Ensika",
-      "programDesc": "ensiklopedia fisika",
+      "programDesc": "Ensiklopedia Fisika",
       "date": "",
-      "programPic": "litbang-robotik"
+      "programPic": "comming"
     },
     {
       "name": "Phy-Path-Course",
       "programDesc": "program baru litbang",
       "date": "",
-      "programPic": "litbang-robotik"
-    },
-    {
-      "name": "Manajemen Projek",
-      "programDesc": "program baru litbang",
-      "date": "",
-      "programPic": "litbang-robotik"
+      "programPic": "comming"
     },
     {
       "name": "Seminar Peminatan",
       "programDesc": "Rapat kerja himafi 2026",
       "date": "",
-      "programPic": "bph-raker"
+      "programPic": "comming"
     }
   ]
 }

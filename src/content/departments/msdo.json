@@ -3,7 +3,7 @@
   "fullName": "Departemen Manajemen Sumber Daya Organisasi",
   "photo": "MSDO",
   "secondPhoto": "MSDO2",
-  "description": "Departemen Manajemen Sumber Daya Organisasi adalah blablabla balbalbalab labalbalb albloekf nsfkbfbvdjbvvb hvaliof dhvhsavohhds lvdhsv jhxcdbcsisdjcxn x sajv",
+  "description": "Departemen Manajemen Sumber Daya Organisasi adalah bagian dari organisasi yang berfokus pada pengelolaan dan penguatan hubungan internal antar anggota serta memastikan administrasi internal berjalan tertib. Tupoksinya meliputi mengelola kesekretariatan, mendata keaktifan staff, mengadakan kegiatan seperti pembelian PDH dan Jahim, serta menyelenggarakan gathering untuk mempererat kekompakan dan solidaritas antar anggota organisasi.",
   "members": [
     {
       "name": "Muhammad Alvi Al Farizi",
@@ -50,16 +50,34 @@
   ],
   "programs": [
     {
-      "name": "JAHIM",
-      "programDesc": "pra rapat kerja HIMAFI 2026",
+      "name": "Data Inventaris",
+      "programDesc": "Memastikan proses administrasi terkait inventaris berjalan sesuai SOP yang di tetapkan.",
       "date": "",
-      "programPic": "bph-pra-raker"
+      "programPic": "comming"
     },
     {
-      "name": "PDH",
-      "programDesc": "Rapat kerja himafi 2026",
+      "name": "OKSITOSIN",
+      "programDesc": "Membuat Bounding untuk mempererat solidaritas antar pengurus HIMAFI.",
       "date": "",
-      "programPic": "bph-raker"
+      "programPic": "comming"
+    },
+    {
+      "name": "Timeline Broadcasting",
+      "programDesc": "Membuat Bounding untuk mempererat solidaritas antar pengurus HIMAFI.",
+      "date": "",
+      "programPic": "comming"
+    },
+    {
+      "name": "Data Internal",
+      "programDesc": "Membuat Bounding untuk mempererat solidaritas antar pengurus HIMAFI.",
+      "date": "",
+      "programPic": "comming"
+    },
+    {
+      "name": "PDH & JAHIM",
+      "programDesc": "Pakaian Dinas Harian dan Jaket Himpunan",
+      "date": "",
+      "programPic": "comming"
     }
   ]
 }

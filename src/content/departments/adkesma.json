@@ -3,7 +3,7 @@
   "fullName": "Departemen Advokasi dan Kesejahteraan Mahasiswa",
   "photo": "Adkesma",
   "secondPhoto": "Adkesma2",
-  "description": "Departemen Advokasi dan Kesejahteraan Mahasiswa adalah blablabla balbalbalab labalbalb albloekf nsfkbfbvdjbvvb hvaliof dhvhsavohhds lvdhsv jhxcdbcsisdjcxn x sajv",
+  "description": "Departemen Advokasi dan Kesejahteraan Mahasiswa adalah bagian dari organisasi yang berperan dalam memperjuangkan hak-hak mahasiswa serta memastikan kesejahteraan mereka, baik di bidang akademik, fasilitas, maupun kebutuhan lainnya. Tupoksinya meliputi menampung dan menyuarakan aspirasi mahasiswa, menjadi penghubung antara mahasiswa dan pihak kampus, memberikan bantuan advokasi terkait permasalahan internal kampus maupun organisasi, serta menyelenggarakan program-program yang mendukung kesejahteraan dan kenyamanan mahasiswa selama berkuliah.",
   "members": [
     {
       "name": "Salwa Nabilah Putri",
@@ -50,16 +50,28 @@
   ],
   "programs": [
     {
-      "name": "Phy-creto",
+      "name": "Asphyrasi",
       "programDesc": "pra rapat kerja HIMAFI 2026",
       "date": "",
-      "programPic": "bph-pra-raker"
+      "programPic": "comming"
     },
     {
-      "name": "Penurunan UKT",
+      "name": "Phynews",
+      "programDesc": "pra rapat kerja HIMAFI 2026",
+      "date": "",
+      "programPic": "comming"
+    },
+    {
+      "name": "Galang Dana Sosial",
+      "programDesc": "pra rapat kerja HIMAFI 2026",
+      "date": "",
+      "programPic": "comming"
+    },
+    {
+      "name": "Studi Banding",
       "programDesc": "Rapat kerja himafi 2026",
       "date": "",
-      "programPic": "bph-raker"
+      "programPic": "comming"
     }
   ]
 }

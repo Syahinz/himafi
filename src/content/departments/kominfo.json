@@ -3,7 +3,7 @@
   "fullName": "Departemen Komunikasi dan Informasi",
   "photo": "Kominfo",
   "secondPhoto": "Kominfo2",
-  "description": "Departemen KOMINFO bertindak sebagai pusat media, komunikasi, dan penyebaran informasi bagi mahasiswa Fisika UIN Jakarta. Departemen ini mengelola saluran komunikasi himpunan secara terorganisir, kreatif, serta dinamis",
+  "description": "Departemen Komunikasi dan Informasi adalah bagian dari organisasi yang berfungsi sebagai pengelola arus informasi, publikasi, serta dokumentasi kegiatan organisasi. Tupoksinya meliputi mengelola data dokumentasi seluruh kegiatan, serta menyebarkan informasi melalui media sosial atau platform lainnya agar seluruh program kerja dapat tersampaikan dengan baik kepada anggota maupun pihak eksternal.",
   "members": [
     {
       "name": "Helen Syakineu Rahmahdini",
@@ -53,25 +53,25 @@
       "name": "Phytagram",
       "programDesc": "mengelola sosial media HIMAFI",
       "date": "",
-      "programPic": "bph-pra-raker"
+      "programPic": "comming"
     },
     {
       "name": "Eksternal",
       "programDesc": "mengelola hubungan eksternal HIMAFI",
       "date": "",
-      "programPic": "bph-pra-raker"
+      "programPic": "comming"
     },
     {
-      "name": "Database",
+      "name": "Database & Dokumentasi",
       "programDesc": "mengelola database HIMAFI 2026",
       "date": "",
-      "programPic": "bph-pra-raker"
+      "programPic": "comming"
     },
     {
-      "name": "Website",
+      "name": "Website HIMAFI",
       "programDesc": "Mengelola Website HIMAFI",
       "date": "",
-      "programPic": "bph-pra-raker"
+      "programPic": "comming"
     }
   ]
 }

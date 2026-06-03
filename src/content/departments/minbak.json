@@ -3,7 +3,7 @@
   "fullName": "Departemen Minat dan Bakat",
   "photo": "minbak",
   "secondPhoto": "minbak2",
-  "description": "Departemen Minat dan Bakat adalah blablabla balbalbalab labalbalb albloekf nsfkbfbvdjbvvb hvaliof dhvhsavohhds lvdhsv jhxcdbcsisdjcxn x sajv",
+  "description": "Departemen Minat dan Bakat adalah bagian dari organisasi yang berperan dalam mewadahi, mengembangkan, dan menyalurkan potensi serta kreativitas mahasiswa di bidang non-akademik. Tupoksinya meliputi menyelenggarakan kegiatan seni, olahraga, dan keterampilan lainnya, mendukung pengembangan komunitas atau klub hobi, serta memberikan ruang bagi mahasiswa untuk mengekspresikan minat dan bakat mereka melalui berbagai event atau kompetisi",
   "members": [
     {
       "name": "Akhmad Jabal Atthoriq",
@@ -44,15 +44,21 @@
   "programs": [
     {
       "name": "Spartival",
-      "programDesc": "pra rapat kerja HIMAFI 2026",
+      "programDesc": "Sport and Art Festival",
       "date": "",
-      "programPic": "bph-pra-raker"
+      "programPic": "minbak-spartival"
     },
     {
-      "name": "Fotografi",
+      "name": "HSC",
+      "programDesc": "HIMAFI Sport Club",
+      "date": "",
+      "programPic": "comming"
+    },
+    {
+      "name": "Seniman HIMAFI",
       "programDesc": "Rapat kerja himafi 2026",
       "date": "",
-      "programPic": "bph-raker"
+      "programPic": "comming"
     }
   ]
 }

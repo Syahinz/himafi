@@ -3,7 +3,7 @@
   "fullName": "Departemen Sosial dan Rohani",
   "photo": "sosro",
   "secondPhoto": "sosro2",
-  "description": "Departemen Sosial dan Rohani adalah blablabla balbalbalab labalbalb albloekf nsfkbfbvdjbvvb hvaliof dhvhsavohhds lvdhsv jhxcdbcsisdjcxn x sajv",
+  "description": "Departemen Sosial Kerohanian adalah bagian dari organisasi yang bertugas mengelola kegiatan yang berkaitan dengan kepedulian sosial, pengembangan karakter spiritual, serta memperkuat nilai-nilai keagamaan dan moral di lingkungan organisasi. Tupoksinya meliputi mengadakan kegiatan sosial seperti bakti sosial dan donasi, menyelenggarakan renungan rutin, serta membentuk budaya organisasi yang berlandaskan nilai-nilai spiritual dan kepedulian sosial.",
   "members": [
     {
       "name": "Muhammad Zidan Muzakki",
@@ -57,16 +57,22 @@
   ],
   "programs": [
     {
-      "name": "Phy-ton",
+      "name": "PHYTON 4.0",
       "programDesc": "pra rapat kerja HIMAFI 2026",
       "date": "",
-      "programPic": "bph-pra-raker"
+      "programPic": "sosro-phyton"
     },
     {
-      "name": "Galang Dana",
+      "name": "KREASI",
+      "programDesc": "Konten Religi dan Sosial ",
+      "date": "",
+      "programPic": "comming"
+    },
+    {
+      "name": "Galang Dana Sosial",
       "programDesc": "pra rapat kerja HIMAFI 2026",
       "date": "",
-      "programPic": "bph-pra-raker"
+      "programPic": "comming"
     }
   ]
 }

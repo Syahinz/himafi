@@ -3,7 +3,7 @@
   "fullName": "Badan Pengurus Harian",
   "photo": "BPH",
   "secondPhoto": "BPH2",
-  "description": "Badan pengurus harian adalah blablabla balbalbalab labalbalb albloekf nsfkbfbvdjbvvb hvaliof dhvhsavohhds lvdhsv jhxcdbcsisdjcxn x sajv",
+  "description": "Badan Pengurus Harian (BPH) adalah struktur inti dalam organisasi  yang berfungsi sebagai koordinator utama dalam menjalankan roda organisasi sehari hari. BPH terdiri dari ketua, wakil ketua, sekretaris, dan bendahara yang memiliki peran strategis dalam pengelolaan organisasi. Tupoksinya meliputi menyusun kebijakan internal, mengatur alur koordinasi antar departemen, mengelola administrasi dan keuangan, mengevaluasi kinerja organisasi, serta menjadi pengambil keputusan strategis demi tercapainya visi dan misi organisasi.",
   "members": [
     {
       "name": "Na'ilah Zahra Putri Utomo",
@@ -50,16 +50,40 @@
   ],
   "programs": [
     {
-      "name": "Pra-Raker",
+      "name": "Pra-Rapat Kerja",
       "programDesc": "pra rapat kerja HIMAFI 2026",
       "date": "",
       "programPic": "bph-pra-raker"
     },
     {
-      "name": "Raker",
+      "name": "Rapat Kerja",
       "programDesc": "Rapat kerja himafi 2026",
       "date": "",
       "programPic": "bph-raker"
+    },
+    {
+      "name": "Evakuasi",
+      "programDesc": "Rapat kerja himafi 2026",
+      "date": "",
+      "programPic": "comming"
+    },
+    {
+      "name": "KSH",
+      "programDesc": "Konferensi Suksesi HIMAFI",
+      "date": "",
+      "programPic": "comming"
+    },
+    {
+      "name": "Uang Kas",
+      "programDesc": "Rapat kerja himafi 2026",
+      "date": "",
+      "programPic": "comming"
+    },
+    {
+      "name": "OSSAKA",
+      "programDesc": "Olimpiade Sains dan Seminar Fisika",
+      "date": "",
+      "programPic": "comming"
     }
   ]
 }

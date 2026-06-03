@@ -3,7 +3,7 @@
   "fullName": "Departemen Kaderisasi",
   "photo": "Kaderisasi",
   "secondPhoto": "Kaderisasi2",
-  "description": "Departemen Kaderisasi adalah blablabla balbalbalab labalbalb albloekf nsfkbfbvdjbvvb hvaliof dhvhsavohhds lvdhsv jhxcdbcsisdjcxn x sajv",
+  "description": "Departemen Kaderisasi adalah bagian dari organisasi yang bertugas mengoptimalkan potensi mahasiswa dalam kualitas diri dalam bentuk soft skill atau lainnya, juga kegiatan yang berkaitan dengan kaderisasi seperti, PBAK, Ekspedisi, Kabim dan juga Training Organization.",
   "members": [
     {
       "name": "Adi Cahya Nurgiman",
@@ -51,15 +51,15 @@
   "programs": [
     {
       "name": "PBAK",
-      "programDesc": "pra rapat kerja HIMAFI 2026",
+      "programDesc": "Pengenalan Budaya Akademik dan Kemahasiswaan",
       "date": "",
       "programPic": "kader-pbak"
     },
     {
       "name": "KABIM",
-      "programDesc": "pra rapat kerja HIMAFI 2026",
+      "programDesc": "KAKAK PEMBIMBING",
       "date": "",
-      "programPic": "bph-pra-raker"
+      "programPic": "comming"
     },
     {
       "name": "GELORA",
@@ -69,13 +69,13 @@
     },
     {
       "name": "Training Organization",
-      "programDesc": "pra rapat kerja HIMAFI 2026",
+      "programDesc": "Training Organization",
       "date": "",
       "programPic": "kader-to"
     },
     {
       "name": "EKSPEDISI",
-      "programDesc": "Eksplorasi pengenalan budaya fisika",
+      "programDesc": "Eksperimen Pengenalan Prodi Fisika",
       "date": "",
       "programPic": "kader-ekspedisi"
     }
