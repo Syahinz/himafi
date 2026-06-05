@@ -62,7 +62,7 @@ const news = await getCollection("news");
       <H1 text="Berita" mode="center" />
     </div>
     <div
-      class="mt-10 flex px-10 md:px-36 flex-wrap justify-center md:grid md:grid-cols-3 md:gap-7 sm:grid-cols-2 sm:gap-10"
+      class="mt-10 flex px-7 md:px-36 flex-wrap justify-center md:grid md:grid-cols-3 md:gap-7 sm:grid-cols-2 gap-10"
     >
       {news.map((report) => <NewsSection report={report} />)}
       {news.length < 1 && <Paragraph text="Ga ada berita kawan " />}

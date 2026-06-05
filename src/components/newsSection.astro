@@ -11,8 +11,11 @@ const { report } = Astro.props;
 
 import { docImages, authorImages, findImage } from "../utils/image";
 
+const produced = report.data.produced.toLowerCase();
 const docImg = findImage(docImages, report.data.img);
 const authorImg = findImage(authorImages, report.data.authorPic);
+
+
 ---
 
 <article
@@ -26,7 +29,7 @@ const authorImg = findImage(authorImages, report.data.authorPic);
   <div class="flex items-center gap-x-4 text-xs mt-3 px-6">
     <time datetime={report.data.date} class="">{report.data.date}</time>
     <a
-      href="#"
+      href=`/about/${produced}`
       class="relative z-10 rounded-full bg-primary px-3 py-1.5 font-medium text-secondary hover:bg-primary-darken"
       >{report.data.produced}</a
     >
@@ -50,10 +53,10 @@ const authorImg = findImage(authorImages, report.data.authorPic);
     }
     <div class="text-sm/6 ">
       <p class="font-semibold">
-        <a href="#">
+        <p>
           <span class="absolute inset-0"></span>
           {report.data.author}
-        </a>
+        </p>
       </p>
       <p class="">{report.data.authorTag}</p>
     </div>
