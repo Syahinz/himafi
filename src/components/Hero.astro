@@ -2,17 +2,16 @@
 import Section from "./Section.astro";
 import H1 from "./H1.astro";
 import H2 from "./H2.astro";
-
+import H3 from "./H3.astro";
 import Paragraph from "./Paragraph.astro";
 import { Image } from "astro:assets";
 import SamanvayaLogo from "../assets/logo/samanvaya.png";
-import NewsCard from "../components/NewsCard.astro";
 
 import NewsSection from "./newsSection.astro";
 import Partner from "./Partner.astro";
 import CTA from "./CTA.astro";
-import fotoNeiya from "../assets/images/Neiya.png";
-import fotoHarry from "../assets/images/Harry.png";
+import fotoNeiya from "../assets/member/bph-neiya.jpg";
+import fotoHarry from "../assets/member/bph-harry.jpg";
 import fotoPbak from "../assets/images/PBAK.jpg";
 import fotoRbtc from "../assets/images/Robotik.jpg";
 import fotoEkspe from "../assets/images/Ekspedisi.jpg";
@@ -56,13 +55,13 @@ const news = await getCollection("news");
 
 <Section mode="dark">
   <div
-    class="w-full pt-36 px-4 sm:px-8 md:px-16 lg:px-24 flex flex-col items-center pb-20 md:pb-0"
+    class="w-full pt-36 lg:pt-20 px-4 sm:px-8 md:px-16 lg:px-24 flex flex-col items-center pb-20 md:pb-0"
   >
     <div class="flex flex-col items-center">
       <H1 text="Berita" mode="center" />
     </div>
     <div
-      class="mt-10 flex px-7 md:px-36 flex-wrap justify-center md:grid md:grid-cols-3 md:gap-7 sm:grid-cols-2 gap-10"
+      class="mt-10 flex px-7 md:px-10 lg:px-36 flex-wrap justify-center md:grid md:grid-cols-3 md:gap-7 sm:grid-cols-2 gap-10"
     >
       {news.map((report) => <NewsSection report={report} />)}
       {news.length < 1 && <Paragraph text="Ga ada berita kawan " />}
@@ -71,59 +70,57 @@ const news = await getCollection("news");
   </div>
 </Section>
 
-<Section mode="bright">
-  <div
-    class="px-4 sm:px-8 md:px-16 lg:px-42 flex flex-col py-10 items-center md:h-screen md:flex-row-reverse md:justify-between"
-  >
-    <div class="p-6 md:w-1/2 md:flex md:flex-col">
-      <H1 text="Struktur" />
-      <Paragraph
-        text="Dibalik setiap program kerja yang sukses, terdapat sinergi kuat dari
+<Section direct="structure">
+  <div class="md:pt-24 pt-10">
+    <div
+      class="px-4 sm:px-8 md:px-16 lg:px-42 flex flex-col items-center md:pt-30 pb-5 md:pb-0 md:flex-row-reverse md:justify-between"
+    >
+      <div class="p-6 md:w-1/2 md:flex md:flex-col">
+        <H3 text="Struktur" />
+        <Paragraph
+          text=`"Dibalik setiap program kerja yang sukses, terdapat sinergi kuat dari
         para pengurus HIMAFI. inilah jajaran struktur organisasi yang
         berkomitmen untuk membawa perubahan positif dan menjadi wadah aspirasi
-        bagi seluruh mahasiswa"
-      />
-      <div class="w-fit mx-auto md:ml-9">
-        <CTA mode="bright" Href="/about#structure" />
-      </div>
-    </div>
-    <div class="flex flex-col md:flex-row md:pl-10 md:gap-10">
-      <div>
-        <div
-          class="px-6 pt-6 backdrop-blur-md bg-white/30 border border-white/20 rounded-2xl shadow-lg appear-anim"
-        >
-          <Image
-            src={fotoNeiya}
-            alt="Neiya"
-            class="w-40 md:w-72 md:h-112 object-cover"
-          />
+        bagi seluruh mahasiswa"`
+        />
+        <div class="w-fit mx-auto md:ml-9">
+          <CTA mode="bright" Href="/about#structure" />
         </div>
-        <h2 class="mt-2 text-center text-lg font-bold font-subhead">
-          Ketua Himpunan
-        </h2>
-        <p class="text-center font-isi">Na’ilah Zahra Putri Utomo</p>
       </div>
-      <div>
-        <div
-          class="px-6 pt-6 backdrop-blur-md bg-white/30 border border-white/20 rounded-2xl shadow-lg appear-anim"
-        >
-          <Image
-            src={fotoHarry}
-            alt="Neiya"
-            class="w-40 md:w-72 md:h-112 object-cover"
-          />
+      <div class="flex flex-col md:flex-row md:pl-10 md:gap-10">
+        <div>
+          <div class="rounded-2xl shadow-lg overflow-hidden appear-anim">
+            <Image
+              src={fotoNeiya}
+              alt="Neiya"
+              class="w-50 md:w-72 md:h-112 object-cover transition-all duration-500 brightness-[0.9] hover:brightness-100 hover:scale-110"
+            />
+          </div>
+          <h2 class="mt-2 text-center text-lg font-bold font-subhead">
+            Ketua Himpunan
+          </h2>
+          <p class="text-center font-isi">Na’ilah Zahra Putri Utomo</p>
         </div>
-        <h2 class="mt-2 text-center text-lg font-bold font-subhead">
-          Wakil Ketua Himpunan
-        </h2>
-        <p class="text-center font-isi">Hary Caesar Setiawan</p>
+        <div>
+          <div class="rounded-2xl shadow-lg overflow-hidden appear-anim">
+            <Image
+              src={fotoHarry}
+              alt="Neiya"
+              class="w-50 md:w-72 md:h-112 object-cover transition-all duration-500 brightness-[0.9] hover:brightness-100 hover:scale-110"
+            />
+          </div>
+          <h2 class="mt-2 text-center text-lg font-bold font-subhead">
+            Wakil Ketua Himpunan
+          </h2>
+          <p class="text-center font-isi">Hary Caesar Setiawan</p>
+        </div>
       </div>
     </div>
   </div>
 </Section>
 
 <Section mode="dark">
-  <div class="py-10 px-4 sm:px-8 md:px-16 lg:px-20">
+  <div class="py-5 px-4 sm:px-8 md:px-16 lg:px-20">
     <div class="">
       <div class="hidden md:block pl-26"><H1 text="Program Kerja" /></div>
       <div class="md:hidden"><H1 text="Proker" /></div>

@@ -53,7 +53,7 @@ const currentPath = Astro.url.pathname;
             >Kontak</a
           >
         </li>
-        <li>
+        <li class="hidden">
           <a
             href="/utility"
             class={`a-menu ${currentPath === "/utility" ? "bg-primary text-neutralwhite" : ""}`}
@@ -139,7 +139,7 @@ const currentPath = Astro.url.pathname;
       >
       <a
         href="/utility"
-        class="block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:bg-gray-100 hover:text-primary"
+        class="hidden px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:bg-gray-100 hover:text-primary "
         >Utilitas</a
       >
     </div>

@@ -14,15 +14,22 @@ import Paragraph from "./Paragraph.astro";
   <div class="mx-auto w-full max-w-7xl p-4 py-6 lg:py-8">
     <div class="md:flex md:justify-between">
       <div class="mb-6 md:mb-0">
-        <a href="/" class="flex items-center">
-          <Image src={uinLogo} class="w-20 me-3" alt="HIMAFI" />
-          <Image src={fstLogo} class="w-20 me-3" alt="HIMAFI" />
-          <Image src={himafiLogo} class="w-20 me-3" alt="HIMAFI" />
+        <div class="flex items-center">
+          <a href="https://www.uinjkt.ac.id/id">
+            <Image src={uinLogo} class="w-20 me-3" alt="HIMAFI" />
+          </a>
+          <a href="https://fst.uinjkt.ac.id/id">
+            <Image src={fstLogo} class="w-20 me-3" alt="HIMAFI" />
+          </a>
+
+          <a href="/">
+            <Image src={himafiLogo} class="w-20 me-3" alt="HIMAFI" />
+          </a>
           <span
             class="text-heading self-center font-heading text-2xl font-semibold whitespace-nowrap hidden md:block"
             >HIMAFI</span
           >
-        </a>
+        </div>
         <p class="mt-4 container max-w-md">
           LT 7 Gedung FST UIN Jakarta, UIN Jakarta, Jl. Lkr. Kampus 1, Cempaka
           Putih, Ciputat Timur, Kota Tangerang Selatan, Banten 15412
@@ -46,7 +53,7 @@ import Paragraph from "./Paragraph.astro";
             <li>
               <a href="/contact" class="hover:underline">Kontak</a>
             </li>
-            <li>
+            <li class="hidden">
               <a href="/utility" class="hover:underline">Utilitas</a>
             </li>
           </ul>
@@ -83,9 +90,7 @@ import Paragraph from "./Paragraph.astro";
         >© 2026 <a href="/" class="hover:underline">HIMAFI™</a>. All Rights
         Reserved.
       </span>
-      <span class="text-sm text-body sm:text-center"
-        >HIMAFI - V {version}
-      </span>
+
       <div class="flex mt-4 sm:justify-center sm:mt-0">
         <a
           href="https://www.instagram.com/himafi.uinjkt/"
