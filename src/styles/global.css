@@ -40,7 +40,7 @@
 }
 
 .span-text-structure {
-  @apply absolute bottom-0 z-10 flex font-heading  items-center justify-center w-full h-12 text-white font-bold text-lg md:text-xl tracking-wider transition-transform duration-300  before:content-[''] before:absolute before:inset-0 before:bg-primary before:-z-10  shadow-md;
+  @apply absolute bottom-0 z-10 flex font-heading  items-center justify-center w-full h-12 text-white font-bold text-fluid-body  tracking-wider transition-transform duration-300  before:content-[''] before:absolute before:inset-0 before:bg-primary before:-z-10  shadow-md;
 }
 
 @keyframes appear {
