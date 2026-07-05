@@ -3,8 +3,6 @@ const { text, mode = "left" } = Astro.props;
 const textMode = mode === "center" ? "md:text-center" : "md:text-left";
 ---
 
-<h2
-  class=`text-center text-2xl font-subhead px-3  md:px-10 lg:text-4xl ${textMode} `
->
+<h2 class=`text-center font-subhead text-fluid-h2  ${textMode} `>
   {text}
 </h2>

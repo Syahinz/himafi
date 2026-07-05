@@ -32,7 +32,7 @@ const title = `Tentang`;
     <div
       class="py-20 md:pt-36 px-10 md:px-16 lg:px-72 flex flex-col items-center justify-center"
     >
-      <div><H3 text="Kami berkomitmen pada" /></div>
+      <div><H1 text="Kami berkomitmen pada" /></div>
       <div
         class="mt-20 flex flex-col md:flex-row gap-6 md:gap-16 justify-between items-center"
       >
@@ -40,9 +40,9 @@ const title = `Tentang`;
           <div
             class="bg-secondary-bright md:p-16 p-6 md:rounded-2xl rounded-t-4xl rounded-b-md text-primary appear-anim"
           >
-            <H3 text="VISI" />
+            <H1 text="VISI" mode="center" />
             <p
-              class="leading-relaxed mt-4 text-md font-isi md:px-5 lg:px-10 lg:text-xl text-justify"
+              class="leading-relaxed mt-4 text-fluid-body font-isi "
             >
               Mewujudkan jantung Himpunan yang integratif, akuntabel, dan
               profesional sebagai poros stabilitas serta sinergitas HIMAFI UIN
@@ -53,9 +53,9 @@ const title = `Tentang`;
           <div
             class="bg-teritary md:p-16 p-6 rounded-md md:rounded-2xl text-primary appear-anim"
           >
-            <H3 text="MISI" />
+            <H1 text="MISI" mode="center" />
             <ol
-              class="leading-relaxed mt-4 ml-4 text-md font-isi md:px-5 lg:px-10 lg:text-xl text-justify list-decimal"
+              class="leading-relaxed mt-4 ml-4 text-fluid-body font-isi text-justify list-decimal"
             >
               <li>
                 Mewujudkan tata kelola HIMAFI yang integratif dan efisien.
@@ -73,15 +73,15 @@ const title = `Tentang`;
         <div
           class="md:w-1/2 flex flex-col items-center bg-green-samanvaya text-secondary-bright rounded-b-4xl rounded-t-md md:rounded-2xl md:p-16 p-6 appear-anim"
         >
-          <H3 text="Tujuan" mode="center" />
+          <H1 text="Tujuan" mode="center" />
           <p
-            class="leading-relaxed mt-4 text-md font-isi md:px-5 lg:px-10 lg:text-xl text-justify"
+            class="leading-relaxed mt-4 text-fluid-body font-isi "
           >
           Terbentuknya mahasiswa fisika yang bertakwa kepada Allah SWT. Serta mengembangkan pengetahuan dan pengggunaan ilmu fisika untuk kepentingan manusia dan bangsa
           </p>
         </div>
       </div>
-      <p class="mt-10 text-md font-isi md:px-5 lg:px-10 lg:text-xl text-center">
+      <p class="mt-10 text-md font-isi text-fluid-body  text-center">
         Pelajari lebih lanjut tentang kabinet Samanvaya dan filosofi logo
         Samanvaya dibawah ini ⬇️⬇️⬇️
       </p>
@@ -94,7 +94,7 @@ const title = `Tentang`;
         class="px-4 sm:px-8 md:px-16 lg:px-42 flex flex-col items-center md:py-10 pb-5 md:flex-row-reverse md:justify-between"
       >
         <div class="p-6 md:w-1/2 md:flex md:flex-col">
-          <H3 text="Struktur" />
+          <H1 text="Struktur" />
           <Paragraph
             text=`"Dibalik setiap program kerja yang sukses, terdapat sinergi kuat dari
         para pengurus HIMAFI. inilah jajaran struktur organisasi yang
@@ -145,7 +145,7 @@ const title = `Tentang`;
   </Section>
   <Section mode="dark">
     <div
-      class="w-full pt-42 px-4 sm:px-8 md:px-16 lg:px-56 flex flex-col gap-10 items-center md:flex-row"
+      class="w-full py-10 md:py-0 md:pt-30 lg:pt-42 px-4 sm:px-8 md:px-16 lg:px-56 flex flex-col gap-10 items-center md:flex-row"
     >
       <div class="md:w-1/2">
         <H1 text="MPK" spanText="PO" />
@@ -157,11 +157,11 @@ const title = `Tentang`;
           <CTA mode="dark" Href="/about/mpkpo" />
         </div>
       </div>
-      <div class="md:w-1/2 rounded-2xl shadow-lg overflow-hidden appear-anim">
+      <div class=" md:w-1/2 rounded-2xl shadow-lg overflow-hidden appear-anim">
         <Image
           src={MPKPO}
           alt="MPKPO"
-          class="bg-secondary md:max-h-130 object-cover mx-auto transition-all duration-500 brightness-[0.9] hover:brightness-100 hover:scale-110"
+          class="bg-secondary max-h-70 md:max-h-130 object-cover mx-auto transition-all duration-500 brightness-[0.9] hover:brightness-100 hover:scale-110"
         />
       </div>
     </div>

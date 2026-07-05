@@ -21,19 +21,18 @@ import fotoPhyTon from "../assets/images/PHY-TON.jpg";
 import ProgramsCard from "../components/ProgramsCard.astro";
 
 import { getCollection } from "astro:content";
-const title = "HIMA";
+const title = "HIMAFI";
 const subhead = `UIN syarif hidayatullah jakarta`;
-const spanTitle = "FI";
 const news = await getCollection("news");
 ---
 
 <Section mode="light">
   <div
-    class="w-full pt-42 px-4 sm:px-8 md:px-16 lg:px-72 flex flex-col items-center md:flex-row"
+    class="mx-auto lg:pt-42 pt-30 md:pt-30 w-full max-w-5xl px-4 sm:px-6  lg:px-0 flex flex-col items-center md:flex-row"
   >
     <div class="md:w-1/2">
-      <H1 text={title} spanText={spanTitle} />
-      <H2 text={subhead} />
+      <H1 text={title}></H1>
+      <H2 text={subhead}></H2>
       <Paragraph
         text=`Kabinet Samanvaya hadir sebagai poros stabilitas dan sinergitas HIMAFI UIN Syarif Hidayatullah Jakarta. Kami berkomitmen penuhmewujudkan tata kelola organisasi yang integratif, akuntabel, dan profesional untuk menjalin kolaborasi strategis dengan berbagai kemitraan.`
       />
@@ -76,7 +75,7 @@ const news = await getCollection("news");
       class="px-4 sm:px-8 md:px-16 lg:px-42 flex flex-col items-center md:pt-30 pb-5 md:pb-0 md:flex-row-reverse md:justify-between"
     >
       <div class="p-6 md:w-1/2 md:flex md:flex-col">
-        <H3 text="Struktur" />
+        <H1 text="Struktur" />
         <Paragraph
           text=`"Dibalik setiap program kerja yang sukses, terdapat sinergi kuat dari
         para pengurus HIMAFI. inilah jajaran struktur organisasi yang
@@ -120,13 +119,13 @@ const news = await getCollection("news");
 </Section>
 
 <Section mode="dark">
-  <div class="py-5 px-4 sm:px-8 md:px-16 lg:px-20">
+  <div class="py-20 px-4 sm:px-8 md:px-16 lg:px-20">
     <div class="">
       <div class="hidden md:block pl-26"><H1 text="Program Kerja" /></div>
       <div class="md:hidden"><H1 text="Proker" /></div>
-      <div class="md:pl-26">
+      <div class="md:px-26">
         <Paragraph
-          text="Program Kerja HIMAFI disusun dan dikaji secara matang oleh masing-masing departemen HIMAFI"
+          text="Program kerja HIMAFI bertujuan mewujudkan aspirasi anggota HIMAFI Fakultas Sains dan Teknologi Universitas Islam Negeri Syarif Hidayatullah Jakarta dalam rangka kegiatan yang nyata dengan menjunjung tinggi persatuan dan kesatuan serta memeliharaiklim kemahasiswaan yang religius, ilmiah, sehat, dinamis, kreatif, dan independen."
         />
       </div>
     </div>

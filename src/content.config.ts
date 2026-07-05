@@ -22,6 +22,8 @@ const memberSchema = z.object({
   role: z.string(),
   profilePic: z.string(),
   angkatan: z.string().optional(),
+  instagramUsn: z.string().optional().default(""),
+  instagramUrl: z.string().optional().default(""),
   bio: z.string(),
 });
 
@@ -41,7 +43,7 @@ const departments = defineCollection({
     secondPhoto: z.string(),
     description: z.string(),
     members: z.array(memberSchema),
-    programs:z.array(programSchema).optional().default([]),
+    programs: z.array(programSchema).optional().default([]),
   }),
 });
 
