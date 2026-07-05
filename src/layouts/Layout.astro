@@ -34,9 +34,11 @@ const {
     <title>{Pagetitle} | HIMAFI</title>
   </head>
   <body>
-    <Navbar />
-    <slot />
-    <Footer />
+    <div class="[overflow-x:clip] w-full">
+      <Navbar />
+      <slot />
+      <Footer />
+    </div>
     <ClientRouter />
   </body>
 </html>

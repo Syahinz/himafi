@@ -10,26 +10,39 @@ import SOSRO from "../assets/structure/sosro.jpg";
 import Kominfo from "../assets/structure/Kominfo.jpg";
 ---
 
-<section class="w-full min-h-screen flex items-center justify-center">
+<section class="w-full min-h-screen flex pb-10 items-center justify-center">
   <div
-    class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-13 w-full max-w-360 mx-auto p-10 auto-rows-auto"
+    class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-13 w-full max-w-7xl mx-auto px-4 md:p-10 auto-rows-auto"
   >
     <a
       href="/about/bph"
-      class="md:col-start-2 md:row-start-1 md:row-span-2 relative overflow-hidden min-h-100 md:min-h-0 rounded-2xl flex items-center justify-center shadow-lg group transition-transform duration-300 hover:scale-[1.02] appear-anim"
+      class="md:col-start-2 md:row-start-1 md:row-span-2 relative overflow-hidden hidden md:flex min-h-100 md:min-h-0 rounded-2xl items-center justify-center shadow-lg group transition-transform duration-300 hover:scale-[1.02] appear-anim"
     >
       <Image
         src={BPH}
         alt="BPH"
-        class="absolute inset-0 w-full h-full object-contain bg-primary transition-all duration-500 brightness-[0.9] group-hover:brightness-100 group-hover:scale-110"
+        class="absolute inset-0 w-full h-full object-contain bg-secondary transition-all duration-500 brightness-[0.9] group-hover:brightness-100 group-hover:scale-110"
       />
 
       <span
-        class="absolute md:bottom-10 bottom-2 z-10 text-white font-bold text-2xl md:text-3xl tracking-widest"
+        class="absolute md:bottom-10 bottom-2 z-10 text-primary font-bold text-2xl md:text-3xl tracking-widest"
         >BPH</span
       >
     </a>
+    <!-- bph mobile -->
+    <a
+      href="/about/bph"
+      class="md:hidden md:col-start-1 md:row-start-1 relative overflow-hidden rounded-2xl flex items-center justify-center min-h-60 md:min-h-90 shadow-md group transition-transform duration-300 hover:scale-[1.02] appear-anim"
+    >
+      <Image
+        src={BPH}
+        alt="BPH"
+        class="absolute inset-0 w-full h-full object-cover transition-all duration-500 brightness-[0.9] group-hover:brightness-100 group-hover:scale-110"
+      />
 
+      <span class="span-text-structure">BPH</span>
+    </a>
+    <!-- bph mobile end -->
     <a
       href="/about/msdo"
       class="md:col-start-1 md:row-start-1 relative overflow-hidden rounded-2xl flex items-center justify-center min-h-60 md:min-h-90 shadow-md group transition-transform duration-300 hover:scale-[1.02] appear-anim"

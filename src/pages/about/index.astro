@@ -2,7 +2,6 @@
 import Layout from "../../layouts/Layout.astro";
 import Section from "../../components/Section.astro";
 import H1 from "../../components/H1.astro";
-import H3 from "../../components/H3.astro";
 import CTA from "../../components/CTA.astro";
 import Paragraph from "../../components/Paragraph.astro";
 import BentoGrid from "../../components/BentoGrid.astro";
@@ -11,6 +10,7 @@ import fotoNeiya from "../../assets/member/bph-neiya.jpg";
 import fotoHarry from "../../assets/member/bph-harry.jpg";
 import MPKPO from "../../assets/structure/MPKPO.jpg";
 import H2 from "../../components/H2.astro";
+import logoHimafi from "../../assets/images/himafi.png";
 import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
 const departments = await getCollection("departments");
@@ -19,14 +19,18 @@ const title = `Tentang`;
 
 <Layout Pagetitle={title}>
   <Section direct="about">
-    <div class="pt-36 px-4 sm:px-8 md:px-16 lg:px-72">
-      <H1 text="TENTANG" mode="center" />
-      <Paragraph
-        text="Beragam dalam Peran, Bersatu dalam Tujuan"
-        mode="center"
-      />
+    <div
+      class="flex flex-col w-full py-16 items-center lg:pt-42 pt-30 md:pt-30"
+    >
+      <div class="px-4 sm:px-8 md:px-16 lg:px-72 mb-6">
+        <H1 text="TENTANG" mode="center" />
+        <Paragraph
+          text="Beragam dalam Peran, Bersatu dalam Tujuan"
+          mode="center"
+        />
+      </div>
+      <BentoGrid />
     </div>
-    <BentoGrid />
   </Section>
   <Section mode="dark" direct="vision">
     <div
@@ -41,9 +45,7 @@ const title = `Tentang`;
             class="bg-secondary-bright md:p-16 p-6 md:rounded-2xl rounded-t-4xl rounded-b-md text-primary appear-anim"
           >
             <H1 text="VISI" mode="center" />
-            <p
-              class="leading-relaxed mt-4 text-fluid-body font-isi "
-            >
+            <p class="leading-relaxed mt-4 text-fluid-body font-isi">
               Mewujudkan jantung Himpunan yang integratif, akuntabel, dan
               profesional sebagai poros stabilitas serta sinergitas HIMAFI UIN
               Syarif Hidayatullah Jakarta.
@@ -74,21 +76,61 @@ const title = `Tentang`;
           class="md:w-1/2 flex flex-col items-center bg-green-samanvaya text-secondary-bright rounded-b-4xl rounded-t-md md:rounded-2xl md:p-16 p-6 appear-anim"
         >
           <H1 text="Tujuan" mode="center" />
-          <p
-            class="leading-relaxed mt-4 text-fluid-body font-isi "
-          >
-          Terbentuknya mahasiswa fisika yang bertakwa kepada Allah SWT. Serta mengembangkan pengetahuan dan pengggunaan ilmu fisika untuk kepentingan manusia dan bangsa
+          <p class="leading-relaxed mt-4 text-fluid-body font-isi">
+            Terbentuknya mahasiswa fisika yang bertakwa kepada Allah SWT. Serta
+            mengembangkan pengetahuan dan pengggunaan ilmu fisika untuk
+            kepentingan manusia dan bangsa
           </p>
         </div>
       </div>
-      <p class="mt-10 text-md font-isi text-fluid-body  text-center">
+      <p class="mt-10 text-md font-isi text-fluid-body text-center">
         Pelajari lebih lanjut tentang kabinet Samanvaya dan filosofi logo
         Samanvaya dibawah ini ⬇️⬇️⬇️
       </p>
       <CTA mode="dark" Href="/news/kabinetsamanvaya" />
     </div>
   </Section>
-  <Section direct="structure">
+
+  <Section>
+    <div
+      class="w-full py-10 px-4 sm:px-8 md:px-16 lg:px-56 flex flex-col gap-10 items-center md:flex-row"
+    >
+      <div class="md:w-1/2">
+        <H1 text="LOGO" />
+
+        <ul
+          class="leading-relaxed text-fluid-body px-4 md:px-0 flex flex-col gap-3 font-isi text-justify "
+        >
+          <li
+            class="bg-primary p-6 rounded-lg text-secondary-bright appear-anim"
+          >
+            Lambang HIMAFI dibentuk dari lingkaran berwarna dasar hijau dan emas
+            dibagian bawahnya. Dibagian dalam lingkaran terdapat lintasan 3
+            (tiga) atom, 5 (lima) bintang, buku dan pulpen.
+          </li>
+          <li
+            class="bg-primary p-6 rounded-lg text-secondary-bright appear-anim"
+          >
+            Lambang berbentuk lingkaran artinya keilmuan di bidang sains. Warna
+            dasar hijau berarti Agama Islam. Warna emas sebagai kejayaan di
+            bidang sains. 5 bintang melambangkan rukun Islam. 3 atom
+            melambangkan Tri Dharma Perguruan Tinggi. Serta buku dan pulpen
+            melambangkan Ilmu Pengetahuan.
+          </li>
+        </ul>
+        <div class="w-fit mx-auto md:ml-9"></div>
+      </div>
+      <div class="md:w-1/2 rounded-full p-4 overflow-hidden appear-anim">
+        <Image
+          src={logoHimafi}
+          alt="Logo Himafi"
+          class="object-contain mx-auto shadow-lg rounded-full"
+        />
+      </div>
+    </div>
+  </Section>
+
+  <Section direct="structure" mode="dark">
     <div class="md:pt-24 pt-10">
       <div
         class="px-4 sm:px-8 md:px-16 lg:px-42 flex flex-col items-center md:py-10 pb-5 md:flex-row-reverse md:justify-between"
@@ -108,7 +150,7 @@ const title = `Tentang`;
               <Image
                 src={fotoNeiya}
                 alt="Neiya"
-                class="w-50 md:w-72 md:h-112 object-cover transition-all duration-500 brightness-[0.9] hover:brightness-100 hover:scale-110"
+                class="w-50 max-w-full md:w-72 md:h-112 object-cover transition-all duration-500 brightness-[0.9] hover:brightness-100 hover:scale-110"
               />
             </div>
             <h2 class="mt-2 text-center text-lg font-bold font-subhead">
@@ -121,7 +163,7 @@ const title = `Tentang`;
               <Image
                 src={fotoHarry}
                 alt="Neiya"
-                class="w-50 md:w-72 md:h-112 object-cover transition-all duration-500 brightness-[0.9] hover:brightness-100 hover:scale-110"
+                class="w-50 max-w-full md:w-72 md:h-112 object-cover transition-all duration-500 brightness-[0.9] hover:brightness-100 hover:scale-110"
               />
             </div>
             <h2 class="mt-2 text-center text-lg font-bold font-subhead">
@@ -143,9 +185,9 @@ const title = `Tentang`;
       </div>
     </div>
   </Section>
-  <Section mode="dark">
+  <Section>
     <div
-      class="w-full py-10 md:py-0 md:pt-30 lg:pt-42 px-4 sm:px-8 md:px-16 lg:px-56 flex flex-col gap-10 items-center md:flex-row"
+      class="w-full py-10 px-4 sm:px-8 md:px-16 lg:px-56 flex flex-col gap-10 items-center md:flex-row"
     >
       <div class="md:w-1/2">
         <H1 text="MPK" spanText="PO" />
@@ -154,10 +196,10 @@ const title = `Tentang`;
           text=`Kabinet Samanvaya hadir sebagai poros stabilitas dan sinergitas HIMAFI UIN Syarif Hidayatullah Jakarta. Kami berkomitmen penuhmewujudkan tata kelola organisasi yang integratif, akuntabel, dan profesional untuk menjalin kolaborasi strategis dengan berbagai kemitraan.`
         />
         <div class="w-fit mx-auto md:ml-9">
-          <CTA mode="dark" Href="/about/mpkpo" />
+          <CTA Href="/about/mpkpo" />
         </div>
       </div>
-      <div class=" md:w-1/2 rounded-2xl shadow-lg overflow-hidden appear-anim">
+      <div class="md:w-1/2 rounded-2xl shadow-lg overflow-hidden appear-anim">
         <Image
           src={MPKPO}
           alt="MPKPO"

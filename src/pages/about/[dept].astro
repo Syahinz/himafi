@@ -83,245 +83,247 @@ const resolvedPrograms = dept.data.programs.map((program) => ({
   }
 
   <Section>
-    <section class="px-4 md:px-30 py-16">
-      <p class="font-isi max-w-2xl">{dept.data.description}</p>
+    <div class="flex flex-col w-full min-h-screen">
+      <section class="px-4 md:px-30 py-16">
+        <p class="font-isi max-w-2xl">{dept.data.description}</p>
 
-      <!-- Grid member -->
-      <h2 class="font-heading font-bold text-2xl mt-14 mb-6">Anggota</h2>
-      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-        {
-          resolvedMembers.map((member) => (
-            <button
-              class="text-left group cursor-pointer"
-              data-member={JSON.stringify({
-                name: member.name,
-                role: member.role,
-                angkatan: member.angkatan,
-                instagram: member.instagramUsn,
-                instagramUrl: member.instagramUrl,
-                bio: member.bio,
-                photo: member.resolvedPhoto?.src ?? "",
-              })}
-            >
-              <div class="overflow-hidden rounded-xl aspect-square bg-primary-darken/10">
-                {member.resolvedPhoto ? (
-                  <Image
-                    src={member.resolvedPhoto}
-                    alt={member.name}
-                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                    loading="eager"
-                    fetchpriority="high"
-                  />
-                ) : (
-                  <div class="w-full h-full flex items-center justify-center">
-                    <span class="font-heading text-2xl font-bold text-primary">
-                      {member.name.charAt(0)}
-                    </span>
-                  </div>
-                )}
-              </div>
-              <p class="mt-2 font-heading font-bold text-sm">{member.name}</p>
-              <p class="font-isi text-xs text-primary/60">{member.role}</p>
-            </button>
-          ))
-        }
-      </div>
+        <!-- Grid member -->
+        <h2 class="font-heading font-bold text-2xl mt-14 mb-6">Anggota</h2>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+          {
+            resolvedMembers.map((member) => (
+              <button
+                class="text-left group cursor-pointer"
+                data-member={JSON.stringify({
+                  name: member.name,
+                  role: member.role,
+                  angkatan: member.angkatan,
+                  instagram: member.instagramUsn,
+                  instagramUrl: member.instagramUrl,
+                  bio: member.bio,
+                  photo: member.resolvedPhoto?.src ?? "",
+                })}
+              >
+                <div class="overflow-hidden rounded-xl aspect-square bg-primary-darken/10">
+                  {member.resolvedPhoto ? (
+                    <Image
+                      src={member.resolvedPhoto}
+                      alt={member.name}
+                      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      loading="eager"
+                      fetchpriority="high"
+                    />
+                  ) : (
+                    <div class="w-full h-full flex items-center justify-center">
+                      <span class="font-heading text-2xl font-bold text-primary">
+                        {member.name.charAt(0)}
+                      </span>
+                    </div>
+                  )}
+                </div>
+                <p class="mt-2 font-heading font-bold text-sm">{member.name}</p>
+                <p class="font-isi text-xs text-primary/60">{member.role}</p>
+              </button>
+            ))
+          }
+        </div>
 
-      <!-- Section program kerja (kalau ada) -->
-    </section>
+        <!-- Section program kerja (kalau ada) -->
+      </section>
 
-    {
-      resolvedPrograms.length > 0 && (
-        <Section mode="dark" direct={programId}>
-          <div class="pt-16 px-6 md:px-16 lg:px-30 pb-16">
-            <h2 class="font-heading font-bold text-center text-2xl md:text-6xl mb-6">
-              Agenda
-            </h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-              {resolvedPrograms.map((program) => (
-                <button
-                  class="rounded-xl border border-secondary-bright/20 overflow-hidden text-left cursor-pointer group hover:scale-[1.02] transition-transform duration-300"
-                  data-program={JSON.stringify({
-                    name: program.name,
-                    date: program.date,
-                    programDesc: program.programDesc,
-                    photo: program.resolvePicture?.src ?? "",
-                  })}
-                >
-                  <div class="h-56 w-full object-cover overflow-hidden bg-primary-darken/30 relative">
-                    {program.resolvePicture ? (
-                      <Image
-                        src={program.resolvePicture}
-                        alt={program.name}
-                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      />
-                    ) : (
-                      <div class="w-full h-full flex items-center justify-center">
-                        <span class="font-heading text-4xl font-bold text-secondary-bright/30">
-                          {program.name.charAt(0)}
-                        </span>
-                      </div>
-                    )}
-                  </div>
-                  <div class="p-4">
-                    <p class="font-heading font-bold text-base text-secondary-bright">
-                      {program.name}
-                    </p>
-                    {program.date && (
-                      <p class="font-isi text-xs text-secondary-bright/50 mt-1">
-                        {program.date}
+      {
+        resolvedPrograms.length > 0 && (
+          <Section mode="dark" direct={programId}>
+            <div class="pt-16 px-6 md:px-16 lg:px-30 pb-16">
+              <h2 class="font-heading font-bold text-center text-2xl md:text-6xl mb-6">
+                Agenda
+              </h2>
+              <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                {resolvedPrograms.map((program) => (
+                  <button
+                    class="rounded-xl border border-secondary-bright/20 overflow-hidden text-left cursor-pointer group hover:scale-[1.02] transition-transform duration-300"
+                    data-program={JSON.stringify({
+                      name: program.name,
+                      date: program.date,
+                      programDesc: program.programDesc,
+                      photo: program.resolvePicture?.src ?? "",
+                    })}
+                  >
+                    <div class="h-56 w-full object-cover overflow-hidden bg-primary-darken/30 relative">
+                      {program.resolvePicture ? (
+                        <Image
+                          src={program.resolvePicture}
+                          alt={program.name}
+                          class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        />
+                      ) : (
+                        <div class="w-full h-full flex items-center justify-center">
+                          <span class="font-heading text-4xl font-bold text-secondary-bright/30">
+                            {program.name.charAt(0)}
+                          </span>
+                        </div>
+                      )}
+                    </div>
+                    <div class="p-4">
+                      <p class="font-heading font-bold text-base text-secondary-bright">
+                        {program.name}
                       </p>
-                    )}
-                  </div>
-                </button>
-              ))}
+                      {program.date && (
+                        <p class="font-isi text-xs text-secondary-bright/50 mt-1">
+                          {program.date}
+                        </p>
+                      )}
+                    </div>
+                  </button>
+                ))}
+              </div>
             </div>
-          </div>
-        </Section>
-      )
-    }
+          </Section>
+        )
+      }
+    </div>
+  </Section>
 
+  <!-- program modal -->
+  <div
+    id="program-modal"
+    class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 items-center justify-center p-4 md:p-10"
+    style="display: none"
+  >
     <div
-      id="program-modal"
-      class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 items-center justify-center p-4 md:p-10"
-      style="display: none"
+      class="relative bg-neutralwhite rounded-3xl w-full max-w-4xl max-h-[80vh] overflow-hidden flex flex-row shadow-2xl"
     >
-      <div
-        class="relative bg-neutralwhite rounded-3xl w-full max-w-4xl max-h-[80vh] overflow-hidden flex flex-row shadow-2xl"
+      <button
+        id="close-program-modal"
+        class="absolute top-4 right-4 z-20 w-9 h-9 rounded-full bg-primary-darken/60 text-neutralwhite flex items-center justify-center hover:bg-primary-darken transition-colors text-sm font-bold cursor-pointer"
+        aria-label="Tutup">✕</button
       >
-        <button
-          id="close-program-modal"
-          class="absolute top-4 right-4 z-20 w-9 h-9 rounded-full bg-primary-darken/60 text-neutralwhite flex items-center justify-center hover:bg-primary-darken transition-colors text-sm font-bold cursor-pointer"
-          aria-label="Tutup">✕</button
-        >
-        <!-- Foto program: selalu kiri -->
+      <!-- Foto program: selalu kiri -->
+      <div
+        class="w-5/12 shrink-0 overflow-hidden relative bg-primary-darken/10"
+      >
+        <img
+          id="prog-modal-photo"
+          src=""
+          alt=""
+          class="w-full h-full object-cover"
+        />
         <div
-          class="w-5/12 shrink-0 overflow-hidden relative bg-primary-darken/10"
+          id="prog-modal-fallback"
+          class="absolute inset-0 items-center justify-center bg-primary-darken/10"
+          style="display: none"
         >
-          <img
-            id="prog-modal-photo"
-            src=""
-            alt=""
-            class="w-full h-full object-cover"
-          />
-          <div
-            id="prog-modal-fallback"
-            class="absolute inset-0 items-center justify-center bg-primary-darken/10"
+          <span
+            id="prog-modal-initial"
+            class="font-heading text-6xl font-bold text-primary-darken/30"
+          ></span>
+        </div>
+      </div>
+      <!-- Info program: selalu kanan -->
+      <div class="w-7/12 flex flex-col overflow-y-auto">
+        <div class="p-6 md:p-10 flex flex-col h-full">
+          <p
+            id="prog-modal-name"
+            class="font-heading font-bold text-xl md:text-3xl text-primary-darken leading-tight"
+          >
+          </p>
+          <span
+            id="prog-modal-date"
+            class="inline-block mt-3 text-xs font-isi bg-primary/10 text-primary px-3 py-1 rounded-full w-fit"
+          ></span>
+          <hr class="my-4 md:my-6 border-primary/10" />
+          <p
+            id="prog-modal-desc"
+            class="font-isi text-xs md:text-base leading-relaxed text-primary-darken flex-1"
+          >
+          </p>
+          <!-- Placeholder kalau desc kosong -->
+          <p
+            id="prog-modal-empty"
+            class="font-isi text-sm text-primary/30 italic flex-1"
             style="display: none"
           >
-            <span
-              id="prog-modal-initial"
-              class="font-heading text-6xl font-bold text-primary-darken/30"
-            ></span>
-          </div>
+            Detail program belum tersedia.
+          </p>
         </div>
-        <!-- Info program: selalu kanan -->
-        <div class="w-7/12 flex flex-col overflow-y-auto">
-          <div class="p-6 md:p-10 flex flex-col h-full">
+      </div>
+    </div>
+  </div>
+  <!-- Modal member -->
+  <div
+    id="member-modal"
+    class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 items-center justify-center p-4 md:p-10"
+    style="display: none"
+  >
+    <div
+      class="relative bg-neutralwhite rounded-3xl w-full max-w-4xl max-h-[80vh] overflow-hidden flex flex-row shadow-2xl"
+    >
+      <button
+        id="close-modal"
+        class="absolute top-4 right-4 z-20 w-9 h-9 rounded-full bg-primary-darken/60 text-neutralwhite flex items-center justify-center hover:bg-primary-darken transition-colors text-sm font-bold cursor-pointer"
+        aria-label="Tutup">✕</button
+      >
+      <!-- Foto: selalu kiri -->
+      <div
+        class="w-5/12 shrink-0 overflow-hidden relative bg-primary-darken/10"
+      >
+        <img
+          id="modal-photo"
+          src=""
+          alt=""
+          class="w-full h-full object-cover object-top"
+        />
+        <div
+          id="modal-photo-fallback"
+          class="absolute inset-0 items-center justify-center bg-primary-darken/20"
+          style="display: none"
+        >
+          <span
+            id="modal-photo-initial"
+            class="font-heading text-6xl font-bold text-primary-darken/40"
+          ></span>
+        </div>
+      </div>
+      <!-- Info: selalu kanan -->
+      <div class="w-7/12 flex flex-col overflow-y-auto">
+        <div class="p-6 md:p-10 flex flex-col h-full">
+          <div>
             <p
-              id="prog-modal-name"
+              id="modal-name"
               class="font-heading font-bold text-xl md:text-3xl text-primary-darken leading-tight"
             >
             </p>
-            <span
-              id="prog-modal-date"
-              class="inline-block mt-3 text-xs font-isi bg-primary/10 text-primary px-3 py-1 rounded-full w-fit"
-            ></span>
-            <hr class="my-4 md:my-6 border-primary/10" />
             <p
-              id="prog-modal-desc"
-              class="font-isi text-xs md:text-base leading-relaxed text-primary-darken flex-1"
+              id="modal-role"
+              class="font-isi text-primary/60 mt-2 text-xs md:text-base"
             >
             </p>
-            <!-- Placeholder kalau desc kosong -->
-            <p
-              id="prog-modal-empty"
-              class="font-isi text-sm text-primary/30 italic flex-1"
-              style="display: none"
-            >
-              Detail program belum tersedia.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Modal — wajib ada class "hidden" di sini -->
-    <div
-      id="member-modal"
-      class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 items-center justify-center p-4 md:p-10"
-      style="display: none"
-    >
-      <div
-        class="relative bg-neutralwhite rounded-3xl w-full max-w-4xl max-h-[80vh] overflow-hidden flex flex-row shadow-2xl"
-      >
-        <button
-          id="close-modal"
-          class="absolute top-4 right-4 z-20 w-9 h-9 rounded-full bg-primary-darken/60 text-neutralwhite flex items-center justify-center hover:bg-primary-darken transition-colors text-sm font-bold cursor-pointer"
-          aria-label="Tutup">✕</button
-        >
-        <!-- Foto: selalu kiri -->
-        <div
-          class="w-5/12 shrink-0 overflow-hidden relative bg-primary-darken/10"
-        >
-          <img
-            id="modal-photo"
-            src=""
-            alt=""
-            class="w-full h-full object-cover object-top"
-          />
-          <div
-            id="modal-photo-fallback"
-            class="absolute inset-0 items-center justify-center bg-primary-darken/20"
-            style="display: none"
-          >
-            <span
-              id="modal-photo-initial"
-              class="font-heading text-6xl font-bold text-primary-darken/40"
-            ></span>
-          </div>
-        </div>
-        <!-- Info: selalu kanan -->
-        <div class="w-7/12 flex flex-col overflow-y-auto">
-          <div class="p-6 md:p-10 flex flex-col h-full">
-            <div>
-              <p
-                id="modal-name"
-                class="font-heading font-bold text-xl md:text-3xl text-primary-darken leading-tight"
-              >
-              </p>
-              <p
-                id="modal-role"
-                class="font-isi text-primary/60 mt-2 text-xs md:text-base"
-              >
-              </p>
-              <div class="flex gap-4">
-
-                <span
-                  id="modal-angkatan"
-                  class="inline-block mt-3 text-xs font-isi bg-primary/10 text-primary px-3 py-1 rounded-full"
-                ></span>
-                <div
+            <div class="flex gap-0 flex-col md:gap-3 md:flex-row">
+              <span
+                id="modal-angkatan"
+                class="w-fit inline-block mt-3 text-fluid-body font-isi bg-primary/10 text-primary px-3 py-1 rounded-full"
+              ></span>
+              <div
                 id="igCov"
-                  class="w-fit mt-3 text-xs font-isi bg-primary text-secondary px-3 py-1 rounded-full flex justify-center items-center gap-1"
-                >
-                  <div class="[&>svg]:w-5 [&>svg]:h-5 ">
-                    <Fragment set:html={instagramIcon} alt="instagram" />
-                  </div>
-                  <a id="modal-instagram" target="_blank"></a>
+                class="w-fit mt-3 text-fluid-body font-isi bg-primary text-secondary px-3 py-1 rounded-full flex justify-center items-center gap-1"
+              >
+                <div class="[&>svg]:w-5 [&>svg]:h-5">
+                  <Fragment set:html={instagramIcon} alt="instagram" />
                 </div>
+                <a id="modal-instagram" target="_blank"></a>
               </div>
             </div>
-            <hr class="my-4 md:my-6 border-primary/10" />
-            <p
-              id="modal-bio"
-              class="font-isi text-xs max-h-30 md:max-h-full md:text-base leading-relaxed text-primary-darken flex-1 overflow-y-scroll"
-            >
-            </p>
           </div>
+          <hr class="my-4 md:my-6 border-primary/10" />
+          <p
+            id="modal-bio"
+            class="font-isi text-fluid-body max-h-30 md:max-h-full md:text-base leading-relaxed text-primary-darken flex-1 overflow-y-scroll"
+          >
+          </p>
         </div>
       </div>
     </div>
-  </Section>
+  </div>
 
   <script>
     // ─── Helper: typed getElementById ────────────────────────
@@ -385,15 +387,13 @@ const resolvedPrograms = dept.data.programs.map((program) => ({
 
       const badge = el("modal-angkatan");
       const igBadge = el("modal-instagram");
-    ;
-
       if (igBadge) {
         igBadge.textContent = data.instagram ? ` ${data.instagram}` : "";
         igBadge.setAttribute("href", `${data.instagramUrl}`);
         igBadge.setAttribute("target", `_blank`);
-        igBadge.parentElement!.style.display = data.instagram ? "flex " : "none";
-      
-
+        igBadge.parentElement!.style.display = data.instagram
+          ? "flex "
+          : "none";
       }
       if (badge) {
         badge.textContent = data.angkatan ? `Angkatan ${data.angkatan}` : "";
