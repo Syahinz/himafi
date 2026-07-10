@@ -1,12 +1,12 @@
 ---
 import { Image } from "astro:assets";
-import Sample1 from "../assets/images/bentoImg1.jpg";
+import Sample1 from "../assets/images/bentoImg1.webp";
 import Sample2 from "../assets/images/bentoImg2.jpg";
-import Sample3 from "../assets/images/bentoImg3.png";
-import Sample4 from "../assets/images/bentoImg4.jpg";
+import Sample3 from "../assets/images/bentoImg3b.webp";
+import Sample4 from "../assets/images/bentoImg4.webp";
 ---
 
-<div class="pb-10 w-full [overflow-x:clip]">
+<div class="pb-10 w-full overflow-x-clip">
   <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
     <div class="mt-10 grid gap-4 sm:mt-16 lg:grid-cols-3 lg:grid-rows-2">
       <div class="relative lg:row-span-2">
@@ -26,7 +26,7 @@ import Sample4 from "../assets/images/bentoImg4.jpg";
             <p
               class="mt-2 max-w-lg font-isi text-sm/6 text-secondary-bright max-lg:text-center"
             >
-             Memaksimalkan kinerja pengurus serta sistem pengelolaan data
+              Memaksimalkan kinerja pengurus serta sistem pengelolaan data
             </p>
           </div>
           <div
@@ -67,7 +67,8 @@ import Sample4 from "../assets/images/bentoImg4.jpg";
             <p
               class="mt-1 max-w-lg font-isi text-sm/6 text-primary-darken max-lg:text-center"
             >
-              Menjalankan organisasi dengan penuh kejujuran, keterbukaan, dan tanggung jawab 
+              Menjalankan organisasi dengan penuh kejujuran, keterbukaan, dan
+              tanggung jawab
             </p>
           </div>
           <div
@@ -101,7 +102,8 @@ import Sample4 from "../assets/images/bentoImg4.jpg";
             <p
               class="mt-2 max-w-lg text-sm/6 text-primary-darken max-lg:text-center"
             >
-              Menjadikan disiplin, kompetensi, dan etika berorganisasi sebagai fondasi utama yang menjaga kestabilan dan keberlangsungan HIMAFI.
+              Menjadikan disiplin, kompetensi, dan etika berorganisasi sebagai
+              fondasi utama yang menjaga kestabilan dan keberlangsungan HIMAFI.
             </p>
           </div>
           <div class="@container flex flex-1 items-center max-lg:py-6 lg:pb-2">
@@ -136,14 +138,15 @@ import Sample4 from "../assets/images/bentoImg4.jpg";
             <p
               class="mt-2 max-w-lg text-sm/6 text-secondary-bright max-lg:text-center"
             >
-              Membangun budaya kebersamaan dan saling mendukung, sekaligus menjadi ruang yang terbuka dan inklusif dalam menampung serta memperjuangkan aspirasi seluruh anggota.
+              Membangun budaya kebersamaan dan saling mendukung, sekaligus
+              menjadi ruang yang terbuka dan inklusif dalam menampung serta
+              memperjuangkan aspirasi seluruh anggota.
             </p>
           </div>
           <div class="relative min-h-120 w-full grow">
             <Image
               src={Sample4}
-              loading="eager"
-              fetchpriority="high"
+              loading="lazy"
               alt=""
               class="absolute top-10 right-0 bottom-0 left-10 overflow-hidden rounded-tl-xl bg-gray-900/60 outline outline-white/10 rounded-lg border-l-13 border-t-13"
             />
