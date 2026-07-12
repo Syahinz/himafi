@@ -47,4 +47,19 @@ const departments = defineCollection({
   }),
 });
 
-export const collections = { news, departments };
+const historyItemSchema = z.object({
+  era: z.string(),
+  title: z.string(),
+  description: z.string(),
+  highlight: z.boolean(),
+  photo: z.string().optional().default(""),
+});
+
+const history = defineCollection({
+  loader: glob({ base: "src/content/history", pattern: "*.json" }),
+  schema: z.object({
+    items: z.array(historyItemSchema),
+  }),
+});
+
+export const collections = { news, departments, history };

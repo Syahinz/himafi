@@ -1,0 +1,95 @@
+{
+  "items": [
+    {
+      "era": "2002–2007",
+      "title": "Berdirinya HIMAFI",
+      "description": "HIMAFI berdiri pada tanggal 13 September 2002 untuk jangka waktu yang tidak ditentukan dan diresmikan melalui rapat anggota pada tanggal 19 Januari 2007.",
+      "highlight": true,
+      "photo": "berdiri"
+    },
+    {
+      "era": "2012–2013",
+      "title": "Pengembangan Program & Era Digital",
+      "description": "Periode 2012–2013 di bawah kepemimpinan Desri Akbari menandai era pengembangan sistem program kerja HIMAFI yang lebih terstruktur. Empat divisi aktif — Litbang, PSDA, Infokom, dan Danus — menjalankan agenda rutin seperti Study Club dan Kajian Ilmiah, serta melahirkan PASSCAL sebagai event akbar pertama yang menjangkau seluruh sivitas UIN Jakarta. Di periode ini pula HIMAFI mulai merintis kehadiran digitalnya melalui website dan akun media sosial pertama di Twitter dan Facebook.",
+      "highlight": false,
+      "photo": "himafi-2012"
+    },
+    {
+      "era": "2013–2014",
+      "title": "Jangkauan Lebih Luas, Dimensi Baru",
+      "description": "Periode 2013–2014 di bawah kepemimpinan Ikhwan Nur Rahman memperluas jangkauan HIMAFI ke level yang lebih luas. Olimpiade Fisika menjadi tonggak penting dengan mengundang pelajar SMP dan SMA se-DKI Jakarta dan Kota Tangerang Selatan, sementara PASSCAL berkembang menjadi ajang kolaborasi sains dan seni. Program sosial SCARY 2014 dan studi banding ke Observatorium Bosscha Universitas Padjadjaran turut memperkaya dimensi kemasyarakatan dan keilmuan himpunan.",
+      "highlight": false,
+      "photo": "himafi-2013"
+    },
+    {
+      "era": "2014–2015",
+      "title": "Pengkaderan & Kompetisi yang Semakin Matang",
+      "description": "Periode 2014–2015 di bawah kepemimpinan Khairul Akbar Deliputra memperkuat fondasi pengkaderan dan kompetisi HIMAFI. PASSCAL berkembang semakin luas dengan menambahkan Art Festival dan Bakti Sosial ke dalam rangkaiannya, sementara kunjungan ilmiah ke LIPI Serpong memperdalam wawasan mahasiswa tentang aplikasi energi dan teknologi. Program Training Organisations turut memperkokoh sistem kaderisasi kepemimpinan himpunan.",
+      "highlight": false,
+      "photo": "himafi-2014"
+    },
+    {
+      "era": "2016–2017",
+      "title": "#Berani Maju, #Berani Berubah",
+      "description": "Periode 2016–2017 di bawah kepemimpinan Dedy Setiawan membawa semangat pembaruan bertajuk '#BeraniMaju #BeraniBerubah'. PASSCAL bertransformasi menjadi HIMAFI Week sebagai festival himpunan yang lebih inklusif, sementara dua program baru lahir: HIMAFI Mengajar yang membawa edukasi fisika langsung ke SMAN 87 Jakarta, dan OSSAKA sebagai olimpiade serta seminar sains fisika bagi pelajar SMA. Program Hari Membawa Bekal turut memperkuat solidaritas internal antar anggota himpunan.",
+      "highlight": false,
+      "photo": "himafi-2016"
+    },
+    {
+      "era": "2017–2018",
+      "title": "Teknologi, Sosial, dan Jaringan Antargenerasi",
+      "description": "Periode 2017–2018 di bawah kepemimpinan Putranto Prasetyo memperluas dimensi sosial dan teknologi HIMAFI. Lahirnya Tim Pemrograman dan Robotik Fisika menandai babak baru orientasi keilmuan himpunan ke ranah teknologi terapan. Di sisi sosial, HIMAFI berpartisipasi dalam peringatan World Down Syndrome Day dengan menggelar kegiatan donasi bagi penderita down syndrome di SLB Negeri 1 Cilandak. Periode ini juga menggelar Temu Alumni dan Studi Banding bersama Fisika Tarbiyah untuk mempererat jaringan antargenerasi dan antardisiplin.",
+      "highlight": false,
+      "photo": "himafi-2017"
+    },
+    {
+      "era": "2018–2019",
+      "title": "Kelahiran Al-Fiziya & Era Digital",
+      "description": "Periode 2018–2019 di bawah kepemimpinan Bagus Septyanto menandai lompatan besar HIMAFI di bidang publikasi ilmiah dan kehadiran digital. Untuk pertama kalinya HIMAFI menerbitkan jurnal ilmiah sendiri bernama Al-Fiziya, menjadikan himpunan sebagai wadah karya ilmiah resmi mahasiswa fisika. Pengelolaan Instagram diperkuat dengan mading online dan feed yang lebih tertata, sementara Market Day Fisika dan Diskusi Sains Modern bersama akademisi turut memperkaya ekosistem keilmuan himpunan.",
+      "highlight": false,
+      "photo": "himafi-2018"
+    },
+    {
+      "era": "2019–2020",
+      "title": "Berkobar: Kolaborasi Lintas Komunitas",
+      "description": "Periode 2019–2020 di bawah kepemimpinan Ridwan Eko Laksono membara dengan semangat '#Berkobar'. Kepengurusan ini mencatatkan kolaborasi unik dengan Wardah Beauty melalui Beauty Class 2019 — membuktikan bahwa HIMAFI mampu menjangkau lintas komunitas di luar sains. Program-program rutin tetap berjalan solid, ditutup dengan Gathering HIMAFI sebagai momen mempererat kebersamaan antarpengurus di penghujung kepengurusan.",
+      "highlight": false,
+      "photo": "himafi-2019"
+    },
+    {
+      "era": "2020–2021",
+      "title": "Kabinet ABHILASHA: Tangguh di Tengah Pandemi",
+      "description": "Periode 2020–2021 Kabinet Abhilasha di bawah kepemimpinan Arjuna Satria Mandala menjadi ujian sekaligus bukti ketangguhan HIMAFI menghadapi pandemi COVID-19. Dengan rancangan program dual-mode daring dan luring, kepengurusan ini justru melahirkan inovasi terbanyak: PHYDIO sebagai podcast fisika di Spotify, HIMAFI TV, Club Robotik berbasis Arduino, hingga layanan aspirasi anonim ATMOSPHERE. Program sosial seperti KASA HIMAFI dan PERI menunjukkan kepedulian nyata di tengah krisis, menjadikan Kabinet Abhilasha sebagai salah satu periode paling produktif dan adaptif dalam sejarah HIMAFI.",
+      "highlight": false,
+      "photo": "himafi-2020"
+    },
+    {
+      "era": "2022–2023",
+      "title": "Kabinet PANDITA: Profesional & Berwirausaha",
+      "description": "Periode 2022–2023 Kabinet PANDITA di bawah kepemimpinan Sofyan Azmi hadir dengan struktur organisasi yang semakin matang dan profesional. Departemen-departemen baru seperti Ekobis dan Ke-ILPROF memperluas cakupan himpunan ke ranah kewirausahaan dan keprofesian, ditandai dengan lahirnya ToFi sebagai toko merchandise resmi dan HIFICLOTH. Program MEKANIKA 2022 mempererat hubungan antarmahasiswa dan alumni, sementara ATMOSPHERE terus menjadi kanal aspirasi digital andalan mahasiswa fisika.",
+      "highlight": false,
+      "photo": "himafi-2022"
+    },
+    {
+      "era": "2023–2024",
+      "title": "Kabinet MAVENDRA: Sinergi Progresif & Inovasi Sosial",
+      "description": "Periode 2023–2024 Kabinet MAVENDRA di bawah kepemimpinan Caesar Rafi Rabbani berfokus pada progresivitas dan kolaborasi kepengurusan yang dievaluasi secara berkala melalui program EVAKUASI. Kepengurusan ini menghadirkan inovasi pengabdian masyarakat melalui PHYTON 2023 yang mengombinasikan santunan sosial dengan eksperimen fisika serta penyaluran alat anatomi tubuh berbasis sensor Arduino. Program KOPI (Komunitas Physics Berbagi) dan kegiatan pengembangan diri terus memperkuat eksistensi serta manfaat nyata HIMAFI di tengah masyarakat.",
+      "highlight": false,
+      "photo": "himafi-2023"
+    },
+    {
+      "era": "2024–2025",
+      "title": "Kabinet ADHYAKSA: Inklusif, Profesional & Inovasi Human Capital",
+      "description": "Periode 2024–2025 Kabinet ADHYAKSA di bawah kepemimpinan Az Hafiz Syach Putra Nugroho mengusung lingkungan organisasi yang inklusif, profesional, dan transparan. Kepengurusan ini menghadirkan terobosan struktur dengan departemen Human Capital untuk optimalisasi manajemen internal, serta mengembangkan pengabdian sosial integratif melalui PHYTON 2.0 yang memadukan edukasi fisika dan pameran instrumentasi Robotic Club. Program ASPHYRASI via Phycreto dan Galang Dana UKT juga mempertegas komitmen advokasi nyata bagi kesejahteraan mahasiswa.",
+      "highlight": false,
+      "photo": "himafi-2024"
+    },
+    {
+      "era": "2025–2026",
+      "title": "Kabinet MAYURACHAKRA: Terbuka, Profesional & Inovasi Sains Digital",
+      "description": "Periode 2025–2026 Kabinet MAYURACHAKRA di bawah kepemimpinan Muhammad Arief Rahman Hakim mengusung dinamika organisasi yang terbuka, profesional, dan inklusif. Kepengurusan ini meluaskan ekosistem akademik melalui Kelompok Studi Geofisika (KSGF) dan Ensiklopedia Fisika (ENSIKA), serta menjangkau masyarakat digital melalui edukasi kreatif KONSICS di TikTok dan integrasi pengaduan Phyroom. Program pengabdian PHYTON 3.0 dan pembinaan internal Unity & Action turut menguatkan kontribusi nyata serta soliditas seluruh keluarga besar HIMAFI.",
+      "highlight": false,
+      "photo": "himafi-2025"
+    }
+  ]
+}

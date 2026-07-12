@@ -21,6 +21,11 @@ export const structureImages = import.meta.glob<{ default: ImageMetadata }>(
   { eager: true },
 );
 
+export const historyImages = import.meta.glob<{ default: ImageMetadata }>(
+  "../assets/history/*.{jpg,jpeg,png,webp}",
+  { eager: true },
+);
+
 export function findImage(
   glob: Record<string, { default: ImageMetadata }>,
   name: string,
