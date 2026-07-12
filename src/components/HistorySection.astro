@@ -101,14 +101,24 @@ const rest = resolvedItems.filter((item) => !item.highlight);
 </Section>
 
 <script>
-  const area = document.getElementById("history-rest");
-  const btn = document.getElementById("history-toggle");
+  function initHistoryToggle() {
+    const area = document.getElementById("history-rest");
+    const btn = document.getElementById("history-toggle");
 
-  if (area && btn) {
-    btn.addEventListener("click", () => {
-      const isHidden = area.style.display === "none";
-      area.style.display = isHidden ? "flex" : "none";
-      btn.textContent = isHidden ? "Sembunyikan" : "Lihat Selengkapnya";
-    });
+    if (area && btn) {
+      // Clone button untuk mencegah duplikasi event listener jika init dipanggil ulang
+      const newBtn = btn.cloneNode(true) as HTMLButtonElement;
+      btn.parentNode?.replaceChild(newBtn, btn);
+
+      newBtn.addEventListener("click", () => {
+        const isHidden = area.style.display === "none";
+        area.style.display = isHidden ? "flex" : "none";
+        newBtn.textContent = isHidden ? "Sembunyikan" : "Lihat Selengkapnya";
+      });
+    }
   }
+
+  initHistoryToggle();
+  document.addEventListener("astro:after-swap", initHistoryToggle);
+  document.addEventListener("astro:page-load", initHistoryToggle);
 </script>

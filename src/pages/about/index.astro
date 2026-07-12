@@ -153,6 +153,8 @@ import HistorySection from "../../components/HistorySection.astro";
               <Image
                 src={fotoNeiya}
                 alt="Neiya"
+                loading="eager"
+                fetchpriority="high"
                 class="w-50 max-w-full md:w-72 md:h-112 object-cover transition-all duration-500 brightness-[0.9] hover:brightness-100 hover:scale-110"
               />
             </div>
@@ -165,7 +167,9 @@ import HistorySection from "../../components/HistorySection.astro";
             <div class="rounded-2xl shadow-lg overflow-hidden appear-anim">
               <Image
                 src={fotoHarry}
-                alt="Neiya"
+                alt="Harry"
+                loading="eager"
+                fetchpriority="high"
                 class="w-50 max-w-full md:w-72 md:h-112 object-cover transition-all duration-500 brightness-[0.9] hover:brightness-100 hover:scale-110"
               />
             </div>
