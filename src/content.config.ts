@@ -16,6 +16,8 @@ const news = defineCollection({
   }),
 });
 
+
+
 // schema baru untuk departments
 const memberSchema = z.object({
   name: z.string(),

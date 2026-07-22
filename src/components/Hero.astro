@@ -19,11 +19,12 @@ import fotoSpartival from "../assets/images/Spartival.jpg";
 import fotoTo from "../assets/images/Training-organization.jpg";
 import fotoPhyTon from "../assets/images/PHY-TON.jpg";
 import ProgramsCard from "../components/ProgramsCard.astro";
-
+import {sortNewsByDate} from "../utils/date.ts"
 import { getCollection } from "astro:content";
 const title = "HIMAFI";
 const subhead = `UIN syarif hidayatullah jakarta`;
 const news = await getCollection("news");
+const sorted = sortNewsByDate(news);
 ---
 
 <Section mode="light">

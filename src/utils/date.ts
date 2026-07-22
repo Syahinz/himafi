@@ -11,3 +11,14 @@ export function formatDate(str: string) {
     year: "numeric",
   });
 }
+
+export function sortNewsByDate(newsArray: any[]) {
+  return newsArray.sort((a, b) => {
+    const parseDate = (str: string) => {
+    const [d, m, y] = str.split("-");
+
+    return new Date(parseInt(y), parseInt(m) - 1, parseInt(d));
+  };
+  return parseDate(b.data.date).getTime() - parseDate(a.data.date).getTime();
+  })
+}
